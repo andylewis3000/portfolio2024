@@ -1,0 +1,23 @@
+/* This is the main SCSS file where all imports will be delivered */
+/* Example: @import '/scss/file_name.scss' */
+
+/* Utilities */
+@import 'styles/utilities/_variables';
+@import 'styles/utilities/_mixins';
+
+/* Base */
+@import 'styles/base/_typography';
+@import 'styles/base/_reset';
+@import 'styles/base/_global';
+
+/* Layout */
+@import 'styles/layout/_header';
+@import 'styles/layout/_footer';
+
+/* Components */
+
+/* Pages */
+@import 'styles/pages/home';
+@import 'styles/pages/about';
+@import 'styles/pages/work';
+@import 'styles/pages/contact';

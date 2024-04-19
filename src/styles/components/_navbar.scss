@@ -1,0 +1,29 @@
+.main-nav {
+  display: inline-block;
+
+  ul {
+    display: inline-flex;
+
+    li {
+      margin-right: 24px;
+    }
+
+    li a {
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+      color: $primary-accent;
+    }
+
+    li a:hover {
+      color: $white;
+      background: $primary-accent;
+    }
+
+    li:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

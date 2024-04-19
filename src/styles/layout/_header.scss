@@ -1,0 +1,44 @@
+@import '/src/styles/components/_navbar';
+@import '/src/styles/components/_social-links';
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  z-index: 10;
+  background: transparent;
+  transition: all 0.3 ease-in-out;
+
+  .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    display: inline-block;
+    color: $white;
+
+    h3 {
+      margin: 0;
+
+      svg {
+        padding-top: 2px;
+        font-size: 24px;
+        fill: $colour-five;
+      }
+    }
+  }
+}
+
+.header-bg-color {
+  background: $white;
+  transition: all 0.3 ease-in-out;
+
+  .header-logo {
+    color: $primary-accent;
+  }
+}

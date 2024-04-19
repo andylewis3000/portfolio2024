@@ -1,0 +1,27 @@
+.contact-hero {
+  background: rgb(41, 47, 54);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 47, 54, 1) 0%,
+    rgba(41, 47, 54, 1) 20%,
+    rgba(120, 161, 187, 1) 20%,
+    rgba(120, 161, 187, 1) 40%,
+    rgba(219, 76, 64, 1) 40%,
+    rgba(219, 76, 64, 1) 60%,
+    rgba(243, 233, 210, 1) 60%,
+    rgba(243, 233, 210, 1) 80%,
+    rgba(255, 212, 0, 1) 80%,
+    rgba(255, 212, 0, 1) 100%
+  );
+  overflow: hidden;
+
+  .hero-content {
+    color: $white;
+  }
+}
+
+.contact-hero-image {
+  position: absolute;
+  bottom: -300px;
+  right: 5%;
+}

@@ -1,0 +1,123 @@
+/*** GENERAL STYLES ***/
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  font-family: $body-font;
+  overflow-x: hidden;
+}
+
+/* Links */
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+/* Buttons */
+button {
+  @include button-reset;
+}
+
+.btn {
+  display: inline-block;
+  font-family: $body-font;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  margin: 1rem 1rem 1rem 0;
+  padding: 0.75rem 1.75rem;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  color: $white;
+  background: $primary-accent;
+
+  &:hover {
+    background: $primary-accent-light;
+  }
+}
+
+.btn-secondary {
+  color: $black;
+  background: $secondary-accent;
+
+  &:hover {
+    background: $secondary-accent-light;
+  }
+}
+
+/* Containers, Sections, etc */
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+section:not(.header) {
+  padding: 48px 0;
+
+  @media (min-width: 768px) {
+    padding: 64px 0;
+  }
+}
+
+/* Heroes */
+.hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: $secondary-accent-light;
+  margin-top: -72px;
+}
+
+.hero-large {
+  height: 100vh;
+  min-height: 700px;
+  max-height: 1000px;
+}
+
+.hero-medium {
+  min-height: 600px;
+}
+
+.hero-small {
+  min-height: 450px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 650px;
+  height: 100%;
+}
+
+/* Color Spans */
+.colour-blue {
+  color: $colour-one;
+}
+.colour-lightblue {
+  color: $colour-two;
+}
+.colour-orange {
+  color: $colour-three;
+}
+.colour-beige {
+  color: $colour-four;
+}
+.colour-yellow {
+  color: $colour-five;
+}

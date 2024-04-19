@@ -1,0 +1,22 @@
+.social-links {
+  a {
+    margin-right: 12px;
+
+    svg {
+      width: 20px;
+      height: auto;
+      fill: $primary-accent;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  a:hover {
+    svg {
+      fill: $secondary-accent;
+    }
+  }
+
+  a:last-of-type {
+    margin-right: 0;
+  }
+}
