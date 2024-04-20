@@ -20,9 +20,9 @@
 
   .header-logo {
     display: inline-block;
-    color: $white;
 
     h3 {
+      color: $white;
       margin: 0;
 
       svg {
@@ -38,7 +38,7 @@
   background: $white;
   transition: all 0.3 ease-in-out;
 
-  .header-logo {
+  .header-logo h3 {
     color: $primary-accent;
   }
 }

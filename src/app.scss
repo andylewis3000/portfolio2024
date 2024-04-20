@@ -15,6 +15,11 @@
 @import 'styles/layout/_footer';
 
 /* Components */
+@import 'styles/components/home-about';
+@import 'styles/components/recent-projects';
+@import 'styles/components/skills';
+@import 'styles/components/project-card';
+@import 'styles/components/_twinkle-stars';
 
 /* Pages */
 @import 'styles/pages/home';

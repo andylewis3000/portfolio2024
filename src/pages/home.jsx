@@ -1,4 +1,7 @@
 import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
+import HomeAbout from '../components/home-about';
+import RecentProjects from '../components/recent-projects';
+import Skills from '../components/skills';
 import PageTransition from '../scripts/transitions';
 
 const Home = () => {
@@ -23,27 +26,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="style-guide">
-        <div className="container">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis
-            unde facilis maxime dolores dicta quae laboriosam corrupti hic
-            aliquam, earum sunt? Eos, ad veritatis?
-          </p>
-          <button className="btn btn-primary">Button</button>
-          <button className="btn btn-secondary">Button</button>
-          <ul>
-            <li>List Item</li>
-            <li>List Item</li>
-            <li>List Item</li>
-            <li>List Item</li>
-          </ul>
-        </div>
-      </section>
+      <HomeAbout />
+      <RecentProjects />
+      <Skills />
     </PageTransition>
   );
 };

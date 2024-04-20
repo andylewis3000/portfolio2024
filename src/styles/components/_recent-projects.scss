@@ -1,0 +1,28 @@
+/* Recent Projects */
+.recent-projects {
+  position: relative;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+  }
+
+  h2:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    height: 75%;
+    width: 100%;
+    background: $colour-two;
+    z-index: -1;
+  }
+
+  .recent-projects__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+    padding: 48px 0;
+  }
+}

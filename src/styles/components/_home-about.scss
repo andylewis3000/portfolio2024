@@ -1,0 +1,31 @@
+/* Home - About */
+.home-about {
+  padding-bottom: 0 !important;
+
+  .home-about__content {
+    margin: 0 auto;
+    max-width: 750px;
+    text-align: center;
+
+    h2 {
+      position: relative;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    h2:after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      height: 75%;
+      width: 100%;
+      background: $colour-five;
+      z-index: -1;
+    }
+
+    p {
+      padding: 24px 0;
+    }
+  }
+}
