@@ -16,8 +16,9 @@ const Home = () => {
                 "I'm a web and graphic designer who also codes and does e-commerce stuff."
               }
             </h4>
+          </div>
+          <div className="home-hero-image">
             <img
-              className="home-hero-image"
               src={coolGuyAndy}
               alt="Cool Guy Andy"
               width="600"

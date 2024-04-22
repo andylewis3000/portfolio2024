@@ -35,10 +35,20 @@ const About = () => {
               </p>
             </div>
             <div className="about-content__img">
-              <img src="" alt="" width="400" height="400" />
+              <img
+                src="https://placehold.co/600x400"
+                alt="Image"
+                width="300"
+                height="300"
+              />
             </div>
             <div className="about-content__img">
-              <img src="" alt="" width="400" height="400" />
+              <img
+                src="https://placehold.co/600x400"
+                alt="Image"
+                width="300"
+                height="300"
+              />
             </div>
             <div className="about-content__text">
               <h2>

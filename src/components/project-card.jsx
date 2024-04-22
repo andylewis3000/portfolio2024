@@ -14,6 +14,7 @@ const ProjectCard = () => {
       <div className="project-card__content">
         <h3>Project Name</h3>
         <h4>Project Type</h4>
+        <button className="btn btn-primary">View Project</button>
       </div>
     </div>
   );

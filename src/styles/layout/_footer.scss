@@ -1,13 +1,12 @@
 footer {
   width: 100%;
-  height: 300px;
-  padding: 48px 0;
+  padding: 96px 0;
   text-align: center;
   color: $white;
   background: $primary-accent;
 
   @media (min-width: 768px) {
-    padding: 64px 0;
+    padding: 128px 0;
   }
 
   .container {

@@ -5,7 +5,11 @@
   height: 100%;
 
   .stars {
-    position: absolute;
+    position: relative;
+
+    @media (min-width: 768px) {
+      position: absolute;
+    }
 
     svg {
       width: 100%;
