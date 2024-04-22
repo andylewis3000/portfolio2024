@@ -14,7 +14,15 @@ const App = () => {
   return (
     <>
       <Header />
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence
+        initial={false}
+        mode="wait"
+        onExitComplete={() => {
+          if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          }
+        }}
+      >
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
