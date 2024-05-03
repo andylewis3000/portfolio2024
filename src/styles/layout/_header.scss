@@ -13,9 +13,14 @@
 
   .header-content {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    height: 100%;
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: minmax(200px, 3fr) 5fr;
+    }
   }
 
   .header-logo {
@@ -24,6 +29,7 @@
     h3 {
       color: $white;
       margin: 0;
+      line-height: 0;
 
       svg {
         padding-top: 2px;
@@ -34,8 +40,10 @@
   }
 }
 
+// Header Color Change on Scroll
 .header-bg-color {
   background: $white;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3 ease-in-out;
 
   .header-logo h3 {

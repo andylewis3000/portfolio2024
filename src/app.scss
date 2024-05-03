@@ -4,6 +4,7 @@
 /* Utilities */
 @import 'styles/utilities/_variables';
 @import 'styles/utilities/_mixins';
+@import 'styles/utilities/animations';
 
 /* Base */
 @import 'styles/base/_typography';
@@ -13,6 +14,7 @@
 /* Layout */
 @import 'styles/layout/_header';
 @import 'styles/layout/_footer';
+@import 'styles/layout/_hireCTA';
 
 /* Components */
 @import 'styles/components/home-about';

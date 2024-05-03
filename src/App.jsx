@@ -2,6 +2,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Header from './layout/header';
+import HireCTA from './layout/hireCTA';
 import Footer from './layout/footer';
 import Home from './pages/home';
 import About from './pages/about';
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
+      <HireCTA />
       <Footer />
     </>
   );

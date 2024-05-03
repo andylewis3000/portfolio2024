@@ -8,8 +8,9 @@ const Work = () => {
         <div className="container">
           <div className="hero-content">
             <h1>My Work</h1>
+          </div>
+          <div className="work-hero-image">
             <img
-              className="work-hero-image"
               src={coolGuyAndy}
               alt="Cool Guy Andy"
               width="600"

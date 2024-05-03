@@ -63,6 +63,7 @@ button {
 /* Containers, Sections, etc */
 .container {
   width: 100%;
+  height: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding-left: $gutter-width;
@@ -93,11 +94,15 @@ section:not(.header, .hero) {
 }
 
 .hero-medium {
+  height: 70vh;
   min-height: 700px;
+  max-height: 1000px;
 }
 
 .hero-small {
+  height: 50vh;
   min-height: 500px;
+  max-height: 1000px;
 }
 
 .hero-content {

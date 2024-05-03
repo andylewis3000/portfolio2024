@@ -20,14 +20,42 @@
   }
 
   .hero-content {
+    position: relative;
     color: $white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+      margin: 0;
+      text-align: left;
+    }
   }
 
   .about-hero-image {
     position: absolute;
     bottom: -200px;
-    right: 5%;
-    filter: drop-shadow(0px 0px 25px $colour-one);
+    right: 0;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 600px;
+      height: auto;
+    }
+
+    img {
+      // filter: drop-shadow(0px 0px 5px $colour-one);
+
+      height: auto;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
+    }
   }
 }
 

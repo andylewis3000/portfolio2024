@@ -1,8 +1,5 @@
 import { useState } from 'react';
-
-import HeaderLogo from '../components/logo';
 import Navbar from '../components/navbar';
-import SocialLinks from '../components/social';
 
 const Header = () => {
   // Header color change on scroll
@@ -22,9 +19,7 @@ const Header = () => {
       <section className={color ? 'header header-bg-color' : 'header'}>
         <div className="container">
           <div className="header-content">
-            <HeaderLogo />
             <Navbar />
-            <SocialLinks />
           </div>
         </div>
       </section>

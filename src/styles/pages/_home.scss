@@ -21,12 +21,15 @@
 
   .hero-content {
     color: $white;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin: 128px auto 0;
 
-    @media (max-width: 1100px) {
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
-      margin: 128px auto 0;
+    @media (min-width: 1100px) {
+      justify-content: center;
+      margin: 0;
+      text-align: left;
     }
   }
 
@@ -35,6 +38,7 @@
     bottom: -65px;
     right: 0;
     width: 100%;
+    animation: headbob 3s;
 
     @media (min-width: 1100px) {
       width: 600px;
@@ -42,7 +46,7 @@
     }
 
     img {
-      filter: drop-shadow(0px 0px 25px $colour-one);
+      // filter: drop-shadow(0px 0px 5px $colour-one);
 
       height: auto;
       margin: 0 auto;

@@ -8,8 +8,9 @@ const Contact = () => {
         <div className="container">
           <div className="hero-content">
             <h1>Contact</h1>
+          </div>
+          <div className="contact-hero-image">
             <img
-              className="contact-hero-image"
               src={coolGuyAndy}
               alt="Cool Guy Andy"
               width="600"

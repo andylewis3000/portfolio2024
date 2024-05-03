@@ -1,0 +1,17 @@
+@keyframes headbob {
+  from {
+    bottom: -100%;
+  }
+
+  33% {
+    bottom: -350px;
+  }
+
+  66% {
+    bottom: -100%;
+  }
+
+  to {
+    bottom: -65px;
+  }
+}

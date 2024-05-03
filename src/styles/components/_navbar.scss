@@ -1,14 +1,63 @@
 .main-nav {
-  display: inline-block;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: -99999px;
+  width: 0;
+  height: 100vh;
+  background: $white;
+  transition: all 0.5s ease-in-out;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    width: 100%;
+    right: unset;
+    height: auto;
+    background: transparent;
+  }
+
+  .header-logo {
+    display: block;
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+      display: none !important;
+    }
+
+    h3 {
+      color: $primary-accent !important;
+    }
+  }
 
   ul {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
 
     li {
-      margin-right: 24px;
+      margin: 0 auto 12px;
+
+      @media (min-width: 768px) {
+        margin: 0 24px 0 0;
+      }
     }
 
     li a {
+      font-size: 1.5rem;
       font-family: $heading-font;
       font-weight: 700;
       text-transform: uppercase;
@@ -17,6 +66,10 @@
       background: transparent;
       transition: all 0.3s ease-in-out;
       color: $primary-accent;
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
     }
 
     li a:hover {
@@ -27,5 +80,45 @@
     li:last-of-type {
       margin-right: 0;
     }
+  }
+}
+
+.main-nav.active {
+  display: flex;
+  right: 0;
+  width: 100%;
+}
+
+.hamburger {
+  display: block;
+  text-align: right;
+  z-index: 1000;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  svg {
+    width: 24px;
+    height: auto;
+    color: $primary-accent;
+  }
+}
+
+.navClose {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  svg {
+    width: 24px;
+    height: auto;
+    color: $primary-accent;
   }
 }
