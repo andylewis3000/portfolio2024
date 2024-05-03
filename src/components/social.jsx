@@ -6,7 +6,7 @@ const SocialLinks = () => {
   return (
     <>
       <div className="social-links">
-        <a href="https://github.com/andylewis3000m" target="_blank">
+        <a href="https://github.com/andylewis3000" target="_blank">
           <FaGithub />
         </a>
         <a href="https://www.linkedin.com/in/andyclewis/" target="_blank">
