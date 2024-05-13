@@ -1,23 +1,53 @@
-// Setup Data.js and map over relavent data
+import { yatesGrab } from '../assets/images/Yates-Grab.png';
+import { bxbGrab } from '../assets/images/BXB-Grab.png';
+import { marosGrab } from '../assets/images/Maros-Grab.png';
+
+import { Link } from 'react-router-dom';
+
+const projects = [
+  {
+    id: 1,
+    name: 'Yates Outdoor Sales',
+    type: 'Web design & development',
+    img: { yatesGrab },
+    link: '/',
+  },
+  {
+    id: 2,
+    name: 'BXB Disposal',
+    type: 'Web design & development',
+    img: { bxbGrab },
+    link: '/',
+  },
+  {
+    id: 3,
+    name: "Maro's Bistro",
+    type: 'Web design & development',
+    img: { marosGrab },
+    link: '/',
+  },
+];
 
 const ProjectCard = () => {
-  return (
-    <div className="project-card">
-      <div className="project-card__image">
-        <img
-          src="https://placehold.co/600x400"
-          alt="Image"
-          width="300"
-          height="300"
-        />
-      </div>
-      <div className="project-card__content">
-        <h3>Project Name</h3>
-        <h4>Project Type</h4>
-        <button className="btn btn-primary">View Project</button>
-      </div>
-    </div>
-  );
+  {
+    projects.map((project) => {
+      const { id, name, type, img, link } = project;
+      return (
+        <div key={id} className="project-card">
+          <div className="project-card__image">
+            <img src={img} alt={name} width="300" height="300" />
+          </div>
+          <div className="project-card__content">
+            <h3>{name}</h3>
+            <h4>{type}</h4>
+            <Link to={link}>
+              <button className="btn btn-primary">View Project</button>
+            </Link>
+          </div>
+        </div>
+      );
+    });
+  }
 };
 
 export default ProjectCard;
