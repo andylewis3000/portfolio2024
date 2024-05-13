@@ -1,0 +1,75 @@
+/* Forms */
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  //gap: 8px;
+  width: 100%;
+  margin: 0;
+}
+
+form {
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid $primary-accent;
+    border-radius: 4px;
+    resize: none;
+    line-height: 1.5rem;
+  }
+
+  input:focus,
+  textarea:focus {
+    box-shadow: 0 0 10px 0px $colour-three;
+  }
+
+  label {
+    display: block;
+    visibility: hidden;
+  }
+
+  input[type='submit'] {
+    border: 0;
+    width: fit-content;
+    margin-right: 0;
+    //align-self: center;
+    cursor: pointer;
+  }
+
+  input[type='submit']:focus {
+    box-shadow: none;
+  }
+
+  ::placeholder {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    letter-spacing: 0.025rem;
+  }
+}
+
+.form__result {
+  color: $white;
+  margin: 24px auto 0;
+  padding: 48px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.form-sending {
+  background: $colour-one;
+}
+
+.form-sent {
+  background: $colour-two;
+}
