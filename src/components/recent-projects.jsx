@@ -1,4 +1,6 @@
-// import ProjectCard from './project-card';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from 'swiper/modules';
+import 'swiper/css';
 
 import yatesGrab from '../assets/images/Yates-Grab.png';
 import bxbGrab from '../assets/images/BXB-Grab.png';
@@ -12,51 +14,78 @@ const projects = [
     name: 'Yates Outdoor Sales',
     type: 'Web design & development',
     img: yatesGrab,
-    link: '/',
+    link: '/projects/yates',
   },
   {
     id: 2,
     name: 'BXB Disposal',
     type: 'Web design & development',
     img: bxbGrab,
-    link: '/',
+    link: '/projects/bxb',
   },
   {
     id: 3,
     name: "Maro's Bistro",
     type: 'Web design & development',
     img: marosGrab,
-    link: '/',
+    link: '/projects/maros',
   },
 ];
 
 const RecentProjects = () => {
   return (
     <section className="recent-projects">
-      <h2>Recent Projects</h2>
       <div className="container">
         <div className="recent-projects__content">
-          {/* <ProjectCard />
-          <ProjectCard />
-          <ProjectCard /> */}
-          {projects.map((project) => {
-            const { id, name, type, img, link } = project;
-            return (
-              <Link to={link} key={id}>
-                <div className="project-card">
-                  <div className="project-card__image">
-                    <img src={img} alt={name} width="300" height="300" />
-                  </div>
-                  <div className="project-card__content">
-                    <h4>{name}</h4>
-                    <p>{type}</p>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+          <div className="slider-nav">
+            <h2>Recent Projects</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+              exercitationem! Quae cupiditate voluptas nobis ipsa possimus
+              suscipit eaque commodi quam. Molestias nemo nostrum excepturi
+              natus?
+            </p>
+            <Link to="/work">
+              <button className="btn btn-secondary">View All Work</button>
+            </Link>
+          </div>
+          <div className="slider">
+            <Swiper
+              spaceBetween={24}
+              slidesPerView={'auto'}
+              centeredSlides={false}
+              loop={true}
+              grabCursor={true}
+              mousewheel={true}
+              modules={[Mousewheel]}
+
+              // breakpoints={{
+              //   768: {
+              //     slidesPerView: 1,
+              //   },
+              // }}
+            >
+              {projects.map((project) => {
+                const { id, name, type, img, link } = project;
+                return (
+                  <SwiperSlide key={id}>
+                    <Link to={link}>
+                      <div className="project-card">
+                        <div className="project-card__image">
+                          <img src={img} alt={name} width="300" height="300" />
+                        </div>
+                        <div className="project-card__content">
+                          <h4>{name}</h4>
+                          <p>{type}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
-        <button className="btn btn-secondary">View All Work</button>
       </div>
     </section>
   );

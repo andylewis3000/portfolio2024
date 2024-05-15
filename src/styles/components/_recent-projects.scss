@@ -2,7 +2,7 @@
 .recent-projects {
   position: relative;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   background: $colour-four;
 
   h2 {
@@ -24,8 +24,76 @@
 
   .recent-projects__content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 24px;
     padding: 48px 0;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 2fr 3fr;
+    }
+
+    .slider-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
   }
+
+  .slider {
+    position: relative;
+    height: 100%;
+
+    .swiper {
+      padding: 0 48px;
+    }
+
+    .swiper-slide {
+      width: 80%;
+
+      @media (min-width: 768px) {
+        width: 60%;
+      }
+    }
+  }
+
+  // Blur Effect on sides of slider
+
+  // .slider:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 24px;
+  //   height: 100%;
+  //   background: rgb(243, 233, 210);
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(243, 233, 210, 1) 0%,
+  //     rgba(243, 233, 210, 0.75) 25%,
+  //     rgba(243, 233, 210, 0.5) 50%,
+  //     rgba(243, 233, 210, 0.25) 75%,
+  //     rgba(243, 233, 210, 0) 100%
+  //   );
+  //   z-index: 10;
+  // }
+
+  // .slider:after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: 24px;
+  //   height: 100%;
+  //   background: rgb(243, 233, 210);
+  //   background: linear-gradient(
+  //     270deg,
+  //     rgba(243, 233, 210, 1) 0%,
+  //     rgba(243, 233, 210, 0.75) 25%,
+  //     rgba(243, 233, 210, 0.5) 50%,
+  //     rgba(243, 233, 210, 0.25) 75%,
+  //     rgba(243, 233, 210, 0) 100%
+  //   );
+  //   z-index: 10;
+  // }
 }
