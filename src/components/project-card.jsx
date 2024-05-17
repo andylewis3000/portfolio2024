@@ -22,7 +22,7 @@ const projects = [
   {
     id: 3,
     name: "Maro's Bistro",
-    type: 'Web design & development',
+    type: 'Web development',
     img: { marosGrab },
     link: '/',
   },

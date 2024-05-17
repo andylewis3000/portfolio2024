@@ -25,11 +25,11 @@
   .recent-projects__content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 24px;
+    gap: 24px;
     padding: 48px 0;
 
     @media (min-width: 1024px) {
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .slider-nav {
@@ -52,14 +52,12 @@
       width: 80%;
 
       @media (min-width: 768px) {
-        width: 60%;
+        width: 70%;
       }
     }
   }
 
-  // Blur Effect on sides of slider
-
-  // .slider:before {
+  // Blur Effect on sides of slider .slider:before {
   //   content: '';
   //   position: absolute;
   //   top: 0;

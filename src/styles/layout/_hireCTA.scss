@@ -6,8 +6,10 @@
   .hireCTA__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 
     @media (min-width: 768px) {
       flex-direction: row;
