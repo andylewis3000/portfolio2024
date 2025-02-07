@@ -4,7 +4,7 @@
 /* Utilities */
 @import 'styles/utilities/_variables';
 @import 'styles/utilities/_mixins';
-@import 'styles/utilities/animations';
+@import 'styles/utilities/_animations';
 
 /* Base */
 @import 'styles/base/_typography';
@@ -17,15 +17,17 @@
 @import 'styles/layout/_hireCTA';
 
 /* Components */
-@import 'styles/components/home-about';
-@import 'styles/components/recent-projects';
-@import 'styles/components/skills';
-@import 'styles/components/project-card';
+@import 'styles/components/_hero';
+@import 'styles/components/_block-2col';
+@import 'styles/components/_home-about';
+@import 'styles/components/_recent-projects';
+@import 'styles/components/_skills';
+@import 'styles/components/_project-card';
 @import 'styles/components/_twinkle-stars';
-@import 'styles/components/contact-form';
+@import 'styles/components/_contact-form';
 
 /* Pages */
-@import 'styles/pages/home';
-@import 'styles/pages/about';
-@import 'styles/pages/work';
-@import 'styles/pages/contact';
+// @import 'styles/pages/home';
+@import 'styles/pages/_about';
+@import 'styles/pages/_work';
+@import 'styles/pages/_contact';

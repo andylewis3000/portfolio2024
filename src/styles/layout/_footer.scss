@@ -2,10 +2,9 @@ footer {
   width: 100%;
   padding: 96px 0;
   text-align: center;
-  color: $white;
-  background: $primary-accent;
+  color: $colour-beige;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     padding: 128px 0;
   }
 
@@ -27,26 +26,26 @@ footer {
         svg {
           width: 20px;
           height: auto;
-          fill: $white;
+          fill: $colour-beige;
           transition: all 0.3s ease-in-out;
         }
       }
 
       a:hover:nth-child(1) {
         svg {
-          fill: $colour-three;
+          fill: $colour-red;
         }
       }
 
       a:hover:nth-child(2) {
         svg {
-          fill: $colour-two;
+          fill: $colour-light-blue;
         }
       }
 
       a:hover:nth-child(3) {
         svg {
-          fill: $colour-five;
+          fill: $colour-yellow;
         }
       }
     }

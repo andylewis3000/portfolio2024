@@ -4,7 +4,7 @@ import { SiAsana, SiJira, SiSlack } from 'react-icons/si';
 const PlatformSkills = () => {
   return (
     <div className="skills-content__group">
-      <h3>Platforms & Tools</h3>
+      <h3>Platforms</h3>
       <ul>
         <li>
           <FaShopify />

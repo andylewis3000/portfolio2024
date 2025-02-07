@@ -8,10 +8,10 @@
   right: -99999px;
   width: 0;
   height: 100vh;
-  background: $white;
+  background: $colour-beige;
   transition: all 0.5s ease-in-out;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,18 +22,19 @@
     right: unset;
     height: auto;
     background: transparent;
+    border-radius: $border-radius-lg;
   }
 
   .header-logo {
     display: block;
     margin-bottom: 48px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-md) {
       display: none !important;
     }
 
     h3 {
-      color: $primary-accent !important;
+      color: $colour-beige !important;
     }
   }
 
@@ -41,7 +42,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-md) {
       display: inline-flex;
       flex-direction: row;
       justify-content: space-around;
@@ -51,7 +52,7 @@
     li {
       margin: 0 auto 12px;
 
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint-md) {
         margin: 0 24px 0 0;
       }
     }
@@ -65,9 +66,9 @@
       border-radius: 4px;
       background: transparent;
       transition: all 0.3s ease-in-out;
-      color: $primary-accent;
+      color: $colour-beige;
 
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint-md) {
         font-size: 1rem;
       }
     }
@@ -95,14 +96,14 @@
   z-index: 1000;
   cursor: pointer;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     display: none;
   }
 
   svg {
     width: 24px;
     height: auto;
-    color: $primary-accent;
+    color: $colour-dark-blue;
   }
 }
 
@@ -112,7 +113,7 @@
   top: 24px;
   right: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     display: none;
   }
 

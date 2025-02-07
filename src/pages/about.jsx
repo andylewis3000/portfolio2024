@@ -1,10 +1,12 @@
-import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
+// import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
+import Block2Col from '../components/block-2col';
+import HeroNew from '../components/hero-new';
 import PageTransition from '../scripts/transitions';
 
 const About = () => {
   return (
     <PageTransition>
-      <section className="hero hero-small about-hero">
+      {/* <section className="hero hero-small about-hero">
         <div className="container">
           <div className="hero-content">
             <h1>About Me</h1>
@@ -18,55 +20,62 @@ const About = () => {
             />
           </div>
         </div>
-      </section>
-      <section className="about">
-        <div className="container">
-          <div className="about-content">
-            <div className="about-content__text">
-              <h2>
-                A little about <span className="colour-orange">me</span>...
-              </h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-                doloribus veniam repudiandae, accusamus aut, quas magni illum
-                blanditiis at doloremque suscipit laboriosam eum beatae
-                asperiores ut iure distinctio facilis inventore animi omnis
-                possimus enim. Quidem possimus qui ipsam nostrum sapiente quam
-                neque porro, voluptates esse quis quas facere, molestias alias.
-              </p>
-            </div>
-            <div className="about-content__img">
-              <img
-                src="https://placehold.co/600x400"
-                alt="Image"
-                width="300"
-                height="300"
-              />
-            </div>
-            <div className="about-content__img">
-              <img
-                src="https://placehold.co/600x400"
-                alt="Image"
-                width="300"
-                height="300"
-              />
-            </div>
-            <div className="about-content__text">
-              <h2>
-                A little <span className="colour-orange">more</span> about me...
-              </h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-                doloribus veniam repudiandae, accusamus aut, quas magni illum
-                blanditiis at doloremque suscipit laboriosam eum beatae
-                asperiores ut iure distinctio facilis inventore animi omnis
-                possimus enim. Quidem possimus qui ipsam nostrum sapiente quam
-                neque porro, voluptates esse quis quas facere, molestias alias.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */}
+      <HeroNew
+        heroSize={'hero-small'}
+        heroLocation={'about-hero'}
+        heading={'About Me'}
+        imgActive={false}
+        imgClass={'about-hero-img'}
+      />
+      <Block2Col
+        reverse={false}
+        heading={'This is a 2-Column Block'}
+        text={
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img={false}
+        text2={
+          'This is some more sample paragraph text. This text will only be visible if the imgActive prop flag is disabled. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img2={false}
+      />
+      <Block2Col
+        reverse={false}
+        heading={'This is a 2-Column Block'}
+        text={
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img={true}
+        text2={
+          'This is some more sample paragraph text. This text will only be visible if the imgActive prop flag is disabled. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img2={false}
+      />
+      <Block2Col
+        reverse={true}
+        heading={'This is a 2-Column Block'}
+        text={
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img={true}
+        text2={
+          'This is some more sample paragraph text. This text will only be visible if the imgActive prop flag is disabled. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img2={false}
+      />
+      <Block2Col
+        reverse={false}
+        heading={'This is a 2-Column Block'}
+        text={
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img={true}
+        text2={
+          'This is some more sample paragraph text. This text will only be visible if the imgActive prop flag is disabled. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloribus veniam repudiandae, accusamus aut, quas magni illum blanditiis at doloremque suscipit laboriosam eum beatae asperiores ut iure distinctio facilis inventore animi omnis possimus enim.'
+        }
+        img2={true}
+      />
     </PageTransition>
   );
 };

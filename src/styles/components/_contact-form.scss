@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  //gap: 8px;
   width: 100%;
   margin: 0;
 }
@@ -21,7 +20,7 @@ form {
 
   input:focus,
   textarea:focus {
-    box-shadow: 0 0 10px 0px $colour-three;
+    box-shadow: 0 0 10px 0px $colour-red;
   }
 
   label {
@@ -33,7 +32,6 @@ form {
     border: 0;
     width: fit-content;
     margin-right: 0;
-    //align-self: center;
     cursor: pointer;
   }
 
@@ -67,9 +65,9 @@ form {
 }
 
 .form-sending {
-  background: $colour-one;
+  background: $colour-dark-blue;
 }
 
 .form-sent {
-  background: $colour-two;
+  background: $colour-light-blue;
 }

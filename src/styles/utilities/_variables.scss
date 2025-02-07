@@ -6,18 +6,46 @@ $body-font: 'Lato', Arial, Verdana, sans-serif;
 $white: #ffffff;
 $black: #1a1b1c;
 
-$colour-one: #292f36;
-$colour-two: #78a1bb;
-$colour-three: #db4c40;
-$colour-four: #f3e9d2;
-$colour-five: #ffd400;
+$colour-dark-blue: #292f36;
+$colour-light-blue: #78a1bb;
+$colour-light-blue-light: #8fc1e1;
+$colour-red: #db4c40;
+$colour-red-light: #ff5649;
+$colour-beige: #f3e9d2;
+$colour-yellow: #ffd400;
 
-$primary-accent: $colour-one;
-$primary-accent-light: $colour-two;
-$secondary-accent: $colour-three;
-$secondary-accent-light: $colour-five;
+$primary-accent: $colour-red;
+$primary-accent-light: $colour-red-light;
+$secondary-accent: $colour-light-blue;
+$secondary-accent-light: $colour-light-blue-light;
 
 /* Margins and Spacing */
 $gutter-width: 1.5rem;
-$section-padding-small: 48px;
-$section-padding-large: 64px;
+$section-padding-small: 3rem;
+$section-padding-large: 4rem;
+
+/* Padding */
+$padding-sm: 1rem;
+$padding-md: 1.5rem;
+$padding-lg: 2rem;
+$padding-xl: 3rem;
+
+/* Grid Sizing */
+$grid-1col: 1fr;
+$grid-2col: repeat(2, 1fr);
+$grid-3col: repeat(3, 1fr);
+$grid-4col: repeat(4, 1fr);
+
+/* Grid Spacing */
+$grid-spacing-sm: 0.75rem;
+$grid-spacing-med: 1.5rem;
+$grid-spacing-lg: 2rem;
+
+/* Borders */
+$border-radius-sm: 1rem;
+$border-radius-lg: 1.5rem;
+
+/* Breakpoints */
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;

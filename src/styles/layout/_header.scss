@@ -3,13 +3,17 @@
 
 .header {
   position: sticky;
-  top: 0;
+  top: 1rem;
   display: flex;
   align-items: center;
+  width: calc(100% - ($gutter-width * 2));
+  max-width: 1280px;
+  margin-inline: auto;
   height: 72px;
   z-index: 10;
   background: transparent;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: $border-radius-lg;
 
   .header-content {
     width: 100%;
@@ -18,7 +22,7 @@
     align-items: center;
     grid-template-columns: 1fr 1fr;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-md) {
       grid-template-columns: minmax(200px, 3fr) 5fr;
     }
   }
@@ -27,14 +31,15 @@
     display: inline-block;
 
     h3 {
-      color: $white;
+      color: $colour-beige;
       margin: 0;
       line-height: 0;
+      font-size: 1.5rem;
 
       svg {
         padding-top: 2px;
         font-size: 24px;
-        fill: $colour-five;
+        fill: $colour-yellow;
       }
     }
   }
@@ -42,15 +47,39 @@
 
 // Header Color Change on Scroll
 .header-bg-color {
-  background: $white;
+  background: $colour-beige;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   .header-logo h3 {
-    color: $primary-accent;
+    color: $colour-dark-blue;
   }
 
-  .main-nav a {
-    color: $primary-accent;
+  .main-nav ul li a {
+    color: $colour-dark-blue;
+  }
+
+  .social-links {
+    a svg {
+      fill: $colour-dark-blue;
+    }
+
+    a:hover:nth-child(1) {
+      svg {
+        fill: $colour-red;
+      }
+    }
+
+    a:hover:nth-child(2) {
+      svg {
+        fill: $colour-light-blue;
+      }
+    }
+
+    a:hover:nth-child(3) {
+      svg {
+        fill: $colour-yellow;
+      }
+    }
   }
 }

@@ -10,6 +10,8 @@ body {
   height: 100vh;
   font-family: $body-font;
   overflow-x: hidden;
+  background: $colour-dark-blue;
+  color: $white;
 }
 
 /* Links */
@@ -38,7 +40,6 @@ button {
   padding: 1rem 1.75rem 0.75rem;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary {
@@ -55,17 +56,16 @@ button {
   background: $secondary-accent;
 
   &:hover {
-    color: $primary-accent;
     background: $secondary-accent-light;
   }
 }
 
 /* Containers, Sections, etc */
 .container {
-  width: 100%;
+  width: calc(100% - $gutter-width * 2);
   height: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding-left: $gutter-width;
   padding-right: $gutter-width;
 }
@@ -73,60 +73,24 @@ button {
 section:not(.header, .hero) {
   padding: 48px 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     padding: 64px 0;
   }
 }
 
-/* Heroes */
-.hero {
-  position: relative;
-  display: flex;
-  width: 100%;
-  background: $secondary-accent-light;
-  margin-top: -72px;
-}
-
-.hero-large {
-  height: 100vh;
-  min-height: 700px;
-  max-height: 1000px;
-}
-
-.hero-medium {
-  height: 70vh;
-  min-height: 700px;
-  max-height: 1000px;
-}
-
-.hero-small {
-  height: 50vh;
-  min-height: 500px;
-  max-height: 1000px;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 650px;
-  height: 100%;
-}
-
 /* Color Spans */
 .colour-blue {
-  color: $colour-one;
+  color: $colour-dark-blue;
 }
 .colour-lightblue {
-  color: $colour-two;
+  color: $colour-light-blue;
 }
 .colour-orange {
-  color: $colour-three;
+  color: $colour-red;
 }
 .colour-beige {
-  color: $colour-four;
+  color: $colour-beige;
 }
 .colour-yellow {
-  color: $colour-five;
+  color: $colour-yellow;
 }

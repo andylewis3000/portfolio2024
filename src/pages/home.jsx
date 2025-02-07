@@ -1,4 +1,4 @@
-import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
+import HeroNew from '../components/hero-new';
 import HomeAbout from '../components/home-about';
 import RecentProjects from '../components/recent-projects';
 import Skills from '../components/skills';
@@ -7,26 +7,15 @@ import PageTransition from '../scripts/transitions';
 const Home = () => {
   return (
     <PageTransition>
-      <section className="hero hero-large home-hero">
-        <div className="container">
-          <div className="hero-content">
-            <h1>{"Hey, I'm Andy and I make things."}</h1>
-            <h4>
-              {
-                "I'm a web and graphic designer who also codes and does e-commerce stuff."
-              }
-            </h4>
-          </div>
-          <div className="home-hero-image">
-            <img
-              src={coolGuyAndy}
-              alt="Cool Guy Andy"
-              width="600"
-              height="600"
-            />
-          </div>
-        </div>
-      </section>
+      <HeroNew
+        heroSize={'hero-large'}
+        heading={'Your website probably needs help.'}
+        subHeading={
+          "I'm a web developer based out of British Columbia, and I can help your website not suck."
+        }
+        imgActive={true}
+        btnActive={true}
+      />
       <HomeAbout />
       <RecentProjects />
       <Skills />
