@@ -1,12 +1,12 @@
 .block-2col {
   .content-2col {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
+    grid-template-columns: $grid-1col;
+    gap: $grid-spacing-md;
 
     @media (min-width: $breakpoint-md) {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 64px;
+      grid-template-columns: $grid-2col;
+      grid-gap: $grid-spacing-lg;
     }
 
     .content-2col__text {
@@ -18,9 +18,9 @@
     .content-2col__text:nth-of-type(even) {
       margin-top: 0;
 
-      @media (min-width: $breakpoint-md) {
-        margin-top: 120px;
-      }
+      // @media (min-width: $breakpoint-md) {
+      //   margin-top: 120px;
+      // }
     }
 
     .content-2col__img {

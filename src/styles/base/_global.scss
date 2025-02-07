@@ -11,7 +11,17 @@ body {
   font-family: $body-font;
   overflow-x: hidden;
   background: $colour-dark-blue;
-  color: $white;
+  color: $colour-beige;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $colour-beige;
 }
 
 /* Links */
