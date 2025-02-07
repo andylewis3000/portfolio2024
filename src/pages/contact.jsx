@@ -1,25 +1,17 @@
-import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
+// import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
 import ContactForm from '../components/contact-form';
 import PageTransition from '../scripts/transitions';
+import HeroNew from '../components/hero-new';
 
 const Contact = () => {
   return (
     <PageTransition>
-      <section className="hero hero-small contact-hero">
-        <div className="container">
-          <div className="hero-content">
-            <h1>Contact</h1>
-          </div>
-          <div className="contact-hero-image">
-            <img
-              src={coolGuyAndy}
-              alt="Cool Guy Andy"
-              width="600"
-              height="600"
-            />
-          </div>
-        </div>
-      </section>
+      <HeroNew
+        heroSize={'hero-small'}
+        heading={'Contact'}
+        imgActive={false}
+        btnActive={false}
+      />
       <section className="contact">
         <div className="container">
           <div className="contact__content">
