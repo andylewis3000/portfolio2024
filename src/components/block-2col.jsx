@@ -1,4 +1,4 @@
-const Block2Col = ({ reverse, heading, text, img, img2, text2 }) => {
+const Block2Col = ({ reverse, heading, heading2, text, img, img2, text2 }) => {
   return (
     <section className="block-2col">
       <div className="container">
@@ -14,8 +14,8 @@ const Block2Col = ({ reverse, heading, text, img, img2, text2 }) => {
             </div>
           ) : (
             <div className="content-2col__text">
-              <h2>{heading}</h2>
-              <p>{text}</p>
+              {heading ? <h2>{heading}</h2> : ''}
+              {text ? <p>{text}</p> : ''}
             </div>
           )}
           {img2 ? (
@@ -29,7 +29,8 @@ const Block2Col = ({ reverse, heading, text, img, img2, text2 }) => {
             </div>
           ) : (
             <div className="content-2col__text">
-              <p>{text2}</p>
+              {heading2 ? <h2>{heading2}</h2> : ''}
+              {text2 ? <p>{text2}</p> : ''}
             </div>
           )}
         </div>
