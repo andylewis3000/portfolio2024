@@ -9,6 +9,7 @@
 
   .container {
     position: relative;
+    padding-top: 120px;
   }
 
   .hero-content {
@@ -16,11 +17,12 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding-top: 72px;
+    padding-top: 92px;
     align-items: center;
 
     &.half {
       flex-direction: column;
+      gap: 1.5rem;
 
       @media (min-width: $breakpoint-md) {
         flex-direction: row;
