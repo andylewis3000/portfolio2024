@@ -2,6 +2,7 @@
 import ContactForm from '../components/contact-form';
 import PageTransition from '../scripts/transitions';
 import HeroNew from '../components/hero-new';
+import SocialLinks from '../components/social';
 
 const Contact = () => {
   return (
@@ -15,12 +16,14 @@ const Contact = () => {
       <section className="contact">
         <div className="container">
           <div className="contact__content">
-            <h2>Get in touch!</h2>
+            <h2>Get in Touch</h2>
             <p>
               {
-                "Whether you're looking for some minor content changes, add some custom functionality, full redesign or rebuild, drop us a line and let us know how we can help your next project."
+                "Whether you're looking for some minor content changes, add some custom functionality, a redesign or a new build, drop me a line and let me know how I can help you realize your next project."
               }
             </p>
+            <h4>{'Stay Connected!'}</h4>
+            <SocialLinks />
           </div>
           <div className="contact__form">
             <ContactForm />
