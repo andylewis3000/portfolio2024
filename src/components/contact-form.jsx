@@ -1,5 +1,6 @@
 /* Contact Form */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
   // window.onload = function () {
@@ -31,8 +32,12 @@ const ContactForm = () => {
 
     const successMsg = (
       <div className="form__result form-sent">
-        <h4>Form submitted successfully!</h4>
-        <p>Thanks for reaching out! Our team will reach out within 48 hours.</p>
+        <h4>Thanks for reaching out!</h4>
+        <p>Our team will get back to you within 48 hours.</p>
+        <p>
+          In the meantime, feel free to check out my{' '}
+          <Link to="/work">work</Link>.
+        </p>
       </div>
     );
 
@@ -70,7 +75,7 @@ const ContactForm = () => {
           Project Details
         </label>
         <textarea name="details" placeholder="Project Details"></textarea>
-        <input className="btn btn-secondary" type="submit" value={'Submit'} />
+        <input className="btn btn-primary" type="submit" value={'Submit'} />
       </form>
 
       <span>{result}</span>
