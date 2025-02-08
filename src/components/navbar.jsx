@@ -6,9 +6,10 @@ import { FaBarsStaggered, FaXmark } from 'react-icons/fa6';
 
 const Navbar = () => {
   const navLinks = [
-    { id: 1, link: '/about', name: 'About' },
-    { id: 2, link: '/work', name: 'Work' },
-    { id: 3, link: '/contact', name: 'Contact' },
+    { id: 1, link: '/', name: 'Home' },
+    { id: 2, link: '/about', name: 'About' },
+    { id: 3, link: '/work', name: 'Work' },
+    { id: 4, link: '/contact', name: 'Contact' },
   ];
 
   const [showNavbar, setShowNavbar] = useState(false);
@@ -23,21 +24,23 @@ const Navbar = () => {
         <FaBarsStaggered onClick={handleShowNavbar} />
       </div>
       <nav className={`main-nav ${showNavbar && 'active'}`}>
+        <div className="navClose">
+          <FaXmark />
+        </div>
         <HeaderLogo />
         <ul>
           {navLinks.map((navLink) => {
             const { id, link, name } = navLink;
             return (
               <li key={id}>
-                <Link to={link}>{name}</Link>
+                <Link to={link} onClick={handleShowNavbar}>
+                  {name}
+                </Link>
               </li>
             );
           })}
         </ul>
         <SocialLinks />
-        <div className="navClose">
-          <FaXmark />
-        </div>
       </nav>
     </>
   );

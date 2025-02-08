@@ -1,7 +1,9 @@
 .social-links {
-  a {
-    margin-right: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.875rem;
 
+  a {
     svg {
       width: 20px;
       height: auto;
@@ -14,9 +16,5 @@
     svg {
       fill: $secondary-accent;
     }
-  }
-
-  a:last-of-type {
-    margin-right: 0;
   }
 }
