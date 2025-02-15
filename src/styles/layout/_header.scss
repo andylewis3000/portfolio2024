@@ -3,7 +3,7 @@
 
 .header {
   position: sticky;
-  top: 1rem;
+  // top: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
@@ -17,6 +17,7 @@
 
   @media (min-width: $breakpoint-md) {
     width: calc(100% - ($gutter-width * 2));
+    top: 1rem;
   }
 
   & .container {

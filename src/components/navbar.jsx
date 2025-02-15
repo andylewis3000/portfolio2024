@@ -17,6 +17,12 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
+
+  // const root = document.getElementById('root');
+  // const mainNav = document.querySelector('.main-nav');
+  // if (mainNav.classList.contains('active')) {
+  //   root.style.overflow = 'hidden';
+  // }
   return (
     <>
       <HeaderLogo />
