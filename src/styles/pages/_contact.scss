@@ -1,78 +1,18 @@
-.contact-hero {
-  background: rgb(41, 47, 54);
-  background: linear-gradient(
-    90deg,
-    rgba(41, 47, 54, 1) 0%,
-    rgba(41, 47, 54, 1) 20%,
-    rgba(120, 161, 187, 1) 20%,
-    rgba(120, 161, 187, 1) 40%,
-    rgba(219, 76, 64, 1) 40%,
-    rgba(219, 76, 64, 1) 60%,
-    rgba(243, 233, 210, 1) 60%,
-    rgba(243, 233, 210, 1) 80%,
-    rgba(255, 212, 0, 1) 80%,
-    rgba(255, 212, 0, 1) 100%
-  );
-  overflow: hidden;
-
-  .container {
-    position: relative;
-  }
-
-  .hero-content {
-    position: relative;
-    color: $white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    z-index: 1;
-
-    @media (min-width: $breakpoint-md) {
-      align-items: flex-start;
-      margin: 0;
-      text-align: left;
-    }
-  }
-
-  .contact-hero-image {
-    position: absolute;
-    bottom: -200px;
-    right: 0;
-    width: 100%;
-
-    @media (min-width: $breakpoint-md) {
-      width: 600px;
-      height: auto;
-    }
-
-    img {
-      // filter: drop-shadow(0px 0px 5px $colour-dark-blue);
-
-      height: auto;
-      margin: 0 auto;
-
-      @media (min-width: $breakpoint-md) {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.contact-hero-image {
-  position: absolute;
-  bottom: -200px;
-  right: 5%;
-  filter: drop-shadow(0px 0px 25px $colour-dark-blue);
-}
-
 .contact {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 48px;
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
   h4 {
     margin-top: 4rem;
+  }
+  .contact__form {
+    .btn {
+      margin-top: 1rem;
+    }
   }
 }
