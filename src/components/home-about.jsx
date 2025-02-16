@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import GlowPulse from './glow-pulse';
 
 const HomeAbout = () => {
   return (
     <section className="home-about">
       <div className="container">
+        <GlowPulse position="right large" />
         <div className="home-about__content">
           <h2>About Me</h2>
           <p>

@@ -1,0 +1,30 @@
+.glow-pulse {
+  width: 20%;
+  height: auto;
+  aspect-ratio: 1/1;
+  background: $colour-light-blue;
+  z-index: -1;
+  position: absolute;
+  top: 5%;
+  // right: -5%;
+  animation: glowpulse 10s ease infinite;
+}
+
+.glow-pulse.right {
+  right: -5%;
+}
+
+.glow-pulse.left {
+  left: -5%;
+  animation-delay: 3s;
+}
+
+.glow-pulse.large {
+  width: 20%;
+  filter: blur(200px);
+}
+
+.glow-pulse.small {
+  width: 10%;
+  filter: blur(100px);
+}
