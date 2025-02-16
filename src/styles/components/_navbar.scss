@@ -68,6 +68,7 @@
       background: transparent;
       transition: all 0.3s ease-in-out;
       color: $colour-beige;
+      // color: $secondary-accent;
 
       @media (min-width: $breakpoint-md) {
         font-size: 1rem;
@@ -75,7 +76,10 @@
     }
 
     li a:hover {
-      color: $primary-accent;
+      color: $secondary-accent-light; // Blue
+      text-shadow: 0 0 10px $secondary-accent-light; // Blue
+      // color: $primary-accent; // Red
+      // text-shadow: 0 0 10px $primary-accent; // Red
     }
 
     li:last-of-type {

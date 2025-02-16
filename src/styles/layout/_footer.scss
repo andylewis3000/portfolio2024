@@ -29,23 +29,10 @@ footer {
           fill: $colour-beige;
           transition: all 0.3s ease-in-out;
         }
-      }
-
-      a:hover:nth-child(1) {
-        svg {
-          fill: $colour-red;
-        }
-      }
-
-      a:hover:nth-child(2) {
-        svg {
-          fill: $colour-light-blue;
-        }
-      }
-
-      a:hover:nth-child(3) {
-        svg {
-          fill: $colour-yellow;
+        &:hover {
+          svg {
+            fill: $secondary-accent;
+          }
         }
       }
     }
