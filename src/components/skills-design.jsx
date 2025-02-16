@@ -6,26 +6,46 @@ import {
   SiFigma,
 } from 'react-icons/si';
 
+const icons = [
+  {
+    key: 1,
+    icon: SiFigma,
+    title: 'Figma',
+  },
+  {
+    key: 2,
+    icon: SiAdobexd,
+    title: 'Adobe XD',
+  },
+  {
+    key: 3,
+    icon: SiAdobephotoshop,
+    title: 'Adobe Photoshop',
+  },
+  {
+    key: 4,
+    icon: SiAdobeillustrator,
+    title: 'Adobe Illustrator',
+  },
+  {
+    key: 5,
+    icon: SiAdobeindesign,
+    title: 'Adobe InDesign',
+  },
+];
+
 const DesignSkills = () => {
   return (
     <div className="skills-content__group">
       <h3>Design</h3>
       <ul>
-        <li>
-          <SiAdobephotoshop />
-        </li>
-        <li>
-          <SiAdobeillustrator />
-        </li>
-        <li>
-          <SiAdobeindesign />
-        </li>
-        <li>
-          <SiAdobexd />
-        </li>
-        <li>
-          <SiFigma />
-        </li>
+        {icons.map((item) => {
+          return (
+            <li key={item.key} title={item.title}>
+              <item.icon />
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
