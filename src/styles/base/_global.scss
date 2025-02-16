@@ -78,6 +78,7 @@ button {
   margin-inline: auto;
   padding-left: $gutter-width;
   padding-right: $gutter-width;
+  position: relative;
 }
 
 section:not(.header, .hero) {
