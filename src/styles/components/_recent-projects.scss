@@ -18,8 +18,9 @@
   .recent-projects__content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: $padding-xl;
+    gap: 48px 24px;
+    padding: $padding-xl 0;
+    padding-right: 0;
     border: 1px solid $colour-light-blue;
     border-radius: $border-radius-sm;
 
@@ -36,6 +37,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      padding: 0 $padding-xl;
+
+      @media (min-width: $breakpoint-lg) {
+        padding-right: 0;
+      }
     }
   }
 
