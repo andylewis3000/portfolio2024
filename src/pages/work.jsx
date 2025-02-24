@@ -1,6 +1,6 @@
 // import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
-import Block2Col from '../components/block-2col';
-import HeroNew from '../components/hero-new';
+import Block2Col from '../components/blocks/block-2col';
+import HeroNew from '../components/blocks/hero-new';
 import PageTransition from '../scripts/transitions';
 
 const Work = () => {

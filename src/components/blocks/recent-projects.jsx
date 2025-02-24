@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
-import yatesGrab from '../assets/images/Yates-Grab.png';
-import bxbGrab from '../assets/images/BXB-Grab.png';
-import marosGrab from '../assets/images/Maros-Grab.png';
+import yatesGrab from '../../assets/images/Yates-Grab.png';
+import bxbGrab from '../../assets/images/BXB-Grab.png';
+import marosGrab from '../../assets/images/Maros-Grab.png';
 
 import { Link } from 'react-router-dom';
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import SocialLinks from './social';
+import SocialLinks from '../elements/social';
 import HeaderLogo from './logo';
 import { FaBarsStaggered, FaXmark } from 'react-icons/fa6';
 

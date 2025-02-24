@@ -1,6 +1,6 @@
-import { yatesGrab } from '../assets/images/Yates-Grab.png';
-import { bxbGrab } from '../assets/images/BXB-Grab.png';
-import { marosGrab } from '../assets/images/Maros-Grab.png';
+import { yatesGrab } from '.../assets/images/Yates-Grab.png';
+import { bxbGrab } from '.../assets/images/BXB-Grab.png';
+import { marosGrab } from '.../assets/images/Maros-Grab.png';
 
 import { Link } from 'react-router-dom';
 

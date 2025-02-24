@@ -1,6 +1,6 @@
-import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
-import ButtonLink from './button';
-import Image from './image';
+import coolGuyAndy from '../../assets/images/cool-guy-posterize.png';
+import ButtonLink from '../elements/button';
+import Image from '../elements/image';
 
 const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
   return (

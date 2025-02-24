@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Navbar from '../components/navbar';
+import Navbar from '../components/header/navbar';
 
 const Header = () => {
   // Header color change on scroll
