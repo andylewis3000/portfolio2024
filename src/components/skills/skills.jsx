@@ -6,8 +6,8 @@ import GlowPulse from '../elements/glow-pulse';
 const Skills = () => {
   return (
     <section className="skills">
+      <GlowPulse position="left large" />
       <div className="container">
-        <GlowPulse position="left small" />
         <h2>Languages & Tools</h2>
         <div className="skills-content container">
           <DevSkills />

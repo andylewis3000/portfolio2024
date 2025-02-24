@@ -6,7 +6,7 @@ const HomeAbout = () => {
     <section className="home-about">
       <div className="container">
         <GlowPulse position="right large" />
-        <div className="home-about__content">
+        <div className="home-about__content content-col">
           <h2>About Me</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque

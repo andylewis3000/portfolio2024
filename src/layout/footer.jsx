@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import SocialLinks from '../components/elements/social';
+import GlowPulse from '../components/elements/glow-pulse';
 
 const Footer = () => {
   const [year, setYear] = useState(new Date().getFullYear());
@@ -13,10 +14,11 @@ const Footer = () => {
         <div className="container">
           <div className="footer-content">
             <SocialLinks />
-            <div className="copyright">
+            <p className="copyright">
               <small>&copy; {year}. All rights reserved.</small>
-            </div>
+            </p>
           </div>
+          <GlowPulse position="right large" />
         </div>
       </footer>
     </>

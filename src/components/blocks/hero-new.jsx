@@ -7,7 +7,7 @@ const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
     <section className={`hero ${heroSize}`}>
       <div className="container">
         <div className={`hero-content ${imgActive ? 'half' : 'full'}`}>
-          <div className="hero-content__text">
+          <div className="hero-content__text content-col">
             <h1 className="heading">{heading}</h1>
             {subHeading && <h4 className="subheading">{subHeading}</h4>}
             {btnActive && (
