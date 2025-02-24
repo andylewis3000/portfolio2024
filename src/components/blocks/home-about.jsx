@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import GlowPulse from './glow-pulse';
+import GlowPulse from '../elements/glow-pulse';
 
 const HomeAbout = () => {
   return (

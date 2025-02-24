@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import SocialLinks from '../components/social';
+import SocialLinks from '../components/elements/social';
 
 const Footer = () => {
   const [year, setYear] = useState(new Date().getFullYear());

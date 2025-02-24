@@ -36,9 +36,10 @@
       display: inline-block;
       border: 1px solid $secondary-accent;
       border-radius: $border-radius-sm;
-      max-height: 80px;
+      height: auto;
+      // max-height: 80px;
       overflow: hidden;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease;
       cursor: pointer;
 
       @media (min-width: $breakpoint-md) {
@@ -46,7 +47,9 @@
       }
 
       &:hover {
-        max-height: 600px;
+        transition: all 0.5s ease;
+        height: 100%;
+        max-height: inherit;
       }
 
       h3 {

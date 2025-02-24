@@ -1,7 +1,7 @@
-import HeroNew from '../components/hero-new';
-import HomeAbout from '../components/home-about';
-import RecentProjects from '../components/recent-projects';
-import Skills from '../components/skills';
+import HeroNew from '../components/blocks/hero-new';
+import HomeAbout from '../components/blocks/home-about';
+import RecentProjects from '../components/blocks/recent-projects';
+import Skills from '../components/skills/skills';
 import PageTransition from '../scripts/transitions';
 
 const Home = () => {

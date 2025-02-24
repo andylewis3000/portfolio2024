@@ -1,8 +1,8 @@
 // import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
-import ContactForm from '../components/contact-form';
+import ContactForm from '../components/elements/contact-form';
 import PageTransition from '../scripts/transitions';
-import HeroNew from '../components/hero-new';
-import SocialLinks from '../components/social';
+import HeroNew from '../components/blocks/hero-new';
+import SocialLinks from '../components/elements/social';
 
 const Contact = () => {
   return (
