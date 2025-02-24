@@ -37,7 +37,7 @@ const RecentProjects = () => {
     <section className="recent-projects">
       <div className="container">
         <div className="recent-projects__content">
-          <div className="slider-nav">
+          <div className="slider-nav content-col">
             <h2>Recent Projects</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,

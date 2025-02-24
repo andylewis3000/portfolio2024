@@ -1,17 +1,31 @@
 /*** GENERAL STYLES ***/
 
-html {
-  font-size: 16px;
-}
+// html {
+//   font-size: 16px;
+// }
 
 body {
   position: relative;
   margin: 0;
   height: 100vh;
   font-family: $body-font;
+  font-size: 100%;
   overflow-x: hidden;
   background: $colour-dark-blue;
   color: $colour-beige;
+}
+
+#root {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }
 
 h1,
@@ -41,7 +55,7 @@ button {
 .btn {
   display: inline-block;
   font-family: $heading-font;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.5px;
   text-align: center;
@@ -53,7 +67,8 @@ button {
 }
 
 .btn-primary {
-  color: $white;
+  // color: $white;
+  color: $colour-dark-blue;
   background: $primary-accent;
 
   &:hover {
@@ -62,7 +77,8 @@ button {
 }
 
 .btn-secondary {
-  color: $white;
+  // color: $white;
+  color: $colour-dark-blue;
   background: $secondary-accent;
 
   &:hover {
@@ -87,6 +103,12 @@ section:not(.header, .hero) {
   @media (min-width: $breakpoint-md) {
     padding: 64px 0;
   }
+}
+
+.content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /* Color Spans */
