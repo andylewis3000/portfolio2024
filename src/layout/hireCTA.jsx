@@ -10,7 +10,7 @@ const HireCTA = () => {
             {"Let's get started"} <FaArrowRight />
           </h2>
           <Link to="/contact">
-            <button className="btn btn-secondary">Hire Me!</button>
+            <button className="btn btn-primary">Hire Me!</button>
           </Link>
         </div>
       </div>

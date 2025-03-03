@@ -54,7 +54,7 @@
 }
 
 .project-card:hover {
-  border: 1px solid $colour-light-blue;
+  border: 1px solid $primary-accent;
   background: rgba(41, 47, 54, 0.8);
   transition: all 0.3s ease-in-out;
   .project-card__image img {

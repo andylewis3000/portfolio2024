@@ -46,7 +46,7 @@ const RecentProjects = () => {
               natus?
             </p>
             <Link to="/work">
-              <button className="btn btn-secondary">View All Work</button>
+              <button className="btn btn-primary">View All Work</button>
             </Link>
           </div>
           <div className="slider">

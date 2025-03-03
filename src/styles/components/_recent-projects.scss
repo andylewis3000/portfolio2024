@@ -19,12 +19,20 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 48px 24px;
-    padding: $padding-xl 0;
+    padding: $padding-lg 0;
     padding-right: 0;
-    border: 1px solid $colour-light-blue;
+    // border: 1px solid $colour-light-blue;
+    // background: rgba(41, 47, 54, 0.5);
+    background: $card-bg;
+    backdrop-filter: blur(1px);
     border-radius: $border-radius-sm;
+    // [ ] ONLY IF :before & :after ELEMENTS PRESENT
+    // border-left: 0;
+    // border-top-left-radius: 0 !important;
+    // border-bottom-left-radius: 0 !important;
 
     @media (min-width: $breakpoint-md) {
+      padding: $padding-xl 0;
       border-radius: $border-radius-lg;
     }
 
@@ -32,12 +40,42 @@
       grid-template-columns: 1fr 1fr;
     }
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -90%;
+      width: 100%;
+      height: 1px;
+      background: #7aa3be;
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -90%;
+      width: 100%;
+      height: 1px;
+      background: #7aa3be;
+      display: none;
+    }
+
     .slider-nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 0 $padding-xl;
+      padding: 0 $padding-md;
+      // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
+      // padding-left: 0;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 0 $padding-xl;
+        // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
+        // padding-left: $padding-sm;
+      }
 
       @media (min-width: $breakpoint-lg) {
         padding-right: 0;
@@ -50,7 +88,15 @@
     height: 100%;
 
     .swiper {
-      padding: 0 $padding-xl;
+      padding: 0 $padding-md;
+      // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
+      // padding-left: 0;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 0 $padding-xl;
+        // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
+        // padding-left: $padding-sm;
+      }
     }
 
     .swiper-slide {
