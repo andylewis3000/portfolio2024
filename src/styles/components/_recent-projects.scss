@@ -21,15 +21,9 @@
     gap: 48px 24px;
     padding: $padding-lg 0;
     padding-right: 0;
-    // border: 1px solid $colour-light-blue;
-    // background: rgba(41, 47, 54, 0.5);
     background: $card-bg;
     backdrop-filter: blur(1px);
     border-radius: $border-radius-sm;
-    // [ ] ONLY IF :before & :after ELEMENTS PRESENT
-    // border-left: 0;
-    // border-top-left-radius: 0 !important;
-    // border-bottom-left-radius: 0 !important;
 
     @media (min-width: $breakpoint-md) {
       padding: $padding-xl 0;
@@ -68,13 +62,9 @@
       justify-content: center;
       align-items: flex-start;
       padding: 0 $padding-md;
-      // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
-      // padding-left: 0;
 
       @media (min-width: $breakpoint-md) {
         padding: 0 $padding-xl;
-        // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
-        // padding-left: $padding-sm;
       }
 
       @media (min-width: $breakpoint-lg) {
@@ -89,13 +79,9 @@
 
     .swiper {
       padding: 0 $padding-md;
-      // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
-      // padding-left: 0;
 
       @media (min-width: $breakpoint-md) {
         padding: 0 $padding-xl;
-        // [ ] ONLY IF .recent-projects__content HAS :before & ::after ELEMENTS ACTIVE
-        // padding-left: $padding-sm;
       }
     }
 
@@ -105,44 +91,12 @@
       @media (min-width: $breakpoint-md) {
         width: 70%;
       }
+
+      &.swiper-slide-active {
+        .project-card .project-card__image {
+          opacity: 1;
+        }
+      }
     }
   }
-
-  // Blur Effect on sides of slider .slider:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 24px;
-  //   height: 100%;
-  //   background: rgb(243, 233, 210);
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba(243, 233, 210, 1) 0%,
-  //     rgba(243, 233, 210, 0.75) 25%,
-  //     rgba(243, 233, 210, 0.5) 50%,
-  //     rgba(243, 233, 210, 0.25) 75%,
-  //     rgba(243, 233, 210, 0) 100%
-  //   );
-  //   z-index: 10;
-  // }
-
-  // .slider:after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   width: 24px;
-  //   height: 100%;
-  //   background: rgb(243, 233, 210);
-  //   background: linear-gradient(
-  //     270deg,
-  //     rgba(243, 233, 210, 1) 0%,
-  //     rgba(243, 233, 210, 0.75) 25%,
-  //     rgba(243, 233, 210, 0.5) 50%,
-  //     rgba(243, 233, 210, 0.25) 75%,
-  //     rgba(243, 233, 210, 0) 100%
-  //   );
-  //   z-index: 10;
-  // }
 }
