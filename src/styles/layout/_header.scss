@@ -3,14 +3,15 @@
 
 .header {
   position: sticky;
-  // top: 1rem;
+  top: 1rem;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 2rem);
   max-width: 1280px;
   margin-inline: auto;
   height: 72px;
   z-index: 10;
+  color: transparent;
   background: transparent;
   transition: all 0.3s ease-in-out;
   border-radius: $border-radius-lg;
@@ -32,7 +33,7 @@
     grid-template-columns: 1fr 1fr;
 
     @media (min-width: $breakpoint-md) {
-      grid-template-columns: minmax(100px, 3fr) 7fr;
+      grid-template-columns: minmax(100px, 3fr) 6fr;
     }
   }
 
@@ -59,8 +60,9 @@
 
 // Header Color Change on Scroll
 .header-bg-color {
-  background: $colour-dark-blue;
-  border: 1px solid $secondary-accent;
+  background: rgba(41, 47, 54, 0.7);
+  backdrop-filter: blur(5px);
+  // border: 1px solid $secondary-accent;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 

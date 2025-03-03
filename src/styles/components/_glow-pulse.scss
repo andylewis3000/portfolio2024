@@ -2,7 +2,14 @@
   width: 20%;
   height: auto;
   aspect-ratio: 1/1;
-  background: $colour-light-blue;
+  // background: $colour-light-blue;
+  background: rgb(255, 35, 239);
+  background: radial-gradient(
+    circle,
+    rgba(255, 35, 239, 1) 0%,
+    rgba(138, 58, 228, 1) 50%,
+    rgba(94, 86, 255, 0) 100%
+  );
   z-index: -1;
   position: absolute;
   top: 5%;

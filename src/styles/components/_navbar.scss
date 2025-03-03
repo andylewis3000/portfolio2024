@@ -24,7 +24,6 @@
     right: unset;
     height: auto;
     background: transparent;
-    // border-radius: $border-radius-lg;
   }
 
   .header-logo {
@@ -59,24 +58,17 @@
     }
 
     li a {
-      font-size: 1.5rem;
+      font-size: 1.125rem;
       font-family: $heading-font;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-weight: 500;
       padding: 12px 16px 8px;
-      // border-radius: 4px;
       background: transparent;
       transition: all 0.3s ease-in-out;
       color: $colour-beige;
-      // color: $secondary-accent;
-
-      @media (min-width: $breakpoint-md) {
-        font-size: 1rem;
-      }
     }
 
     li a:hover {
-      color: $secondary-accent-light; // Blue
+      color: $secondary-accent-light !important; // Blue
       text-shadow: 0 0 10px $secondary-accent-light; // Blue
       // color: $primary-accent; // Red
       // text-shadow: 0 0 10px $primary-accent; // Red
@@ -84,6 +76,17 @@
 
     li:last-of-type {
       margin-right: 0;
+    }
+  }
+
+  .social-links {
+    @media (min-width: $breakpoint-md) {
+      margin-left: 2rem;
+    }
+    a:hover {
+      svg {
+        fill: $secondary-accent-light !important;
+      }
     }
   }
 
@@ -122,24 +125,27 @@
   }
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 // Mobile Nav Open
 .main-nav.active {
   display: flex;
-  // top: -1rem;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background: $colour-light-blue;
-  // z-index: 10001;
-  overflow: hidden;
+  top: -1px;
+  right: -1px;
+  width: calc(100% + 2px);
+  height: calc(100vh - 2rem);
+  background: rgba(41, 47, 54, 0.95);
+  backdrop-filter: blur(5px);
+  border: 1px solid $secondary-accent;
+  border-radius: $border-radius-lg;
+
   @media (min-width: $breakpoint-md) {
-    // top: 0;
     height: auto;
-    background: $colour-dark-blue;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    top: unset;
+    right: unset;
+    position: relative;
   }
 
   .navClose {
@@ -147,12 +153,12 @@
   }
 
   ul li a {
-    color: $colour-beige !important;
+    color: $colour-beige;
   }
 
   .social-links {
     a svg {
-      fill: $colour-beige !important;
+      fill: $colour-beige;
     }
   }
 }

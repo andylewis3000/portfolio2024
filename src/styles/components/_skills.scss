@@ -38,23 +38,23 @@
       text-align: left;
       padding: $padding-md;
       display: inline-block;
-      border: 1px solid $secondary-accent;
+      border: 0.1px solid transparent;
       border-radius: $border-radius-sm;
+      background: $card-bg;
+      backdrop-filter: blur(1px);
       height: auto;
-      max-height: 70px;
       overflow: hidden;
-      transition: all 0.5s ease;
+      transition: all 0.2s ease;
       cursor: pointer;
 
       @media (min-width: $breakpoint-md) {
-        max-height: 80px;
         border-radius: $border-radius-lg;
       }
 
       &:hover {
-        transition: all 0.5s ease;
+        transition: all 1s ease;
         height: 100%;
-        max-height: 600px;
+        border: 1px solid $primary-accent;
       }
 
       h3 {
@@ -80,7 +80,6 @@
             position: relative;
             width: 1.5rem;
             height: 1.5rem;
-            // color: $secondary-accent;
             color: $colour-beige;
             opacity: 1;
             transition: all 0.3s ease-in-out;

@@ -3,13 +3,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  margin-top: -72px;
-  // background: $colour-beige;
-  overflow: hidden;
+  // overflow: hidden;
+  padding: 5rem 0;
 
   .container {
     position: relative;
-    padding-top: 120px;
   }
 
   .hero-content {
@@ -17,12 +15,12 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding-top: 92px;
+    // padding-top: 92px;
     align-items: center;
 
     &.half {
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2.5rem 1.5rem;
 
       @media (min-width: $breakpoint-md) {
         flex-direction: row;
@@ -30,11 +28,11 @@
 
       .hero-content__text {
         width: 100%;
-        align-items: flex-start;
-        //margin-top: -50%;
+        align-items: center;
 
         @media (min-width: $breakpoint-md) {
           width: 75%;
+          align-items: flex-start;
           margin-top: unset;
         }
       }
@@ -63,7 +61,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    text-align: left;
+    text-align: center;
+
+    @media (min-width: $breakpoint-md) {
+      text-align: left;
+    }
 
     .heading {
       width: 100%;
@@ -76,20 +78,45 @@
   }
 
   .hero-content__image {
-    // position: absolute;
     position: relative;
-    top: 0;
-    right: 0;
     width: 100%;
-    background: $colour-red;
-    border-radius: 50%;
-    overflow: clip;
+    background: none;
+    // overflow: clip;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -0%;
+      right: 35%;
+      width: 17.5%;
+      height: 125%;
+      background: none;
+      border: 1px solid $primary-accent;
+      border-radius: $border-radius-lg;
+      z-index: -1;
+      transform: rotate(-45deg);
+      box-shadow: 0 0 25px 0px $primary-accent;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 25%;
+      right: 0%;
+      width: 125%;
+      height: 20%;
+      background: none;
+      border: 1px solid $primary-accent-light;
+      border-radius: $border-radius-lg;
+      z-index: -1;
+      transform: rotate(-25deg);
+      box-shadow: 0 0 25px 0px $primary-accent;
+    }
 
     @media (min-width: $breakpoint-md) {
       position: relative;
       width: 600px;
       height: auto;
-      // bottom: -20%;
     }
 
     img {
@@ -97,28 +124,45 @@
       height: 100%;
       margin: 0 auto;
       animation: headbob 3s;
+      border-radius: 50% 25% 100% 10%;
     }
   }
+  // .hero-content__image {
+  //   position: relative;
+  //   width: 100%;
+  //   background: $colour-red;
+  //   border-radius: 50%;
+  //   overflow: clip;
+
+  //   @media (min-width: $breakpoint-md) {
+  //     position: relative;
+  //     width: 600px;
+  //     height: auto;
+  //   }
+
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     margin: 0 auto;
+  //     animation: headbob 3s;
+  //   }
+  // }
 
   &.hero-large {
-    // height: 80vh;
-
-    @media (min-width: $breakpoint-md) {
-      height: 70vh;
-      min-height: 700px;
-      max-height: 700px;
-    }
+    height: auto;
+    // min-height: 700px;
+    // max-height: 700px;
   }
 
   &.hero-medium {
-    // height: 70vh;
-    min-height: 700px;
-    max-height: 1000px;
+    height: auto;
+    min-height: 500px;
+    // max-height: 450px;
   }
 
   &.hero-small {
-    // height: 50vh;
-    min-height: 500px;
-    max-height: 1000px;
+    height: auto;
+    min-height: 300px;
+    // max-height: 300px;
   }
 }
