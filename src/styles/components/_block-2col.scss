@@ -1,18 +1,34 @@
 .block-2col {
+  padding: $padding-lg 0 !important;
+
   .content-2col {
     display: grid;
     grid-template-columns: $grid-1col;
     gap: $grid-spacing-md;
+    background: $card-bg;
+    border-radius: $border-radius-sm;
+    padding: $padding-md;
 
     @media (min-width: $breakpoint-md) {
       grid-template-columns: $grid-2col;
       grid-gap: $grid-spacing-lg;
+      border-radius: $border-radius-lg;
+      padding: $padding-lg;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      padding: $padding-xl;
     }
 
     .content-2col__text {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap: $grid-spacing-sm;
+
+      @media (min-width: $breakpoint-md) {
+        gap: $grid-spacing-md;
+      }
     }
 
     .content-2col__text:nth-of-type(even) {
@@ -28,13 +44,21 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: $border-radius-sm;
+
+        @media (min-width: $breakpoint-md) {
+          border-radius: $border-radius-lg;
+        }
       }
     }
   }
 
   .content-2col.reverse {
     div:nth-of-type(odd) {
-      order: 2;
+      order: 1;
+      @media (min-width: $breakpoint-md) {
+        order: 2;
+      }
     }
 
     div:nth-of-type(even) {

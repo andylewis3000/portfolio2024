@@ -1,10 +1,21 @@
 import coolGuyAndy from '../../assets/images/cool-guy-posterize.png';
 import ButtonLink from '../elements/button';
+import GlowPulse from '../elements/glow-pulse';
 import Image from '../elements/image';
 
-const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
+const HeroNew = ({
+  heroSize,
+  heading,
+  subHeading,
+  imgActive,
+  btnActive,
+  glowPulse,
+  gpSize,
+  gpPosition,
+}) => {
   return (
     <section className={`hero ${heroSize}`}>
+      {glowPulse ? <GlowPulse position={gpPosition} size={gpSize} /> : ''}
       <div className="container">
         <div className={`hero-content ${imgActive ? 'half' : 'full'}`}>
           <div className="hero-content__text content-col">
