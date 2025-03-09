@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const ScrollFade = (children) => {
+const ScrollFade = ({ children }) => {
   return (
     <motion.div
       initial={{

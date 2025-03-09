@@ -7,6 +7,7 @@ import bxbGrab from '../../assets/images/BXB-Grab.png';
 import marosGrab from '../../assets/images/Maros-Grab.png';
 
 import { Link } from 'react-router-dom';
+import ContentColumn from '../elements/content-col';
 
 const projects = [
   {
@@ -37,18 +38,16 @@ const RecentProjects = () => {
     <section className="recent-projects">
       <div className="container">
         <div className="recent-projects__content">
-          <div className="slider-nav content-col">
-            <h2>Recent Projects</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-              exercitationem! Quae cupiditate voluptas nobis ipsa possimus
-              suscipit eaque commodi quam. Molestias nemo nostrum excepturi
-              natus?
-            </p>
-            <Link to="/work">
-              <button className="btn btn-primary">View All Work</button>
-            </Link>
-          </div>
+          <ContentColumn
+            extraClass={'slider-nav'}
+            heading={'Recent Projects'}
+            paragraph={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, exercitationem! Quae cupiditate voluptas nobis ipsa possimus suscipit eaque commodi quam. Molestias nemo nostrum excepturi natus?'
+            }
+            link={'/work'}
+            btnClass={'primary'}
+            btnText={'View All Work'}
+          />
           <div className="slider">
             <Swiper
               spaceBetween={24}
