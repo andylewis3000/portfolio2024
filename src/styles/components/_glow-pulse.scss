@@ -2,7 +2,6 @@
   width: 20%;
   height: auto;
   aspect-ratio: 1/1;
-  // background: $colour-light-blue;
   background: rgb(255, 35, 239);
   background: radial-gradient(
     circle,
@@ -13,7 +12,6 @@
   z-index: -1;
   position: absolute;
   top: 5%;
-  // right: -5%;
   animation: glowpulse 10s ease infinite;
 }
 

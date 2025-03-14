@@ -4,8 +4,8 @@ import GlowPulse from '../elements/glow-pulse';
 const HomeAbout = () => {
   return (
     <section className="home-about">
+      <GlowPulse position="right large" />
       <div className="container">
-        <GlowPulse position="right large" />
         <div className="home-about__content content-col">
           <h2>About Me</h2>
           <p>

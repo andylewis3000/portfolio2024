@@ -18,8 +18,8 @@ const Footer = () => {
               <small>&copy; {year}. All rights reserved.</small>
             </p>
           </div>
-          <GlowPulse position="right large" />
         </div>
+        <GlowPulse position="right large" />
       </footer>
     </>
   );
