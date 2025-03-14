@@ -38,7 +38,7 @@
       }
 
       .hero-content__image {
-        width: 75%;
+        width: 100%;
 
         @media (min-width: $breakpoint-md) {
           width: 50%;
@@ -80,38 +80,41 @@
   .hero-content__image {
     position: relative;
     width: 100%;
-    background: none;
-    // overflow: clip;
+    // background: none;
+    overflow: clip;
+    background: $card-bg;
+    border-radius: $border-radius-lg;
+    padding: 3rem 3rem 0;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: -0%;
-      right: 35%;
-      width: 17.5%;
-      height: 125%;
-      background: none;
-      border: 1px solid $primary-accent;
-      border-radius: $border-radius-lg;
-      z-index: -1;
-      transform: rotate(-45deg);
-      box-shadow: 0 0 25px 0px $primary-accent;
-    }
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -0%;
+    //   right: 35%;
+    //   width: 17.5%;
+    //   height: 125%;
+    //   background: none;
+    //   border: 1px solid $primary-accent;
+    //   border-radius: $border-radius-lg;
+    //   z-index: -1;
+    //   transform: rotate(-45deg);
+    //   box-shadow: 0 0 25px 0px $primary-accent;
+    // }
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 25%;
-      right: 0%;
-      width: 125%;
-      height: 20%;
-      background: none;
-      border: 1px solid $primary-accent-light;
-      border-radius: $border-radius-lg;
-      z-index: -1;
-      transform: rotate(-25deg);
-      box-shadow: 0 0 25px 0px $primary-accent;
-    }
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 25%;
+    //   right: 0%;
+    //   width: 125%;
+    //   height: 20%;
+    //   background: none;
+    //   border: 1px solid $primary-accent-light;
+    //   border-radius: $border-radius-lg;
+    //   z-index: -1;
+    //   transform: rotate(-25deg);
+    //   box-shadow: 0 0 25px 0px $primary-accent;
+    // }
 
     @media (min-width: $breakpoint-md) {
       position: relative;
@@ -124,7 +127,8 @@
       height: 100%;
       margin: 0 auto;
       animation: headbob 3s;
-      border-radius: 50% 25% 100% 10%;
+      // background: $card-bg;
+      // border-radius: $border-radius-lg;
     }
   }
   // .hero-content__image {
