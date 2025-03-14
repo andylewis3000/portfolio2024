@@ -8,6 +8,9 @@ import Home from './pages/home';
 import About from './pages/about';
 import Work from './pages/work';
 import Contact from './pages/contact';
+import YatesOutdoor from './pages/projects/yates-outdoor';
+import MarosBistro from './pages/projects/maros-bistro';
+import BxB from './pages/projects/bxb-bins';
 
 const App = () => {
   const location = useLocation();
@@ -29,6 +32,9 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/yates-outdoor" element={<YatesOutdoor />} />
+          <Route path="/projects/maros-bistro" element={<MarosBistro />} />
+          <Route path="/projects/bxb-bins" element={<BxB />} />
         </Routes>
       </AnimatePresence>
       <HireCTA />
