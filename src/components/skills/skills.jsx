@@ -1,6 +1,7 @@
 import DevSkills from './skills-dev';
 import DesignSkills from './skills-design';
 import PlatformSkills from './skills-platform-tools';
+import ToolsSkills from './skills-tools';
 import GlowPulse from '../elements/glow-pulse';
 
 const Skills = () => {
@@ -14,6 +15,7 @@ const Skills = () => {
             <DevSkills />
             <DesignSkills />
             <PlatformSkills />
+            <ToolsSkills />
           </div>
         </div>
       </div>

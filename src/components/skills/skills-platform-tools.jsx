@@ -5,7 +5,6 @@ import {
   FaWordpress,
   FaDrupal,
 } from 'react-icons/fa6';
-import { SiAsana, SiJira, SiSlack } from 'react-icons/si';
 
 const icons = [
   {
@@ -32,21 +31,6 @@ const icons = [
     key: 5,
     icon: FaWix,
     title: 'Wix',
-  },
-  {
-    key: 6,
-    icon: SiAsana,
-    title: 'Asana',
-  },
-  {
-    key: 7,
-    icon: SiJira,
-    title: 'Jira',
-  },
-  {
-    key: 8,
-    icon: SiSlack,
-    title: 'Slack',
   },
 ];
 

@@ -33,18 +33,18 @@
     // padding: $padding-lg 0 0;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: $grid-1col;
     grid-template-rows: auto;
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
+    grid-column-gap: $grid-spacing-sm * 1.5;
+    grid-row-gap: $grid-spacing-sm * 1.5;
     position: relative;
 
     @media (min-width: $breakpoint-sm) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: $grid-2col;
     }
 
-    @media (min-width: $breakpoint-md) {
-      grid-template-columns: repeat(3, 1fr);
+    @media (min-width: $breakpoint-xl) {
+      grid-template-columns: $grid-4col;
     }
 
     .skills-content__group {
