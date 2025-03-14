@@ -15,21 +15,21 @@ const projects = [
     name: 'Yates Outdoor Sales',
     type: 'Web design & development',
     img: yatesGrab,
-    link: '/projects/yates',
+    link: '/projects/yates-outdoor',
   },
   {
     id: 2,
     name: 'BXB Disposal',
     type: 'Web design & development',
     img: bxbGrab,
-    link: '/projects/bxb',
+    link: '/projects/bxb-bins',
   },
   {
     id: 3,
     name: "Maro's Bistro",
     type: 'Web development',
     img: marosGrab,
-    link: '/projects/maros',
+    link: '/projects/maros-bistro',
   },
 ];
 

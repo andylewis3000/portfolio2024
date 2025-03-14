@@ -10,31 +10,31 @@ const projects = [
   {
     id: 1,
     name: 'Yates Outdoor Sales',
-    subheading: 'Web design & development',
+    subheading: 'Web Design & Development',
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: yatesGrab,
-    link: '/projects/yates',
+    link: '/projects/yates-outdoor',
     reverse: true,
   },
   {
     id: 2,
     name: 'BXB Disposal',
-    subheading: 'Web design & development',
+    subheading: 'Web Design & Development, Branding',
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: bxbGrab,
-    link: '/projects/bxb',
+    link: '/projects/bxb-bins',
     reverse: false,
   },
   {
     id: 3,
     name: "Maro's Bistro",
-    subheading: 'Web development',
+    subheading: 'Web Development',
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: marosGrab,
-    link: '/projects/maros',
+    link: '/projects/maros-bistro',
     reverse: true,
   },
 ];
