@@ -104,39 +104,39 @@ button {
   }
 }
 
-// .btn-primary {
-//   // color: $white;
-//   color: $colour-dark-blue;
-//   background: $primary-accent;
-
-//   &:hover {
-//     background: $primary-accent-light;
-//   }
-// }
-
-// .btn-secondary {
-//   // color: $white;
-//   color: $colour-dark-blue;
-//   background: $secondary-accent;
-
-//   &:hover {
-//     background: $secondary-accent-light;
-//   }
-// }
-
 /* Containers, Sections, etc */
+.page-container {
+  background: rgba(49, 55, 63, 0.5);
+  backdrop-filter: blur(1px);
+  border-radius: $border-radius-lg;
+  width: calc(100% - 2rem);
+  // max-width: 1280px;
+  margin-inline: auto;
+  padding: $padding-sm 0;
+
+  @media (min-width: $breakpoint-md) {
+    width: calc(100% - 3rem);
+    padding: $padding-md 0;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding: $padding-lg 0;
+  }
+}
 .container {
+  // max-width: 1280px;
   width: 100%;
   height: 100%;
-  max-width: 1280px;
   margin-inline: auto;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
+  padding: 0 $padding-sm;
   position: relative;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 0 $padding-md;
+  }
 }
 
 section:not(.header, .hero) {
-  // section:not(.header) {
   padding: 4rem 0;
 
   @media (min-width: $breakpoint-md) {
@@ -157,12 +157,6 @@ section:not(.header, .hero) {
 .colour-lightblue {
   color: $colour-light-blue;
 }
-// .colour-orange {
-//   color: $colour-red;
-// }
 .colour-beige {
   color: $colour-beige;
 }
-// .colour-yellow {
-//   color: $colour-yellow;
-// }

@@ -53,7 +53,7 @@ const icons = [
 const PlatformSkills = () => {
   return (
     <div className="skills-content__group">
-      <h3>Platforms</h3>
+      <h4>Platforms</h4>
       <ul>
         {icons.map((item) => {
           return (

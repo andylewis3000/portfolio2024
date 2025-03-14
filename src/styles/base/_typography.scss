@@ -153,8 +153,12 @@ h4 {
 
 p {
   font-family: $body-font;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.75rem;
   letter-spacing: 1px;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 1.125rem;
+  }
 }

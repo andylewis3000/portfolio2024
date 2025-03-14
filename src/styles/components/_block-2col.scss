@@ -1,23 +1,30 @@
 .block-2col {
-  padding: $padding-lg 0 !important;
+  padding: $padding-sm 0 !important;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $padding-md 0 !important;
+  }
 
   .content-2col {
     display: grid;
     grid-template-columns: $grid-1col;
     gap: $grid-spacing-md;
-    background: $card-bg;
+    // background: $card-bg;
+    // border: 1px solid $colour-beige;
+    border-top: 1px solid $colour-beige;
+    border-left: 1px solid $colour-beige;
     border-radius: $border-radius-sm;
-    padding: $padding-md;
+    padding: $padding-sm;
 
     @media (min-width: $breakpoint-md) {
       grid-template-columns: $grid-2col;
       grid-gap: $grid-spacing-lg;
       border-radius: $border-radius-lg;
-      padding: $padding-lg;
+      padding: $padding-md;
     }
 
     @media (min-width: $breakpoint-lg) {
-      padding: $padding-xl;
+      padding: $padding-lg;
     }
 
     .content-2col__text {
@@ -25,9 +32,11 @@
       flex-direction: column;
       justify-content: center;
       gap: $grid-spacing-sm;
+      padding: $padding-md 0;
 
       @media (min-width: $breakpoint-md) {
         gap: $grid-spacing-md;
+        padding: $padding-xl 0;
       }
     }
 

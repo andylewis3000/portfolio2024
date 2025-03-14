@@ -16,9 +16,11 @@ const Home = () => {
         imgActive={true}
         btnActive={true}
       />
-      <HomeAbout />
-      <RecentProjects />
-      <Skills />
+      <div className="page-container">
+        <HomeAbout />
+        <RecentProjects />
+        <Skills />
+      </div>
     </PageTransition>
   );
 };

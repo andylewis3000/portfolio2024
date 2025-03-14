@@ -1,12 +1,18 @@
 footer {
   position: relative;
-  width: 100%;
+  width: calc(100% - 2rem);
   padding: 96px 0;
   text-align: center;
   color: $colour-beige;
+  background: rgba(49, 55, 63, 0.5);
+  backdrop-filter: blur(1px);
+  border-radius: $border-radius-lg $border-radius-lg 0 0;
+  // max-width: 1280px;
+  margin-inline: auto;
 
   @media (min-width: $breakpoint-md) {
     padding: 128px 0;
+    width: calc(100% - 3rem);
   }
 
   .container {
