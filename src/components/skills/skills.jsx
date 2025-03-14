@@ -8,11 +8,13 @@ const Skills = () => {
     <section className="skills">
       <GlowPulse position="left large" />
       <div className="container">
-        <h2>Languages & Tools</h2>
-        <div className="skills-content container">
-          <DevSkills />
-          <DesignSkills />
-          <PlatformSkills />
+        <div className="skills-content">
+          <h2>Languages & Tools</h2>
+          <div className="skills-content__grid">
+            <DevSkills />
+            <DesignSkills />
+            <PlatformSkills />
+          </div>
         </div>
       </div>
     </section>

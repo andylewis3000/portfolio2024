@@ -37,7 +37,7 @@ const icons = [
 const DesignSkills = () => {
   return (
     <div className="skills-content__group">
-      <h3>Design</h3>
+      <h4>Design</h4>
       <ul>
         {icons.map((item) => {
           return (

@@ -1,7 +1,7 @@
 /* Recent Projects */
 .recent-projects {
   position: relative;
-  margin: 0 auto;
+  margin-inline: auto;
   text-align: left;
 
   h2 {
@@ -21,9 +21,11 @@
     gap: 48px 24px;
     padding: $padding-lg 0;
     padding-right: 0;
-    background: $card-bg;
-    backdrop-filter: blur(1px);
+    // background: $card-bg;
+    // backdrop-filter: blur(1px);
     border-radius: $border-radius-sm;
+    border-top: 1px solid $colour-beige;
+    border-left: 1px solid $colour-beige;
 
     @media (min-width: $breakpoint-md) {
       padding: $padding-xl 0;

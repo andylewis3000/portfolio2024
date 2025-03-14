@@ -30,7 +30,7 @@
     display: block;
 
     @media (min-width: $breakpoint-md) {
-      display: none !important;
+      display: block !important;
     }
 
     h3 {
@@ -69,7 +69,7 @@
 
     li a:hover {
       color: $secondary-accent-light !important; // Blue
-      text-shadow: 0 0 10px $secondary-accent-light; // Blue
+      // text-shadow: 0 0 10px $secondary-accent-light; // Blue
       // color: $primary-accent; // Red
       // text-shadow: 0 0 10px $primary-accent; // Red
     }
@@ -134,7 +134,8 @@
   height: calc(100vh - 2rem);
   background: rgba(41, 47, 54, 0.95);
   backdrop-filter: blur(5px);
-  border: 1px solid $secondary-accent;
+  // border: 1px solid $secondary-accent;
+  border: 1px solid $colour-beige;
   border-radius: $border-radius-lg;
 
   @media (min-width: $breakpoint-md) {

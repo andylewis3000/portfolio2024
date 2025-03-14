@@ -51,27 +51,30 @@ const Work = () => {
         gpPosition={'left'}
         gpSize={'large'}
       />
-      {projects.map((project) => {
-        const { id, name, subheading, paragraph, img, link, reverse } = project;
-        return (
-          <Block2Col
-            key={id}
-            reverse={reverse}
-            heading2={name}
-            subheading={subheading}
-            text2={paragraph}
-            button={true}
-            btnClass={'btn-secondary'}
-            title={'View Project'}
-            link={link}
-            img={true}
-            imgURL={img}
-            imgAlt={name}
-            imgWidth={600}
-            imgHeight={400}
-          />
-        );
-      })}
+      <div className="page-container">
+        {projects.map((project) => {
+          const { id, name, subheading, paragraph, img, link, reverse } =
+            project;
+          return (
+            <Block2Col
+              key={id}
+              reverse={reverse}
+              heading2={name}
+              subheading={subheading}
+              text2={paragraph}
+              button={true}
+              btnClass={'btn-secondary'}
+              title={'View Project'}
+              link={link}
+              img={true}
+              imgURL={img}
+              imgAlt={name}
+              imgWidth={600}
+              imgHeight={400}
+            />
+          );
+        })}
+      </div>
     </PageTransition>
   );
 };

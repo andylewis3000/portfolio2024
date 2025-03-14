@@ -79,7 +79,7 @@ const icons = [
 const DevSkills = () => {
   return (
     <div className="skills-content__group">
-      <h3>Dev</h3>
+      <h4>Dev</h4>
       <ul>
         {icons.map((item) => {
           return (
