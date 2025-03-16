@@ -4,7 +4,7 @@ import PageTransition from '../../scripts/transitions';
 const BxB = () => {
   return (
     <PageTransition>
-      <HeroNew heroSize={'small'} heading={'BxB Bins'} />;
+      <HeroNew heroSize={'small'} heading={'BxB Bins'} />
       <div className="page-container"></div>
     </PageTransition>
   );
