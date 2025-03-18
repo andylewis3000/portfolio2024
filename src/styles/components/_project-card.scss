@@ -1,15 +1,16 @@
 .project-card {
   position: relative;
   width: auto;
-  height: 300px;
+  height: auto;
+  // height: 300px;
   border-radius: $border-radius-sm;
   background: transparent;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
-  @media (min-width: $breakpoint-md) {
-    height: 500px;
-  }
+  // @media (min-width: $breakpoint-md) {
+  //   height: 400px;
+  // }
 
   .project-card__image {
     height: 100%;
@@ -55,7 +56,7 @@
 }
 
 .project-card:hover {
-  border: 1px solid $primary-accent;
+  // border: 1px solid $primary-accent;
   background: rgba(41, 47, 54, 0.8);
   transition: all 0.3s ease-in-out;
   .project-card__image img {

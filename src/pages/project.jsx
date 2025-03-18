@@ -43,6 +43,7 @@ const projects = {
         </p>
       </>
     ),
+    link: '#',
   },
   'bxb-bins': {
     heading: 'BXB Bins',
@@ -80,6 +81,7 @@ const projects = {
         </p>
       </>
     ),
+    link: '#',
   },
   'maros-bistro': {
     heading: "Maro's Bistro",
@@ -117,6 +119,7 @@ const projects = {
         </p>
       </>
     ),
+    link: '#',
   },
 };
 
@@ -140,6 +143,9 @@ const Project = () => {
                   </>
                 }
                 paragraph={project.paragraph}
+                link={project.link}
+                btnClass={'secondary'}
+                btnText={'Launch Project'}
               />
               <ImageGallery />
             </div>

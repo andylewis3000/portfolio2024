@@ -6,10 +6,10 @@ import { FaBarsStaggered, FaXmark } from 'react-icons/fa6';
 
 const Navbar = () => {
   const navLinks = [
-    { id: 1, link: '/', name: 'Home' },
+    // { id: 1, link: '/', name: 'Home' },
+    { id: 1, link: '/projects', name: 'Projects' },
     { id: 2, link: '/about', name: 'About' },
-    { id: 3, link: '/projects', name: 'Projects' },
-    { id: 4, link: '/contact', name: 'Contact' },
+    { id: 3, link: '/contact', name: 'Contact' },
   ];
 
   const [showNavbar, setShowNavbar] = useState(false);
