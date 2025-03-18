@@ -27,7 +27,7 @@ const ContentColumn = ({
   btnText,
 }) => {
   return (
-    <div className={`content-col` + (extraClass ? ` l${extraClass}` : '')}>
+    <div className={`content-col` + (extraClass ? ` ${extraClass}` : '')}>
       <Reveal
         cascade
         // duration={300}
