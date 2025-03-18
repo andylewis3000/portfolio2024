@@ -1,0 +1,17 @@
+.content-col {
+  display: block;
+
+  div {
+    p {
+      margin-bottom: 1rem;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

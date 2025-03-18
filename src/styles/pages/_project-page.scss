@@ -1,0 +1,10 @@
+.project-content {
+  display: grid;
+  grid-template-columns: $grid-1col;
+  grid-column-gap: $grid-spacing-lg;
+  grid-row-gap: $grid-spacing-lg;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: $grid-2col;
+  }
+}

@@ -6,6 +6,9 @@
     max-width: 750px;
     text-align: center;
 
+    & .content-col {
+      display: flex;
+    }
     h2 {
       position: relative;
       display: inline-block;
