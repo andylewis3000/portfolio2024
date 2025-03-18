@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import GlowPulse from '../elements/glow-pulse';
+import ContentColumn from '../elements/content-col';
 
 const HomeAbout = () => {
   return (
@@ -7,6 +8,22 @@ const HomeAbout = () => {
       <GlowPulse position="right large" />
       <div className="container">
         <div className="home-about__content content-col">
+          <ContentColumn
+            heading="A little bit about me..."
+            paragraph={
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                exercitationem! Quae cupiditate voluptas nobis ipsa possimus
+                suscipit eaque commodi quam. Molestias nemo nostrum excepturi
+                natus?
+              </p>
+            }
+            link={'/about'}
+            btnClass={'secondary'}
+            btnText={'Learn More'}
+          />
+        </div>
+        {/* <div className="home-about__content content-col">
           <h2>About Me</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
@@ -19,7 +36,7 @@ const HomeAbout = () => {
           <Link to="/about">
             <button className="btn btn-secondary">Read More</button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

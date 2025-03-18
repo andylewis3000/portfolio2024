@@ -42,9 +42,14 @@ const RecentProjects = () => {
             extraClass={'slider-nav'}
             heading={'Recent Projects'}
             paragraph={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, exercitationem! Quae cupiditate voluptas nobis ipsa possimus suscipit eaque commodi quam. Molestias nemo nostrum excepturi natus?'
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                exercitationem! Quae cupiditate voluptas nobis ipsa possimus
+                suscipit eaque commodi quam. Molestias nemo nostrum excepturi
+                natus?
+              </p>
             }
-            link={'/work'}
+            link={'/projects'}
             btnClass={'primary'}
             btnText={'View All Work'}
           />

@@ -8,43 +8,46 @@ import marosGrab from '../assets/images/Maros-Grab.png';
 
 const projects = [
   {
-    id: 1,
+    id: 'yates-outdoor',
     name: 'Yates Outdoor Sales',
     subheading: 'Web Design & Development',
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: yatesGrab,
-    link: '/projects/yates-outdoor',
+    // link: '/projects/${id}',
+    // link: '/projects/yates-outdoor',
     reverse: true,
   },
   {
-    id: 2,
+    id: 'bxb-bins',
     name: 'BXB Disposal',
     subheading: 'Web Design & Development, Branding',
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: bxbGrab,
-    link: '/projects/bxb-bins',
+    // link: '/projects/${id}',
+    // link: '/projects/bxb-bins',
     reverse: false,
   },
   {
-    id: 3,
+    id: 'maros-bistro',
     name: "Maro's Bistro",
     subheading: 'Web Development',
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: marosGrab,
-    link: '/projects/maros-bistro',
+    // link: '/projects/${id}',
+    // link: '/projects/maros-bistro',
     reverse: true,
   },
 ];
 
-const Work = () => {
+const Projects = () => {
   return (
     <PageTransition>
       <HeroNew
         heroSize={'hero-small'}
-        heading={'Work'}
+        heading={'Projects'}
         imgActive={false}
         btnActive={false}
         glowPulse={true}
@@ -53,8 +56,8 @@ const Work = () => {
       />
       <div className="page-container">
         {projects.map((project) => {
-          const { id, name, subheading, paragraph, img, link, reverse } =
-            project;
+          // const { id, name, subheading, paragraph, img, link, reverse } =
+          const { id, name, subheading, paragraph, img, reverse } = project;
           return (
             <Block2Col
               key={id}
@@ -65,7 +68,8 @@ const Work = () => {
               button={true}
               btnClass={'btn-secondary'}
               title={'View Project'}
-              link={link}
+              link={`/projects/${id}`}
+              // link={link}
               img={true}
               imgURL={img}
               imgAlt={name}
@@ -79,4 +83,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

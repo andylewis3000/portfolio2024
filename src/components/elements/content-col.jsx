@@ -18,13 +18,16 @@ const customAnimation = keyframes`
 const ContentColumn = ({
   extraClass,
   heading,
+  subheading,
+  note,
   paragraph,
+  paragraph2,
   link,
   btnClass,
   btnText,
 }) => {
   return (
-    <div className={`content-col ${extraClass}`}>
+    <div className={`content-col` + (extraClass ? ` l${extraClass}` : '')}>
       <Reveal
         cascade
         // duration={300}
@@ -32,11 +35,18 @@ const ContentColumn = ({
         fraction={0.75}
         keyframes={customAnimation}
       >
-        <h2>{heading}</h2>
-        <p>{paragraph}</p>
-        <Link to={link}>
-          <button className={`btn btn-${btnClass}`}>{btnText}</button>
-        </Link>
+        {heading ? <h2>{heading}</h2> : ''}
+        {subheading ? <h4>{subheading}</h4> : ''}
+        {note ? <h5>{note}</h5> : ''}
+        {paragraph ? paragraph : ''}
+        {paragraph2 ? <p>{paragraph2}</p> : ''}
+        {link ? (
+          <Link to={link}>
+            <button className={`btn btn-${btnClass}`}>{btnText}</button>
+          </Link>
+        ) : (
+          ''
+        )}
       </Reveal>
     </div>
   );
