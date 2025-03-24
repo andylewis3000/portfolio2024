@@ -1,23 +1,13 @@
 .block-2col {
-  // padding: $padding-sm 0 !important;
-
-  // @media (min-width: $breakpoint-md) {
-  //   padding: $padding-md 0 !important;
-  // }
-
   .content-2col {
     display: grid;
     grid-template-columns: $grid-1col;
     gap: $grid-spacing-md;
-    // background: $card-bg;
-    // border: 1px solid $colour-beige;
-    // border-top: 1px solid $colour-beige;
-    // border-left: 1px solid $colour-beige;
     border-radius: $border-radius-sm;
     padding: $padding-sm;
     box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       grid-template-columns: $grid-2col;
       grid-gap: $grid-spacing-lg;
       border-radius: $border-radius-lg;
@@ -43,21 +33,17 @@
 
     .content-2col__text:nth-of-type(even) {
       margin-top: 0;
-
-      // @media (min-width: $breakpoint-md) {
-      //   margin-top: 120px;
-      // }
     }
 
     .content-2col__img {
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         border-radius: $border-radius-sm;
         box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.3);
 
-        @media (min-width: $breakpoint-md) {
+        @media (min-width: $breakpoint-lg) {
           border-radius: $border-radius-lg;
         }
       }
