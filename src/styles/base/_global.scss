@@ -39,6 +39,19 @@ p {
   color: $colour-beige;
 }
 
+p {
+  a {
+    color: $primary-accent !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid $primary-accent;
+    }
+  }
+}
+
 /* Links */
 a,
 a:hover,

@@ -129,7 +129,13 @@ const Project = () => {
 
   return (
     <PageTransition>
-      <HeroNew heroSize={'small'} heading={'Projects'} />
+      <HeroNew
+        heroSize={'hero-small'}
+        heading={'Projects'}
+        glowPulse={true}
+        gpPosition={'left'}
+        gpSize={'large'}
+      />
       <div className="page-container">
         <section className="project">
           <div className="container">
