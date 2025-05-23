@@ -12,12 +12,15 @@ form {
   textarea {
     width: 100%;
     padding: 1rem;
-    background: none;
-    color: $colour-beige;
-    border: 1px solid $secondary-accent;
+    // background: none;
+    color: $colour-dark-blue;
+    // border: 1px solid $secondary-accent;
+    border: none;
+    background: #fefefe;
     border-radius: $border-radius-sm;
     resize: none;
     line-height: 1.5rem;
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.3);
   }
 
   input:focus,

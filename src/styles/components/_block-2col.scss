@@ -4,18 +4,18 @@
     grid-template-columns: $grid-1col;
     gap: $grid-spacing-md;
     border-radius: $border-radius-sm;
-    padding: $padding-sm;
-    box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+    // padding: $padding-sm;
+    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-lg) {
       grid-template-columns: $grid-2col;
       grid-gap: $grid-spacing-lg;
-      border-radius: $border-radius-lg;
-      padding: $padding-md;
+      // border-radius: $border-radius-lg;
+      // padding: $padding-md;
     }
 
     @media (min-width: $breakpoint-lg) {
-      padding: $padding-lg;
+      // padding: $padding-lg;
     }
 
     .content-2col__text {

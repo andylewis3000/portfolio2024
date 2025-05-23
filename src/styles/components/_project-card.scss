@@ -4,8 +4,9 @@
   height: auto;
   // height: 300px;
   border-radius: $border-radius-sm;
-  background: transparent;
+  background: #fefefe;
   overflow: hidden;
+  // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 
   // @media (min-width: $breakpoint-md) {

@@ -23,7 +23,7 @@ const HeroNew = ({
             {subHeading && <h4 className="subheading">{subHeading}</h4>}
             {btnActive && (
               <ButtonLink
-                btnClass={'btn-secondary'}
+                btnClass={'btn-primary'}
                 link="/work"
                 title="Learn How"
               />
