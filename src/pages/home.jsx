@@ -11,7 +11,7 @@ const Home = () => {
         heroSize={'hero-large'}
         heading={'Your website probably needs help.'}
         subHeading={
-          "I'm a web developer based out of British Columbia, and I can help your website not suck."
+          "I'm a web designer and developer based out of British Columbia, and I can help your website not suck."
         }
         imgActive={true}
         btnActive={true}

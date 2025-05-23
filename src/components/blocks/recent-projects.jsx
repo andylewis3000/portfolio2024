@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 import yatesGrab from '../../assets/images/Yates-Grab.png';
@@ -57,17 +57,14 @@ const RecentProjects = () => {
             <Swiper
               spaceBetween={24}
               slidesPerView={'auto'}
+              // slidesPerView={1}
               centeredSlides={false}
               loop={true}
               grabCursor={true}
+              speed={1000}
+              modules={[Mousewheel, Autoplay]}
+              autoplay={{ delay: 3000 }}
               mousewheel={true}
-              modules={[Mousewheel]}
-
-              // breakpoints={{
-              //   768: {
-              //     slidesPerView: 1,
-              //   },
-              // }}
             >
               {projects.map((project) => {
                 const { id, name, type, img, link } = project;

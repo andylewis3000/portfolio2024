@@ -3,13 +3,14 @@ footer {
   width: calc(100% - 2rem);
   padding: 96px 0;
   text-align: center;
-  color: $colour-beige;
-  background: rgba(49, 55, 63, 0.5);
-  backdrop-filter: blur(1px);
+  // color: $colour-beige;
+  color: $colour-dark-blue;
+  // background: rgba(49, 55, 63, 0.5);
+  // backdrop-filter: blur(1px);
   border-radius: $border-radius-lg $border-radius-lg 0 0;
   max-width: 1920px;
   margin-inline: auto;
-  box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+  // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
   @media (min-width: $breakpoint-md) {
     padding: 128px 0;
@@ -34,7 +35,8 @@ footer {
         svg {
           width: 20px;
           height: auto;
-          fill: $colour-beige;
+          // fill: $colour-beige;
+          fill: $colour-dark-blue;
           transition: all 0.3s ease-in-out;
         }
         &:hover {
@@ -47,6 +49,7 @@ footer {
 
     .copyright {
       margin-top: 48px;
+      color: $colour-dark-blue;
 
       small {
         font-size: 0.875rem;

@@ -21,13 +21,15 @@
 
     h2 {
       margin: 0;
-      color: $colour-beige;
+      // color: $colour-beige;
+      color: $colour-dark-blue;
 
       svg {
         display: none;
         width: 32px;
         padding-top: 12px;
-        color: $colour-beige;
+        // color: $colour-beige;
+        color: $colour-dark-blue;
 
         @media (min-width: $breakpoint-md) {
           display: inline-block;

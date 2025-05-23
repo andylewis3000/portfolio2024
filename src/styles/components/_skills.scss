@@ -8,15 +8,15 @@
     flex-direction: column;
     align-items: flex-start;
     gap: $grid-spacing-lg;
-    padding: $padding-lg;
-    border-radius: $border-radius-sm;
+    // padding: $padding-lg;
+    // border-radius: $border-radius-sm;
     // border-top: 1px solid $colour-beige;
     // border-left: 1px solid $colour-beige;
-    box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-md) {
-      padding: $padding-xl;
-      border-radius: $border-radius-lg;
+      // padding: $padding-xl;
+      // border-radius: $border-radius-lg;
     }
   }
 
@@ -24,7 +24,8 @@
     position: relative;
     display: inline-block;
     z-index: 2;
-    color: $colour-beige;
+    color: $colour-dark-blue;
+    // color: $colour-beige;
     text-align: left;
   }
 
@@ -58,11 +59,13 @@
       display: inline-block;
       border: 1px solid transparent;
       border-radius: $border-radius-sm;
-      background: $card-bg;
+      // background: $card-bg;
+      background: #fefefe;
       backdrop-filter: blur(1px);
       overflow: hidden;
       transition: all 0.2s ease;
       cursor: pointer;
+      box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
       @media (min-width: $breakpoint-md) {
         border-radius: $border-radius-lg;
@@ -72,15 +75,16 @@
         transition: all 0.5s ease;
         height: 100%;
         // border: 1px solid $primary-accent;
-        box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+        // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
         transform: scale(1.025);
       }
 
-      h3 {
+      h4 {
         display: inline-block;
         margin-top: 0;
         margin-bottom: 0;
-        color: $colour-beige;
+        color: $colour-dark-blue;
+        // color: $colour-beige;
       }
 
       ul {
@@ -99,7 +103,8 @@
             position: relative;
             width: 1.5rem;
             height: 1.5rem;
-            color: $colour-beige;
+            color: $colour-dark-blue;
+            // color: $colour-beige;
             opacity: 1;
             transition: all 0.3s ease-in-out;
             cursor: pointer;
