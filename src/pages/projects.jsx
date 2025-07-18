@@ -58,7 +58,7 @@ const Projects = () => {
   return (
     <PageTransition>
       <HeroNew
-        heroSize={'hero-small'}
+        heroSize={'hero-medium'}
         heading={'Projects'}
         imgActive={false}
         btnActive={false}

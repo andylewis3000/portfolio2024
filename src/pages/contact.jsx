@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <PageTransition>
       <HeroNew
-        heroSize={'hero-small'}
+        heroSize={'hero-medium'}
         heading={'Contact'}
         imgActive={false}
         btnActive={false}

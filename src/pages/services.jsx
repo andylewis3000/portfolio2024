@@ -135,7 +135,7 @@ const Services = () => {
   return (
     <PageTransition>
       <HeroNew
-        heroSize={'hero-small'}
+        heroSize={'hero-medium'}
         heading={'Services'}
         imgActive={false}
         btnActive={false}

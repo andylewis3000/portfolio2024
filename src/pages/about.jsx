@@ -7,7 +7,7 @@ import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
 const About = () => {
   return (
     <PageTransition>
-      <HeroNew heroSize={'hero-small'} heading={'About Me'} />
+      <HeroNew heroSize={'hero-medium'} heading={'About Me'} />
       <div className="page-container">
         <Block2Col
           reveal={true}

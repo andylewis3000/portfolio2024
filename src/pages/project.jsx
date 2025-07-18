@@ -168,7 +168,7 @@ const Project = () => {
   return (
     <PageTransition>
       <HeroNew
-        heroSize={'hero-small'}
+        heroSize={'hero-medium'}
         heading={'Projects'}
         glowPulse={true}
         gpPosition={'left'}
