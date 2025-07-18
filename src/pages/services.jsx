@@ -5,10 +5,11 @@ import PageTransition from '../scripts/transitions';
 const services = [
   {
     id: 1,
-    name: 'Web Developement',
+    name: 'Web Development',
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique itaque ipsa quis laborum! At non laudantium dolorum dolores facere molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex tempora reprehenderit numquam odit eligendi obcaecati hic excepturi error, earum vel quo facilis quaerat quibusdam delectus necessitatibus similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos, voluptates aliquam natus esse provident excepturi laborum praesentium doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos, delectus non repellat consequuntur vero perspiciatis ab officiis id voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!',
     img: 'https://placehold.co/600x400',
+    reverse: true,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const services = [
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique itaque ipsa quis laborum! At non laudantium dolorum dolores facere molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex tempora reprehenderit numquam odit eligendi obcaecati hic excepturi error, earum vel quo facilis quaerat quibusdam delectus necessitatibus similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos, voluptates aliquam natus esse provident excepturi laborum praesentium doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos, delectus non repellat consequuntur vero perspiciatis ab officiis id voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!',
     img: 'https://placehold.co/600x400',
+    reverse: false,
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const services = [
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique itaque ipsa quis laborum! At non laudantium dolorum dolores facere molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex tempora reprehenderit numquam odit eligendi obcaecati hic excepturi error, earum vel quo facilis quaerat quibusdam delectus necessitatibus similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos, voluptates aliquam natus esse provident excepturi laborum praesentium doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos, delectus non repellat consequuntur vero perspiciatis ab officiis id voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!',
     img: 'https://placehold.co/600x400',
+    reverse: true,
   },
   {
     id: 4,
@@ -30,6 +33,23 @@ const services = [
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique itaque ipsa quis laborum! At non laudantium dolorum dolores facere molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex tempora reprehenderit numquam odit eligendi obcaecati hic excepturi error, earum vel quo facilis quaerat quibusdam delectus necessitatibus similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos, voluptates aliquam natus esse provident excepturi laborum praesentium doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos, delectus non repellat consequuntur vero perspiciatis ab officiis id voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!',
     img: 'https://placehold.co/600x400',
+    reverse: false,
+  },
+  {
+    id: 5,
+    name: 'Service Five',
+    paragraph:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique itaque ipsa quis laborum! At non laudantium dolorum dolores facere molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex tempora reprehenderit numquam odit eligendi obcaecati hic excepturi error, earum vel quo facilis quaerat quibusdam delectus necessitatibus similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos, voluptates aliquam natus esse provident excepturi laborum praesentium doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos, delectus non repellat consequuntur vero perspiciatis ab officiis id voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!',
+    img: 'https://placehold.co/600x400',
+    reverse: true,
+  },
+  {
+    id: 6,
+    name: 'Service Six',
+    paragraph:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique itaque ipsa quis laborum! At non laudantium dolorum dolores facere molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex tempora reprehenderit numquam odit eligendi obcaecati hic excepturi error, earum vel quo facilis quaerat quibusdam delectus necessitatibus similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos, voluptates aliquam natus esse provident excepturi laborum praesentium doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos, delectus non repellat consequuntur vero perspiciatis ab officiis id voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!',
+    img: 'https://placehold.co/600x400',
+    reverse: false,
   },
 ];
 

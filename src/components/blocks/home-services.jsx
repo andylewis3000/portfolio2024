@@ -23,6 +23,18 @@ const services = [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
   },
+  {
+    id: 5,
+    name: 'Service 5',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+  },
+  {
+    id: 6,
+    name: 'Service Six',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+  },
 ];
 
 const HomeServices = () => {
