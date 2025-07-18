@@ -1,31 +1,37 @@
 .home-services {
-  .services_grid {
-    display: grid;
-    grid-template-columns: $grid-1col;
-    gap: $grid-spacing-md;
+  .services_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 
-    @media (min-width: $breakpoint-md) {
-      grid-template-columns: $grid-2col;
-    }
+    .services_grid {
+      display: grid;
+      grid-template-columns: $grid-1col;
+      gap: $grid-spacing-md;
 
-    @media (min-width: $breakpoint-lg) {
-      grid-template-columns: $grid-3col;
-    }
-
-    .service {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 2rem;
-      background: $colour-dark-blue;
-      border-radius: $border-radius-sm;
-
-      h3 {
-        color: $white;
+      @media (min-width: $breakpoint-md) {
+        grid-template-columns: $grid-2col;
       }
 
-      p {
-        color: $white;
+      @media (min-width: $breakpoint-lg) {
+        grid-template-columns: $grid-3col;
+      }
+
+      .service {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        background: $colour-dark-blue;
+        border-radius: $border-radius-sm;
+
+        h3 {
+          color: $white;
+        }
+
+        p {
+          color: $white;
+        }
       }
     }
   }

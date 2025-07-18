@@ -71,14 +71,14 @@ button {
   display: inline-block;
   font-family: $heading-font;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.5rem;
   letter-spacing: 0.5px;
   text-align: center;
   text-decoration: none;
   margin: 0;
-  padding: 1rem 1.75rem 0.75rem;
-  border-radius: $border-radius-sm;
+  padding: 1rem 1.75rem;
+  border-radius: $border-radius-xs;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
 }
@@ -121,6 +121,7 @@ button {
 
 /* Containers, Sections, etc */
 .page-container {
+  position: relative;
   width: 100%;
   max-width: $max-site-width;
   background: $white;
@@ -128,6 +129,7 @@ button {
   margin-top: -2rem;
   margin-inline: auto;
   padding: $padding-sm 0;
+  z-index: 1;
 
   @media (min-width: $breakpoint-md) {
     padding: $padding-md 0;

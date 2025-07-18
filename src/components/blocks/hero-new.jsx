@@ -24,7 +24,7 @@ const HeroNew = ({
             {btnActive && (
               <ButtonLink
                 btnClass={'btn-primary'}
-                link="/work"
+                link="/services"
                 title="Learn How"
               />
             )}

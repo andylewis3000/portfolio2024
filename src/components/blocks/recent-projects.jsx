@@ -10,6 +10,21 @@ import airsprintGrab from '../../assets/images/Airsprint-Grab.png';
 import { Link } from 'react-router-dom';
 import ContentColumn from '../elements/content-col';
 
+import { keyframes } from '@emotion/react';
+import { Reveal } from 'react-awesome-reveal';
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const projects = [
   {
     id: 1,
@@ -46,52 +61,75 @@ const RecentProjects = () => {
     <section className="recent-projects">
       <div className="container">
         <div className="recent-projects__content">
-          <ContentColumn
-            extraClass={'slider-nav'}
-            heading={'Recent Projects'}
-            paragraph={
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-                exercitationem! Quae cupiditate voluptas nobis ipsa possimus
-                suscipit eaque commodi quam. Molestias nemo nostrum excepturi
-                natus?
-              </p>
-            }
-            link={'/projects'}
-            btnClass={'primary'}
-            btnText={'View All Work'}
-          />
-          <div className="slider">
-            <Swiper
-              spaceBetween={24}
-              slidesPerView={'auto'}
-              centeredSlides={false}
-              loop={true}
-              grabCursor={true}
-              speed={2000}
-              modules={[Autoplay]}
-              autoplay={{ delay: 3000 }}
-            >
-              {projects.map((project) => {
-                const { id, name, type, img, link } = project;
-                return (
-                  <SwiperSlide key={id}>
-                    <Link to={link}>
-                      <div className="project-card">
-                        <div className="project-card__image">
-                          <img src={img} alt={name} width="300" height="300" />
+          <Reveal
+            cascade
+            // duration={300}
+            damping={0.2}
+            fraction={0.75}
+            keyframes={customAnimation}
+            triggerOnce
+          >
+            <ContentColumn
+              extraClass={'slider-nav'}
+              heading={"Things I've done..."}
+              paragraph={
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                  exercitationem! Quae cupiditate voluptas nobis ipsa possimus
+                  suscipit eaque commodi quam. Molestias nemo nostrum excepturi
+                  natus?
+                </p>
+              }
+              link={'/projects'}
+              btnClass={'primary'}
+              btnText={'View All Work'}
+            />
+            {/* </Reveal>
+          <Reveal
+            cascade
+            // duration={300}
+            damping={0.2}
+            fraction={0.75}
+            keyframes={customAnimation}
+            triggerOnce
+          > */}
+            <div className="slider">
+              <Swiper
+                spaceBetween={24}
+                slidesPerView={'auto'}
+                centeredSlides={false}
+                loop={true}
+                grabCursor={true}
+                speed={2000}
+                modules={[Autoplay]}
+                autoplay={{ delay: 3000 }}
+              >
+                {projects.map((project) => {
+                  const { id, name, type, img, link } = project;
+                  return (
+                    <SwiperSlide key={id}>
+                      <Link to={link}>
+                        <div className="project-card">
+                          <div className="project-card__image">
+                            <img
+                              src={img}
+                              alt={name}
+                              width="300"
+                              height="300"
+                            />
+                          </div>
+                          <div className="project-card__content">
+                            <h4>{name}</h4>
+                            <p>{type}</p>
+                          </div>
                         </div>
-                        <div className="project-card__content">
-                          <h4>{name}</h4>
-                          <p>{type}</p>
-                        </div>
-                      </div>
-                    </Link>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
