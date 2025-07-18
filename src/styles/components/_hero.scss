@@ -5,6 +5,7 @@
   width: 100%;
   padding: 5rem 0;
   background: linear-gradient(45deg, $colour-dark-blue, $primary-accent);
+  z-index: -1;
 
   .container {
     position: relative;
@@ -21,7 +22,7 @@
       flex-direction: column;
       gap: 2.5rem 1.5rem;
 
-      @media (min-width: $breakpoint-md) {
+      @media (min-width: $breakpoint-lg) {
         flex-direction: row;
       }
 
@@ -29,7 +30,7 @@
         width: 100%;
         align-items: center;
 
-        @media (min-width: $breakpoint-md) {
+        @media (min-width: $breakpoint-lg) {
           width: 50%;
           align-items: flex-start;
           margin-top: unset;
@@ -39,7 +40,7 @@
       .hero-content__image {
         width: 100%;
 
-        @media (min-width: $breakpoint-md) {
+        @media (min-width: $breakpoint-lg) {
           width: 50%;
         }
       }
@@ -62,7 +63,7 @@
     align-items: center;
     text-align: center;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       text-align: left;
     }
 
@@ -82,10 +83,8 @@
     position: relative;
     width: 100%;
     overflow: clip;
-    // background: $card-bg;
     border-radius: $border-radius-lg;
     padding: 3rem 3rem 0;
-    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-md) {
       position: relative;
@@ -103,7 +102,9 @@
 
   &.hero-large {
     height: auto;
-    padding-bottom: 0;
+    @media (min-width: $breakpoint-lg) {
+      max-height: 750px;
+    }
   }
 
   &.hero-medium {

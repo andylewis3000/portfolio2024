@@ -59,13 +59,14 @@
       display: inline-block;
       border: 1px solid transparent;
       border-radius: $border-radius-sm;
+      background: $colour-dark-blue;
       // background: $card-bg;
-      background: #fefefe;
+      // background: #fefefe;
       backdrop-filter: blur(1px);
       overflow: hidden;
       transition: all 0.2s ease;
       cursor: pointer;
-      box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+      // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
       @media (min-width: $breakpoint-md) {
         border-radius: $border-radius-lg;
@@ -83,8 +84,8 @@
         display: inline-block;
         margin-top: 0;
         margin-bottom: 0;
-        color: $colour-dark-blue;
-        // color: $colour-beige;
+        // color: $colour-dark-blue;
+        color: $white;
       }
 
       ul {
@@ -103,8 +104,8 @@
             position: relative;
             width: 1.5rem;
             height: 1.5rem;
-            color: $colour-dark-blue;
-            // color: $colour-beige;
+            // color: $colour-dark-blue;
+            color: $white;
             opacity: 1;
             transition: all 0.3s ease-in-out;
             cursor: pointer;

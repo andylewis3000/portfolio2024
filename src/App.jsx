@@ -6,6 +6,7 @@ import HireCTA from './layout/hireCTA';
 import Footer from './layout/footer';
 import Home from './pages/home';
 import About from './pages/about';
+import Services from './pages/services';
 import Projects from './pages/projects';
 import Project from './pages/project';
 import Contact from './pages/contact';
@@ -31,6 +32,7 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<Project />} />
           <Route path="/contact" element={<Contact />} />

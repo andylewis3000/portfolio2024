@@ -14,12 +14,15 @@ $colour-light-blue-light: #8fc1e1;
 $colour-pink: #e51bd4;
 $colour-pink-light: #fc3ce9;
 $colour-beige: #f3e9d2;
-$card-bg: rgba(49, 55, 63, 0.5);
+$card-bg: rgba(49, 55, 63, 0.1);
 
 $primary-accent: $colour-pink;
 $primary-accent-light: $colour-pink-light;
 $secondary-accent: $colour-light-blue;
 $secondary-accent-light: $colour-light-blue-light;
+
+/* Site Widths */
+$max-site-width: 1600px;
 
 /* Margins and Spacing */
 $gutter-width: 1.5rem;

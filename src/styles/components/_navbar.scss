@@ -34,7 +34,6 @@
     }
 
     h3 {
-      // color: $colour-beige !important;
       color: $colour-dark-blue !important;
     }
   }
@@ -54,7 +53,7 @@
       margin: 0 auto 12px;
 
       @media (min-width: $breakpoint-md) {
-        margin: 0 24px 0 0;
+        margin: 0;
       }
     }
 
@@ -65,16 +64,12 @@
       padding: 12px 16px 8px;
       background: transparent;
       transition: all 0.3s ease-in-out;
-      // color: $colour-beige;
       color: $colour-dark-blue;
       text-transform: uppercase;
     }
 
     li a:hover {
-      color: $secondary-accent-light !important; // Blue
-      // text-shadow: 0 0 10px $secondary-accent-light; // Blue
-      // color: $primary-accent; // Red
-      // text-shadow: 0 0 10px $primary-accent; // Red
+      color: $secondary-accent-light !important;
     }
 
     li:last-of-type {
@@ -83,9 +78,6 @@
   }
 
   .social-links {
-    @media (min-width: $breakpoint-md) {
-      margin-left: 2rem;
-    }
     a:hover {
       svg {
         fill: $secondary-accent-light !important;
@@ -106,7 +98,6 @@
     svg {
       width: 24px;
       height: auto;
-      // color: $colour-beige;
       color: $colour-dark-blue;
     }
   }
@@ -125,7 +116,6 @@
   svg {
     width: 24px;
     height: auto;
-    // color: $colour-beige;
     color: $colour-dark-blue;
   }
 }
@@ -133,21 +123,13 @@
 // Mobile Nav Open
 .main-nav.active {
   display: flex;
-  // top: -1px;
-  // right: -1px;
-  // width: calc(100% + 2px);
-  // height: calc(100vh - 2rem);
   top: 0;
   right: 0;
   width: 100%;
   height: 100vh;
-  // background: rgba(41, 47, 54, 0.95);
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
-  // border: 1px solid $secondary-accent;
-  // border: 1px solid $colour-beige;
-  // border: 1px solid $colour-dark-blue;
-  // border-radius: $border-radius-lg;
+  transition: all 0.3s ease-in-out;
 
   @media (min-width: $breakpoint-md) {
     height: auto;
@@ -165,14 +147,16 @@
   }
 
   ul li a {
-    // color: $colour-beige;
     color: $colour-dark-blue;
   }
 
   .social-links {
     a svg {
-      // fill: $colour-beige;
       fill: $colour-dark-blue;
     }
   }
+}
+
+.main-nav.false {
+  transition: $transition-all;
 }

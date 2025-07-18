@@ -1,5 +1,6 @@
 import HeroNew from '../components/blocks/hero-new';
 import HomeAbout from '../components/blocks/home-about';
+import HomeServices from '../components/blocks/home-services';
 import RecentProjects from '../components/blocks/recent-projects';
 import Skills from '../components/skills/skills';
 import PageTransition from '../scripts/transitions';
@@ -17,6 +18,7 @@ const Home = () => {
         btnActive={true}
       />
       <div className="page-container">
+        <HomeServices />
         <RecentProjects />
         <Skills />
         <HomeAbout />
