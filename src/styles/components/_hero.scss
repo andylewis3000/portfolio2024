@@ -83,10 +83,8 @@
     position: relative;
     width: 100%;
     overflow: clip;
-    // background: $card-bg;
     border-radius: $border-radius-lg;
     padding: 3rem 3rem 0;
-    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-md) {
       position: relative;

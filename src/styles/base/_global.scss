@@ -15,6 +15,9 @@ body {
 
 #root {
   contain: paint;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -25,7 +28,6 @@ h5,
 h6 {
   font-weight: 800;
   text-transform: uppercase;
-  // letter-spacing: -3px;
 }
 
 h1,
@@ -35,7 +37,6 @@ h4,
 h5,
 h6,
 p {
-  // color: $colour-beige;
   color: $colour-dark-blue;
 }
 
@@ -120,18 +121,15 @@ button {
 
 /* Containers, Sections, etc */
 .page-container {
+  width: 100%;
+  max-width: $max-site-width;
   background: $white;
   border-radius: $border-radius-lg;
-  // width: calc(100% - 2rem);
-  width: 100%;
-  max-width: 1920px;
+  margin-top: -2rem;
   margin-inline: auto;
   padding: $padding-sm 0;
-  // box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
-  margin-top: -2rem;
 
   @media (min-width: $breakpoint-md) {
-    width: calc(100% - 3rem);
     padding: $padding-md 0;
     margin-top: -3rem;
   }
@@ -141,7 +139,7 @@ button {
   }
 }
 .container {
-  max-width: 1920px;
+  max-width: $max-site-width;
   width: 100%;
   height: 100%;
   margin-inline: auto;
