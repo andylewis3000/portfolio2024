@@ -16,6 +16,7 @@
   .project-card__image {
     height: 100%;
     opacity: 0.1;
+    transition: $transition-all;
 
     img {
       width: 100%;

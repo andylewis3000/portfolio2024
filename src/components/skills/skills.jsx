@@ -31,8 +31,9 @@ const Skills = () => {
             damping={0.2}
             fraction={0.75}
             keyframes={customAnimation}
+            triggerOnce
           >
-            <h2>Languages & Tools</h2>
+            <h2>Things I use...</h2>
           </Reveal>
           <div className="skills-content__grid">
             <Reveal
@@ -41,6 +42,7 @@ const Skills = () => {
               damping={0.2}
               fraction={0.75}
               keyframes={customAnimation}
+              triggerOnce
             >
               <DevSkills />
               <DesignSkills />
