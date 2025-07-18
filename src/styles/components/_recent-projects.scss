@@ -8,27 +8,17 @@
     position: relative;
     display: inline-block;
     z-index: 2;
-    // color: $colour-beige;
     color: $colour-dark-blue;
   }
 
   p {
     color: $colour-dark-blue;
-    // color: $colour-beige;
   }
 
   .recent-projects__content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 48px 24px;
-    // padding: $padding-lg 0;
-    // padding-right: 0;
-    // background: $card-bg;
-    // backdrop-filter: blur(1px);
-    // border-radius: $border-radius-sm;
-    // border-top: 1px solid $colour-beige;
-    // border-left: 1px solid $colour-beige;
-    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-md) {
       padding: $padding-xl 0;
@@ -39,42 +29,11 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -90%;
-      width: 100%;
-      height: 1px;
-      background: #7aa3be;
-      display: none;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -90%;
-      width: 100%;
-      height: 1px;
-      background: #7aa3be;
-      display: none;
-    }
-
     .slider-nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      // padding: 0 $padding-md;
-
-      @media (min-width: $breakpoint-md) {
-        // padding: 0 $padding-xl;
-      }
-
-      @media (min-width: $breakpoint-lg) {
-        // padding-right: 0;
-      }
     }
   }
 
@@ -83,27 +42,33 @@
     height: 100%;
 
     .swiper {
-      padding: 0 $padding-md;
+      padding-left: 5px;
+      padding-right: $padding-md;
 
       @media (min-width: $breakpoint-md) {
-        padding: 0 $padding-xl;
+        padding-right: $padding-xl;
       }
     }
 
     .swiper-slide {
-      width: 80%;
+      width: 90%;
       padding: 10px 0;
 
-      @media (min-width: $breakpoint-md) {
-        width: 90%;
+      .project-card {
+        .project-card__image {
+          height: 400px;
+
+          @media (min-width: $breakpoint-md) {
+            height: auto;
+          }
+        }
       }
 
       &.swiper-slide-active {
         .project-card {
-          box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.3);
           .project-card__image {
             opacity: 1;
-            // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
           }
         }
       }

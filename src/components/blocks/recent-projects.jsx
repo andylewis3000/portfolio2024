@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 import yatesGrab from '../../assets/images/Yates-Grab.png';
 import bxbGrab from '../../assets/images/BXB-Grab.png';
 import marosGrab from '../../assets/images/Maros-Grab.png';
+import airsprintGrab from '../../assets/images/Airsprint-Grab.png';
 
 import { Link } from 'react-router-dom';
 import ContentColumn from '../elements/content-col';
@@ -12,22 +13,29 @@ import ContentColumn from '../elements/content-col';
 const projects = [
   {
     id: 1,
+    name: 'Airsprint',
+    type: 'Web Development',
+    img: airsprintGrab,
+    link: '/projects/airsprint',
+  },
+  {
+    id: 2,
     name: 'Yates Outdoor Sales',
-    type: 'Web design & development',
+    type: 'Web Design & Development',
     img: yatesGrab,
     link: '/projects/yates-outdoor',
   },
   {
-    id: 2,
+    id: 3,
     name: 'BXB Disposal',
-    type: 'Web design & development',
+    type: 'Web Design & Development',
     img: bxbGrab,
     link: '/projects/bxb-bins',
   },
   {
-    id: 3,
+    id: 4,
     name: "Maro's Bistro",
-    type: 'Web development',
+    type: 'Web Development',
     img: marosGrab,
     link: '/projects/maros-bistro',
   },
@@ -57,14 +65,12 @@ const RecentProjects = () => {
             <Swiper
               spaceBetween={24}
               slidesPerView={'auto'}
-              // slidesPerView={1}
               centeredSlides={false}
               loop={true}
               grabCursor={true}
-              speed={1000}
-              modules={[Mousewheel, Autoplay]}
+              speed={2000}
+              modules={[Autoplay]}
               autoplay={{ delay: 3000 }}
-              mousewheel={true}
             >
               {projects.map((project) => {
                 const { id, name, type, img, link } = project;
