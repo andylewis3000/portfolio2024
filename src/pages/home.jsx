@@ -17,9 +17,9 @@ const Home = () => {
         btnActive={true}
       />
       <div className="page-container">
-        <HomeAbout />
         <RecentProjects />
         <Skills />
+        <HomeAbout />
       </div>
     </PageTransition>
   );

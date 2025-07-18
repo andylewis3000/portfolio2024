@@ -61,12 +61,13 @@
     li a {
       font-size: 1.125rem;
       font-family: $heading-font;
-      font-weight: 500;
+      font-weight: 800;
       padding: 12px 16px 8px;
       background: transparent;
       transition: all 0.3s ease-in-out;
       // color: $colour-beige;
       color: $colour-dark-blue;
+      text-transform: uppercase;
     }
 
     li a:hover {

@@ -4,6 +4,7 @@
   align-items: center;
   width: 100%;
   padding: 5rem 0;
+  background: linear-gradient(45deg, $colour-dark-blue, $primary-accent);
 
   .container {
     position: relative;
@@ -29,7 +30,7 @@
         align-items: center;
 
         @media (min-width: $breakpoint-md) {
-          width: 75%;
+          width: 50%;
           align-items: flex-start;
           margin-top: unset;
         }
@@ -54,7 +55,7 @@
   }
 
   .hero-content__text {
-    color: $colour-beige;
+    color: $white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -67,11 +68,13 @@
 
     .heading {
       width: 100%;
+      color: $white;
     }
 
     .subheading {
       width: 100%;
       max-width: 800px;
+      color: $white;
     }
   }
 
@@ -82,7 +85,7 @@
     // background: $card-bg;
     border-radius: $border-radius-lg;
     padding: 3rem 3rem 0;
-    box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-md) {
       position: relative;
@@ -100,6 +103,7 @@
 
   &.hero-large {
     height: auto;
+    padding-bottom: 0;
   }
 
   &.hero-medium {
