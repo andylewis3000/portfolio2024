@@ -2,7 +2,6 @@ import DevSkills from './skills-dev';
 import DesignSkills from './skills-design';
 import PlatformSkills from './skills-platform-tools';
 import ToolsSkills from './skills-tools';
-import GlowPulse from '../elements/glow-pulse';
 
 import { keyframes } from '@emotion/react';
 import { Reveal } from 'react-awesome-reveal';
@@ -22,12 +21,10 @@ const customAnimation = keyframes`
 const Skills = () => {
   return (
     <section className="skills">
-      <GlowPulse position="left large" />
       <div className="container">
         <div className="skills-content">
           <Reveal
             cascade
-            // duration={300}
             damping={0.2}
             fraction={0.75}
             keyframes={customAnimation}
@@ -38,7 +35,6 @@ const Skills = () => {
           <div className="skills-content__grid">
             <Reveal
               cascade
-              // duration={300}
               damping={0.2}
               fraction={0.75}
               keyframes={customAnimation}

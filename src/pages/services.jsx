@@ -139,7 +139,6 @@ const Services = () => {
         heading={'Services'}
         imgActive={false}
         btnActive={false}
-        glowPulse={false}
       />
       <div className="page-container">
         {services.map((service) => {

@@ -15,8 +15,6 @@ const projects = [
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: airsprintGrab,
-    // link: '/projects/${id}',
-    // link: '/projects/yates-outdoor',
     reverse: true,
   },
   {
@@ -26,8 +24,6 @@ const projects = [
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: yatesGrab,
-    // link: '/projects/${id}',
-    // link: '/projects/yates-outdoor',
     reverse: false,
   },
   {
@@ -37,8 +33,6 @@ const projects = [
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: bxbGrab,
-    // link: '/projects/${id}',
-    // link: '/projects/bxb-bins',
     reverse: true,
   },
   {
@@ -48,8 +42,6 @@ const projects = [
     paragraph:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
     img: marosGrab,
-    // link: '/projects/${id}',
-    // link: '/projects/maros-bistro',
     reverse: false,
   },
 ];
@@ -62,13 +54,9 @@ const Projects = () => {
         heading={'Projects'}
         imgActive={false}
         btnActive={false}
-        glowPulse={true}
-        gpPosition={'left'}
-        gpSize={'large'}
       />
       <div className="page-container">
         {projects.map((project) => {
-          // const { id, name, subheading, paragraph, img, link, reverse } =
           const { id, name, subheading, paragraph, img, reverse } = project;
           return (
             <Block2Col
@@ -81,7 +69,6 @@ const Projects = () => {
               btnClass={'btn-secondary'}
               title={'View Project'}
               link={`/projects/${id}`}
-              // link={link}
               img={true}
               imgURL={img}
               imgAlt={name}
