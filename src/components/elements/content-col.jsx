@@ -34,6 +34,7 @@ const ContentColumn = ({
         damping={0.2}
         fraction={0.75}
         keyframes={customAnimation}
+        triggerOnce
       >
         {heading ? <h2>{heading}</h2> : ''}
         {subheading ? <h4>{subheading}</h4> : ''}
