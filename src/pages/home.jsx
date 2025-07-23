@@ -3,7 +3,8 @@ import HomeAbout from '../components/blocks/home-about';
 import HomeServices from '../components/blocks/home-services';
 import RecentProjects from '../components/blocks/recent-projects';
 import Testimonials from '../components/blocks/testimonials';
-import Skills from '../components/skills/skills';
+// import Skills from '../components/skills/skills';
+import SkillsNew from '../components/skills/skills-new';
 import PageTransition from '../scripts/transitions';
 
 const Home = () => {
@@ -22,7 +23,8 @@ const Home = () => {
         <HomeServices />
         <RecentProjects />
         <Testimonials />
-        <Skills />
+        <SkillsNew />
+        {/* <Skills /> */}
         <HomeAbout />
       </div>
     </PageTransition>
