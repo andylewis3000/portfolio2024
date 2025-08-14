@@ -5,6 +5,7 @@
   width: 100%;
   padding: 5rem 0;
   background: linear-gradient(45deg, $colour-dark-blue, $primary-accent);
+  margin-top: -72px;
 
   .container {
     position: relative;
@@ -16,6 +17,7 @@
     align-items: center;
     height: 100%;
     align-items: center;
+    margin-top: 72px;
 
     &.half {
       flex-direction: column;
@@ -100,19 +102,19 @@
   }
 
   &.hero-large {
-    height: auto;
+    height: 100vh;
     @media (min-width: $breakpoint-lg) {
-      max-height: 750px;
+      max-height: 800px;
     }
   }
 
   &.hero-medium {
     height: auto;
-    min-height: 400px;
+    min-height: 450px;
   }
 
   &.hero-small {
     height: auto;
-    min-height: 300px;
+    min-height: 350px;
   }
 }

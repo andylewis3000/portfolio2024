@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
-import { AiFillThunderbolt } from 'react-icons/ai';
+// import { AiFillThunderbolt } from 'react-icons/ai';
 
 const HeaderLogo = () => {
   return (
     <>
       <div className="header-logo">
         <Link to={'/'}>
-          <h3>
+          {/* <h3>
             AL
             <AiFillThunderbolt />
             DC
-          </h3>
+          </h3> */}
+          <h3>Andy Lewis</h3>
         </Link>
       </div>
     </>
