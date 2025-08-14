@@ -4,16 +4,14 @@
   display: flex;
   align-items: center;
   width: 100%;
-  // max-width: $max-site-width;
   margin-inline: auto;
   height: 72px;
   z-index: 10;
   color: transparent;
-  // background: $white;
   background: transparent;
   transition: all 0.3s ease-in-out;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-lg) {
     width: 100%;
     top: 0;
   }
@@ -34,12 +32,11 @@
   .header-logo {
     display: inline-block;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       display: none;
     }
 
     h3 {
-      // color: $colour-dark-blue;
       color: $white;
       margin: 0;
       line-height: 0;
@@ -86,12 +83,4 @@
       fill: $colour-dark-blue;
     }
   }
-
-  // &.main-nav.active {
-  //   .hamburger {
-  //     svg {
-  //       fill: $colour-dark-blue;
-  //     }
-  //   }
-  // }
 }

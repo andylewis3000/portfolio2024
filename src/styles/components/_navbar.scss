@@ -9,10 +9,9 @@
   right: -99999px;
   width: 0;
   height: 0;
-  // background: $colour-beige;
   transition: $transition-all;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-lg) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,13 +28,12 @@
   .header-logo {
     display: block;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       display: block !important;
     }
 
     h3 {
       color: $white;
-      // color: $colour-dark-blue !important;
     }
   }
 
@@ -43,7 +41,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       display: inline-flex;
       flex-direction: row;
       justify-content: space-around;
@@ -53,7 +51,7 @@
     li {
       margin: 0 auto 12px;
 
-      @media (min-width: $breakpoint-md) {
+      @media (min-width: $breakpoint-lg) {
         margin: 0;
       }
     }
@@ -66,12 +64,11 @@
       background: transparent;
       transition: all 0.3s ease-in-out;
       color: $white;
-      // color: $colour-dark-blue;
       text-transform: uppercase;
     }
 
     li a:hover {
-      color: $secondary-accent-light !important;
+      color: $secondary-accent !important;
     }
 
     li:last-of-type {
@@ -85,7 +82,7 @@
     }
     a:hover {
       svg {
-        fill: $secondary-accent-light !important;
+        fill: $secondary-accent !important;
       }
     }
   }
@@ -93,15 +90,15 @@
   .navClose {
     display: none;
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 18px;
+    right: 22px;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       display: none;
     }
 
     svg {
-      width: 24px;
+      width: 30px;
       height: auto;
       color: $colour-dark-blue;
     }
@@ -114,7 +111,7 @@
   z-index: 1000;
   cursor: pointer;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-lg) {
     display: none;
   }
 
@@ -128,6 +125,7 @@
 // Mobile Nav Open
 .header-content:has(.main-nav.active) {
   .hamburger {
+    display: none;
     svg {
       fill: $colour-dark-blue;
     }
@@ -144,7 +142,7 @@
   backdrop-filter: blur(5px);
   transition: $transition-all !important;
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-lg) {
     height: auto;
     background: none;
     backdrop-filter: none;
@@ -156,7 +154,7 @@
   }
 
   .navClose {
-    display: none;
+    display: block;
   }
 
   h3 {
