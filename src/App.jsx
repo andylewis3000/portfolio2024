@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
 
 import Header from './layout/header';
 import HireCTA from './layout/hireCTA';
@@ -10,12 +11,44 @@ import Services from './pages/services';
 import Projects from './pages/projects';
 import Project from './pages/project';
 import Contact from './pages/contact';
-// import YatesOutdoor from './pages/projects/yates-outdoor';
-// import MarosBistro from './pages/projects/maros-bistro';
-// import BxB from './pages/projects/bxb-bins';
 
 const App = () => {
   const location = useLocation();
+
+  // Update document title when location changes
+  useEffect(() => {
+    // Define page titles for each route
+    const pageTitles = {
+      '/': 'Home - Andy Lewis - Web Designer & Developer',
+      '/about': 'About Us - Andy Lewis - Web Designer & Developer',
+      '/services': 'Services - Andy Lewis - Web Designer & Developer',
+      '/projects': 'Projects - Andy Lewis - Web Designer & Developer',
+      '/contact': 'Contact Us - Andy Lewis - Web Designer & Developer',
+      // Dynamic project pages will be handled separately
+      // '/projects/yates-outdoor': 'Yates Outdoor - Your Company Name',
+      // '/projects/maros-bistro': 'Maros Bistro - Your Company Name',
+      // '/projects/bxb-bins': 'BxB Bins - Your Company Name',
+    };
+
+    // Function to get page title based on current path
+    const getPageTitle = (pathname) => {
+      // Handle dynamic project routes (/projects/:id)
+      if (pathname.startsWith('/projects/') && pathname !== '/projects') {
+        const projectId = pathname.split('/')[2];
+        return `${projectId
+          .replace(/-/g, ' ')
+          .replace(/\b\w/g, (l) =>
+            l.toUpperCase()
+          )} - Andy Lewis - Web Designer & Developer`;
+      }
+
+      // Return specific title or default
+      return pageTitles[pathname] || 'Andy Lewis - Web Designer & Developer';
+    };
+
+    const newTitle = getPageTitle(location.pathname);
+    document.title = newTitle;
+  }, [location.pathname]);
 
   return (
     <>
