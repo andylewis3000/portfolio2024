@@ -3,9 +3,7 @@ footer {
   width: 100%;
   padding: 5rem 0;
   text-align: center;
-  color: $colour-dark-blue;
-  background: $colour-dark-blue;
-  // background: linear-gradient(45deg, $colour-light-blue, $colour-dark-blue);
+  @include gradientBG($colour-dark-blue, $colour-dark-blue);
   border-radius: $border-radius-lg $border-radius-lg 0 0;
   max-width: $max-site-width;
   margin-inline: auto;

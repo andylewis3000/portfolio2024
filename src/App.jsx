@@ -11,6 +11,7 @@ import Services from './pages/services';
 import Projects from './pages/projects';
 import Project from './pages/project';
 import Contact from './pages/contact';
+import SEOMetaTags from './scripts/SEOMetaTags';
 
 const App = () => {
   const location = useLocation();
@@ -52,6 +53,7 @@ const App = () => {
 
   return (
     <>
+      <SEOMetaTags />
       <Header />
       <AnimatePresence
         initial={false}

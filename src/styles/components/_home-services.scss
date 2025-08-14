@@ -23,15 +23,18 @@
         gap: 1rem;
         height: 100%;
         padding: 2rem;
-        background: $colour-dark-blue;
+        // background: $colour-dark-blue;
+        background: $card-bg;
         border-radius: $border-radius-sm;
 
         h3 {
-          color: $white;
+          // color: $white;
+          color: $colour-dark-blue;
         }
 
         p {
-          color: $white;
+          // color: $white;
+          color: $colour-dark-blue;
         }
       }
     }

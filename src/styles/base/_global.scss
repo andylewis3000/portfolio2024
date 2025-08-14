@@ -145,11 +145,15 @@ button {
   width: 100%;
   height: 100%;
   margin-inline: auto;
-  padding: 0 $padding-sm;
+  padding: 0 $padding-md;
   position: relative;
 
   @media (min-width: $breakpoint-md) {
-    padding: 0 $padding-md;
+    padding: 0 $padding-lg;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    padding: 0 $padding-xl;
   }
 }
 

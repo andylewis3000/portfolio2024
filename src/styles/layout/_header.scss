@@ -52,6 +52,14 @@
         fill: $primary-accent;
       }
     }
+
+    .main-nav ul li a {
+      color: $white;
+    }
+
+    .social-links a svg {
+      fill: $white;
+    }
   }
 }
 
@@ -66,11 +74,11 @@
   }
 
   .main-nav ul li a {
-    color: $colour-dark-blue;
+    color: $colour-dark-blue !important;
   }
 
   .social-links a svg {
-    fill: $colour-dark-blue;
+    fill: $colour-dark-blue !important;
   }
 
   .hamburger {

@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     gap: $grid-spacing-sm;
-    background: linear-gradient(45deg, #292f36, #e51bd4);
     padding: 3rem;
     border-radius: $border-radius-sm;
+    @include gradientBG($colour-dark-blue, $primary-accent);
 
     @media (min-width: $breakpoint-md) {
       gap: $grid-spacing-md;
