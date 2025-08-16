@@ -20,6 +20,13 @@ footer {
     align-items: center;
     height: 100%;
 
+    .footer-logo {
+      width: 50px;
+      height: auto;
+      margin-bottom: 4rem;
+      fill: $white;
+    }
+
     .social-links {
       a {
         margin-right: 12px;

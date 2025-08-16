@@ -12,6 +12,11 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="footer-content">
+            <img
+              className="footer-logo"
+              src="src/assets/images/ALDC-Logo-Light.svg"
+              alt="Andy Lewis Logo"
+            />
             <SocialLinks />
             <p className="copyright">
               <small>&copy; {year}. All rights reserved.</small>

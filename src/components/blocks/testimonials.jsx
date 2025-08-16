@@ -67,8 +67,8 @@ const Testimonials = () => {
                 return (
                   <SwiperSlide key={id}>
                     <div className="testimonial">
-                      <h3>&ldquo;{content}&rdquo;</h3>
-                      <h4>{client}</h4>
+                      <h2 className="h4">&ldquo;{content}&rdquo;</h2>
+                      <h3 className="h5">{client}</h3>
                     </div>
                   </SwiperSlide>
                 );

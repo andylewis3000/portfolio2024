@@ -9,7 +9,7 @@ const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
         <div className={`hero-content ${imgActive ? 'half' : 'full'}`}>
           <div className="hero-content__text content-col">
             <h1 className="heading">{heading}</h1>
-            {subHeading && <h4 className="subheading">{subHeading}</h4>}
+            {subHeading && <h2 className="h5 subheading">{subHeading}</h2>}
             {btnActive && (
               <ButtonLink
                 btnClass={'btn-primary'}

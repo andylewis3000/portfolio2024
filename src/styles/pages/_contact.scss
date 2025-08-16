@@ -26,6 +26,10 @@
     margin: $padding-xl 0 $padding-sm;
   }
 
+  .social-links svg {
+    fill: $colour-dark-blue;
+  }
+
   .contact__form {
     .btn {
       margin-top: 1rem;
