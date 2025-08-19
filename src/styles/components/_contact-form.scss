@@ -16,11 +16,12 @@ form {
     color: $colour-dark-blue;
     // border: 1px solid $secondary-accent;
     border: none;
-    background: #fefefe;
+    // background: #fefefe;
+    background: $card-bg;
     border-radius: $border-radius-sm;
     resize: none;
     line-height: 1.5rem;
-    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.3);
   }
 
   input:focus,
