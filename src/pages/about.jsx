@@ -3,6 +3,7 @@ import HeroNew from '../components/blocks/hero-new';
 import PageTransition from '../scripts/transitions';
 
 import coolGuyAndy from '../assets/images/cool-guy-posterize.png';
+import ImageTextLayout from '../components/layouts/image-text-layout';
 
 const About = () => {
   return (
@@ -101,6 +102,23 @@ const About = () => {
           img2URL={coolGuyAndy}
           img2Width={'500px'}
           img2Height={'500px'}
+        />
+        {/* NEW COMPONENT STRUCTURE */}
+        <ImageTextLayout
+          imageSrc={coolGuyAndy}
+          imageAlt="Cool Guy Andy"
+          imageWidth={500}
+          imageHeight={500}
+          heading="Also, also..."
+          text={
+            <p>
+              Living in the mountains, getting outside to nature is almost a
+              prerequisite. I like to take advantage of my location by
+              snowboarding, mountain biking, rock climbing, and hiking. Although
+              he can&apos;t come with me anymore, I also love hanging out with
+              my dog, Jasper.
+            </p>
+          }
         />
       </div>
     </PageTransition>

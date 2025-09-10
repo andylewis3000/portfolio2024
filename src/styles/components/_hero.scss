@@ -8,16 +8,18 @@
   @include gradientBG($colour-dark-blue, $primary-accent);
 
   .container {
-    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   .hero-content {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
+    height: auto;
     align-items: center;
     margin-top: 72px;
+    margin-bottom: 72px;
 
     &.half {
       flex-direction: column;
@@ -29,10 +31,10 @@
 
       .hero-content__text {
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
 
         @media (min-width: $breakpoint-lg) {
-          width: 50%;
+          // width: 80%;
           align-items: flex-start;
           margin-top: unset;
         }
@@ -42,7 +44,7 @@
         width: 100%;
 
         @media (min-width: $breakpoint-lg) {
-          width: 50%;
+          width: 80%;
         }
       }
     }
@@ -62,7 +64,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    z-index: 1;
 
     @media (min-width: $breakpoint-lg) {
       text-align: left;
@@ -71,6 +74,8 @@
     .heading {
       width: 100%;
       color: $white;
+      text-wrap: balance;
+      max-width: 75%;
     }
 
     .subheading {
@@ -81,15 +86,19 @@
   }
 
   .hero-content__image {
-    position: relative;
+    position: absolute;
     width: 100%;
+    bottom: 0;
+    right: -100px;
+    transform: rotate(-15deg) scale(1.5);
     overflow: clip;
-    // border-radius: $border-radius-lg;
-    // padding: 3rem 3rem 0;
+    animation: FadeIn 3s;
+    z-index: 0;
 
-    @media (min-width: $breakpoint-md) {
-      position: relative;
-      width: 600px;
+    @media (min-width: $breakpoint-lg) {
+      bottom: -200px;
+      right: -100px;
+      transform: rotate(-15deg) scale(1);
       height: auto;
     }
 
@@ -97,24 +106,23 @@
       width: 100%;
       height: 100%;
       margin: 0 auto;
-      animation: headbob 3s;
+      opacity: 0.2;
     }
   }
 
   &.hero-large {
-    height: auto;
+    // height: auto;
+    height: 100vh;
     @media (min-width: $breakpoint-lg) {
-      max-height: 800px;
+      max-height: 1000px;
     }
   }
 
   &.hero-medium {
-    height: auto;
-    min-height: 450px;
+    height: 450px;
   }
 
   &.hero-small {
-    height: auto;
-    min-height: 350px;
+    height: 350px;
   }
 }

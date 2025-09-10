@@ -67,7 +67,7 @@ const Projects = () => {
               text2={paragraph}
               button={true}
               btnClass={'btn-secondary'}
-              title={'View Project'}
+              btnTitle={'View Project'}
               link={`/projects/${id}`}
               img={true}
               imgURL={img}

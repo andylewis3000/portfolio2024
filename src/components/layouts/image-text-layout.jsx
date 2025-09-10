@@ -1,7 +1,7 @@
-import TwoColumnLayout from '../layout/TwoColumnLayout';
-import ImageColumn from '../columns/ImageColumn';
-import TextColumn from '../columns/TextColumn';
-import ActionButton from '../ui/ActionButton';
+import TwoColumnLayout from '../../layout/two-col-layout';
+import ImageColumn from '../columns/image-col';
+import TextColumn from '../columns/text-col';
+import Button from '../elements/button';
 
 const ImageTextLayout = ({
   reverse = false,
@@ -21,7 +21,7 @@ const ImageTextLayout = ({
   withReveal = false,
 }) => {
   const button = (
-    <ActionButton btnClass={btnClass} title={buttonTitle} link={buttonLink} />
+    <Button btnClass={btnClass} title={buttonTitle} link={buttonLink} />
   );
 
   return (

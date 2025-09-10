@@ -27,3 +27,12 @@
     opacity: 0;
   }
 }
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
