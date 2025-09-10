@@ -34,7 +34,6 @@
         align-items: flex-start;
 
         @media (min-width: $breakpoint-lg) {
-          // width: 80%;
           align-items: flex-start;
           margin-top: unset;
         }
@@ -111,7 +110,6 @@
   }
 
   &.hero-large {
-    // height: auto;
     height: 100vh;
     @media (min-width: $breakpoint-lg) {
       max-height: 1000px;
