@@ -12,24 +12,30 @@ const ImageGallery = () => {
         />
       </div>
       <div className="image image-multi">
-        <Image
-          src="https://placehold.co/600x400"
-          alt="Placeholder 600x400"
-          width={600}
-          height={400}
-        />
-        <Image
-          src="https://placehold.co/600x400"
-          alt="Placeholder 600x400"
-          width={600}
-          height={400}
-        />
-        <Image
-          src="https://placehold.co/600x400"
-          alt="Placeholder 600x400"
-          width={600}
-          height={400}
-        />
+        <div className="image-container">
+          <Image
+            src="https://placehold.co/600x400"
+            alt="Placeholder 600x400"
+            width={600}
+            height={400}
+          />
+        </div>
+        <div className="image-container">
+          <Image
+            src="https://placehold.co/600x400"
+            alt="Placeholder 600x400"
+            width={600}
+            height={400}
+          />
+        </div>
+        <div className="image-container">
+          <Image
+            src="https://placehold.co/600x400"
+            alt="Placeholder 600x400"
+            width={600}
+            height={400}
+          />
+        </div>
       </div>
     </div>
   );

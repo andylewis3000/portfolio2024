@@ -8,12 +8,7 @@ const HomeAbout = () => {
           <ContentColumn
             heading="A little bit about me..."
             paragraph={
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-                exercitationem! Quae cupiditate voluptas nobis ipsa possimus
-                suscipit eaque commodi quam. Molestias nemo nostrum excepturi
-                natus?
-              </p>
+              'Meet the guy who builds websites that look sharp, run smoothly, and won’t mysteriously crash on mobile. He blends creativity, code, and strategy to help brands stand out online—minus the jargon and fluff.'
             }
             link={'/about'}
             btnClass={'secondary'}

@@ -8,17 +8,13 @@ const services = [
     name: 'Web Development',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
-        itaque ipsa quis laborum! At non laudantium dolorum dolores facere
-        molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex
-        tempora reprehenderit numquam odit eligendi obcaecati hic excepturi
-        error, earum vel quo facilis quaerat quibusdam delectus necessitatibus
-        similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae
-        praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos,
-        voluptates aliquam natus esse provident excepturi laborum praesentium
-        doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos,
-        delectus non repellat consequuntur vero perspiciatis ab officiis id
-        voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!
+        Web development is where the magic happens behind the scenes. Whether
+        it’s making sure your site loads faster than you can say “skip intro,”
+        or ensuring it doesn’t break the moment someone opens it on an iPhone
+        from 2017, I’ve got you covered. I specialize in clean, maintainable
+        code that plays nicely with modern browsers, platforms, and your
+        business goals. The result? A site that not only looks good but actually
+        works—for you and your users.
       </p>
     ),
     img: 'https://placehold.co/600x400',
@@ -29,17 +25,12 @@ const services = [
     name: 'Web Design',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
-        itaque ipsa quis laborum! At non laudantium dolorum dolores facere
-        molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex
-        tempora reprehenderit numquam odit eligendi obcaecati hic excepturi
-        error, earum vel quo facilis quaerat quibusdam delectus necessitatibus
-        similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae
-        praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos,
-        voluptates aliquam natus esse provident excepturi laborum praesentium
-        doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos,
-        delectus non repellat consequuntur vero perspiciatis ab officiis id
-        voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!
+        Your website is often the first handshake your brand gives to the world.
+        That handshake better be firm, friendly, and not awkwardly sweaty. My
+        design approach blends creativity, usability, and a bit of “wow” factor
+        to make sure your visitors stick around. From thoughtful layouts to
+        color palettes that match your brand vibe, I craft digital experiences
+        that feel polished, purposeful, and anything but cookie-cutter.
       </p>
     ),
     img: 'https://placehold.co/600x400',
@@ -47,20 +38,16 @@ const services = [
   },
   {
     id: 3,
-    name: 'Graphic Design',
+    name: 'SEO & Accessibility',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
-        itaque ipsa quis laborum! At non laudantium dolorum dolores facere
-        molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex
-        tempora reprehenderit numquam odit eligendi obcaecati hic excepturi
-        error, earum vel quo facilis quaerat quibusdam delectus necessitatibus
-        similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae
-        praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos,
-        voluptates aliquam natus esse provident excepturi laborum praesentium
-        doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos,
-        delectus non repellat consequuntur vero perspiciatis ab officiis id
-        voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!
+        SEO and accessibility are the unsung heroes of web success. Great design
+        and dev won’t mean much if Google buries your site on page 8 or if users
+        can’t actually navigate it. I build and optimize with both humans and
+        search engines in mind. That means semantic code, accessible layouts,
+        fast load times, and content that’s keyword-smart without being
+        keyword-stuffed. The result? A site that’s inclusive, discoverable, and
+        ready to rank.
       </p>
     ),
     img: 'https://placehold.co/600x400',
@@ -68,20 +55,15 @@ const services = [
   },
   {
     id: 4,
-    name: 'Web Consulting',
+    name: 'Graphic Design',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
-        itaque ipsa quis laborum! At non laudantium dolorum dolores facere
-        molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex
-        tempora reprehenderit numquam odit eligendi obcaecati hic excepturi
-        error, earum vel quo facilis quaerat quibusdam delectus necessitatibus
-        similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae
-        praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos,
-        voluptates aliquam natus esse provident excepturi laborum praesentium
-        doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos,
-        delectus non repellat consequuntur vero perspiciatis ab officiis id
-        voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!
+        Sometimes your brand needs more than a killer website—it needs the whole
+        visual toolkit. I create graphics that not only catch the eye but keep
+        it there. From logos that feel timeless, to social media visuals that
+        pop in a crowded feed, I make sure your brand is consistent, memorable,
+        and ready to flex across every channel. Because design should make
+        people stop scrolling, not keep scrolling.
       </p>
     ),
     img: 'https://placehold.co/600x400',
@@ -89,20 +71,17 @@ const services = [
   },
   {
     id: 5,
-    name: 'Service Five',
+    name: 'Content Planning',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
-        itaque ipsa quis laborum! At non laudantium dolorum dolores facere
-        molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex
-        tempora reprehenderit numquam odit eligendi obcaecati hic excepturi
-        error, earum vel quo facilis quaerat quibusdam delectus necessitatibus
-        similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae
-        praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos,
-        voluptates aliquam natus esse provident excepturi laborum praesentium
-        doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos,
-        delectus non repellat consequuntur vero perspiciatis ab officiis id
-        voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!
+        A beautiful, functional website without great content is like a sports
+        car with no fuel—it looks nice in the driveway but won’t take you
+        anywhere. I help businesses plan their content so it’s structured,
+        consistent, and strategically designed to connect with the right people.
+        From mapping out what goes where, to creating a voice that feels
+        authentic and engaging, I make sure your content works as hard as your
+        design. Bonus: you’ll never have to guess “what do we even put here?”
+        again.
       </p>
     ),
     img: 'https://placehold.co/600x400',
@@ -110,20 +89,16 @@ const services = [
   },
   {
     id: 6,
-    name: 'Service Six',
+    name: 'Web Consulting',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique
-        itaque ipsa quis laborum! At non laudantium dolorum dolores facere
-        molestiae quisquam cum nisi cupiditate voluptatem! Sit officia ex
-        tempora reprehenderit numquam odit eligendi obcaecati hic excepturi
-        error, earum vel quo facilis quaerat quibusdam delectus necessitatibus
-        similique quod eius ratione asperiores doloribus ducimus! Ipsa beatae
-        praesentium non iste explicabo vitae, aut ipsam. Hic dolore dignissimos,
-        voluptates aliquam natus esse provident excepturi laborum praesentium
-        doloribus. Aliquid ducimus hic provident pariatur libero quibusdam eos,
-        delectus non repellat consequuntur vero perspiciatis ab officiis id
-        voluptates? Laudantium minima ea beatae temporibus iure rerum tempore!
+        Sometimes you don’t need a full rebuild—you just need someone to tell
+        you what’s working, what’s not, and how to fix it. That’s where I come
+        in. With years of experience in design, development, and strategy, I
+        provide actionable insights that go beyond surface-level advice. Whether
+        it’s diagnosing why conversions are low, untangling a messy CMS, or
+        figuring out how to scale, I’ll help you get clarity and a clear path
+        forward. Think of me as your website’s coach—minus the whistle.
       </p>
     ),
     img: 'https://placehold.co/600x400',

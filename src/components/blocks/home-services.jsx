@@ -18,37 +18,37 @@ const services = [
     id: 1,
     name: 'Web Development',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+      'I turn your designs into fast, functional, and future-proof websites. Think of me as your site’s mechanic—minus the greasy hands.',
   },
   {
     id: 2,
     name: 'Web Design',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+      'Good design isn’t just pretty—it’s persuasive. I design websites that look sharp and convert clicks into clients.',
   },
   {
     id: 3,
-    name: 'Graphic Design',
+    name: 'Seo & Accessibility',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+      'If people can’t find you—or worse, can’t use your site—you’re leaving money on the table. Let’s fix that.',
   },
   {
     id: 4,
-    name: 'Web Consulting',
+    name: 'Graphic Design',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+      'Logos, social graphics, marketing materials—if it lives online (or in print), I can make it look good.',
   },
   {
     id: 5,
-    name: 'Service Five',
+    name: 'Content Planning',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+      'No more staring at a blank page. I’ll help you plan content that speaks to your audience and sells your story.',
   },
   {
     id: 6,
-    name: 'Service Six',
+    name: 'Consulting',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quia aut, sunt odit quibusdam, eos nam distinctio assumenda hic rem sapiente error dolorem et quasi!',
+      'Need a second set of eyes on your website? I’ll give you the no-fluff feedback and practical steps to improve it.',
   },
 ];
 
@@ -59,7 +59,6 @@ const HomeServices = () => {
         <div className="services_content">
           <Reveal
             cascade
-            // duration={300}
             damping={0.2}
             fraction={0.75}
             keyframes={customAnimation}
@@ -70,7 +69,6 @@ const HomeServices = () => {
           <div className="services_grid">
             <Reveal
               cascade
-              // duration={300}
               damping={0.2}
               fraction={0.75}
               keyframes={customAnimation}
@@ -80,7 +78,7 @@ const HomeServices = () => {
                 const { id, name, description } = service;
                 return (
                   <div className="service" key={id}>
-                    <h3>{name}</h3>
+                    <h3 className="h4">{name}</h3>
                     <p>{description}</p>
                   </div>
                 );

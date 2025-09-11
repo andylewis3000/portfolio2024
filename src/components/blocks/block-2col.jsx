@@ -43,7 +43,7 @@ const Block2Col = ({
             <div className="content-2col__text">
               {reveal ? <Reveal /> : ''}
               {heading ? <h2>{heading}</h2> : ''}
-              {subheading ? <h4>{subheading}</h4> : ''}
+              {subheading ? <h3 className="h5">{subheading}</h3> : ''}
               {text ? text : ''}
               {button ? (
                 <ButtonLink
@@ -68,7 +68,7 @@ const Block2Col = ({
           ) : (
             <div className="content-2col__text">
               {heading2 ? <h2>{heading2}</h2> : ''}
-              {subheading ? <h4>{subheading}</h4> : ''}
+              {subheading ? <h3 className="h5">{subheading}</h3> : ''}
               {text2 ? text2 : ''}
               {button ? (
                 <ButtonLink
