@@ -1,17 +1,11 @@
+// Contact Page -- Overrides
+
 .contact {
   .contact__content {
     display: grid;
     grid-template-columns: $grid-1col;
     grid-column-gap: $grid-spacing-lg;
     grid-row-gap: $grid-spacing-lg;
-    // padding: $padding-lg;
-    // border-radius: $border-radius-sm;
-    // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
-
-    @media (min-width: $breakpoint-md) {
-      // padding: $padding-xl;
-      // border-radius: $border-radius-lg;
-    }
 
     @media (min-width: $breakpoint-lg) {
       grid-template-columns: $grid-2col;
@@ -20,19 +14,19 @@
     .content-col {
       display: flex;
     }
-  }
 
-  h4 {
-    margin: $padding-xl 0 $padding-sm;
-  }
+    h4 {
+      margin: $padding-xl 0 $padding-sm;
+    }
 
-  .social-links svg {
-    fill: $colour-dark-blue;
-  }
+    .social-links svg {
+      fill: $colour-dark-blue;
+    }
 
-  .contact__form {
-    .btn {
-      margin-top: 1rem;
+    .contact__form {
+      .btn {
+        margin-top: 1rem;
+      }
     }
   }
 }

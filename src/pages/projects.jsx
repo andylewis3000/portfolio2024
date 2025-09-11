@@ -12,8 +12,13 @@ const projects = [
     id: 'airsprint',
     name: 'Airsprint',
     subheading: 'Web Development for Breeze Digital',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
+    paragraph: (
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
+        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
+        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+      </p>
+    ),
     img: airsprintGrab,
     reverse: true,
   },
@@ -21,8 +26,13 @@ const projects = [
     id: 'yates-outdoor',
     name: 'Yates Outdoor Sales',
     subheading: 'Web Design & Development',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
+    paragraph: (
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
+        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
+        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+      </p>
+    ),
     img: yatesGrab,
     reverse: false,
   },
@@ -30,8 +40,13 @@ const projects = [
     id: 'bxb-bins',
     name: 'BXB Disposal',
     subheading: 'Web Design & Development, Branding',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
+    paragraph: (
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
+        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
+        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+      </p>
+    ),
     img: bxbGrab,
     reverse: true,
   },
@@ -39,8 +54,13 @@ const projects = [
     id: 'maros-bistro',
     name: "Maro's Bistro",
     subheading: 'Web Development for Valiant Creative',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis architecto asperiores necessitatibus dolorum sapiente laborum dolores.',
+    paragraph: (
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
+        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
+        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+      </p>
+    ),
     img: marosGrab,
     reverse: false,
   },
@@ -67,7 +87,7 @@ const Projects = () => {
               text2={paragraph}
               button={true}
               btnClass={'btn-secondary'}
-              title={'View Project'}
+              btnTitle={'View Project'}
               link={`/projects/${id}`}
               img={true}
               imgURL={img}

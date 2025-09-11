@@ -22,7 +22,7 @@ const Block2Col = ({
   text2,
   button,
   btnClass,
-  title,
+  btnTitle,
   link,
   reveal,
 }) => {
@@ -46,7 +46,11 @@ const Block2Col = ({
               {subheading ? <h4>{subheading}</h4> : ''}
               {text ? text : ''}
               {button ? (
-                <ButtonLink btnClass={btnClass} title={title} link={link} />
+                <ButtonLink
+                  btnClass={btnClass}
+                  btnTitle={btnTitle}
+                  link={link}
+                />
               ) : (
                 ''
               )}
@@ -67,7 +71,11 @@ const Block2Col = ({
               {subheading ? <h4>{subheading}</h4> : ''}
               {text2 ? text2 : ''}
               {button ? (
-                <ButtonLink btnClass={btnClass} title={title} link={link} />
+                <ButtonLink
+                  btnClass={btnClass}
+                  btnTitle={btnTitle}
+                  link={link}
+                />
               ) : (
                 ''
               )}

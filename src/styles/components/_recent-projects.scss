@@ -59,14 +59,13 @@
           height: 400px;
 
           @media (min-width: $breakpoint-md) {
-            height: auto;
+            height: 600px;
           }
         }
       }
 
       &.swiper-slide-active {
         .project-card {
-          box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.3);
           .project-card__image {
             opacity: 1;
           }
