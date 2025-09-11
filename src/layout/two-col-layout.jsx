@@ -1,13 +1,30 @@
-const TwoColumnLayout = ({ children, reverse = false, extraClass = '' }) => {
+import { Reveal } from 'react-awesome-reveal';
+import { defaultRevealProps } from '../utils/revealAnimation';
+
+const TwoColumnLayout = ({
+  children,
+  reverse = false,
+  extraClass = '',
+  withReveal = false,
+  revealProps = {},
+}) => {
   const sectionClasses = `block-2col${extraClass ? ` ${extraClass}` : ''}`;
   const contentClasses = `content-2col${reverse ? ' reverse' : ''}`;
 
-  return (
+  const finalRevealProps = { ...defaultRevealProps, ...revealProps };
+
+  const content = (
     <section className={sectionClasses}>
       <div className="container">
         <div className={contentClasses}>{children}</div>
       </div>
     </section>
+  );
+
+  return withReveal ? (
+    <Reveal {...finalRevealProps}>{content}</Reveal>
+  ) : (
+    content
   );
 };
 

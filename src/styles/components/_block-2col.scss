@@ -14,12 +14,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: $grid-spacing-sm;
-      padding: $padding-md 0;
+      // gap: $grid-spacing-sm;
+      // padding: $padding-md 0;
 
       @media (min-width: $breakpoint-md) {
-        gap: $grid-spacing-md;
-        padding: $padding-xl 0;
+        // gap: $grid-spacing-md;
+        // padding: $padding-xl 0;
       }
     }
 

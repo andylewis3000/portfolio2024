@@ -1,42 +1,66 @@
 import TwoColumnLayout from '../../layout/two-col-layout';
 import ImageColumn from '../columns/image-col';
 import TextColumn from '../columns/text-col';
-import Button from '../elements/button';
+import ButtonLink from '../elements/button';
 
 const ImageTextLayout = ({
   reverse = false,
   extraClass = '',
+  // Layout reveal props
+  withReveal = false,
+  revealProps = {},
   // Image props
   imageSrc,
   imageAlt = '',
   imageWidth,
   imageHeight,
+  imageReveal = false,
+  imageRevealProps = {},
   // Text props
   heading,
   subheading,
   text,
-  buttonTitle,
-  buttonLink,
+  textReveal = false,
+  textRevealProps = {},
+  // Button props
+  btnTitle,
+  link,
   btnClass,
-  withReveal = false,
+  buttonReveal = false,
+  buttonRevealProps = {},
 }) => {
-  const button = (
-    <Button btnClass={btnClass} title={buttonTitle} link={buttonLink} />
-  );
+  const button =
+    btnTitle && link ? (
+      <ButtonLink
+        btnClass={btnClass}
+        btnTitle={btnTitle}
+        link={link}
+        withReveal={buttonReveal}
+        revealProps={buttonRevealProps}
+      />
+    ) : null;
 
   return (
-    <TwoColumnLayout reverse={reverse} extraClass={extraClass}>
+    <TwoColumnLayout
+      reverse={reverse}
+      extraClass={extraClass}
+      withReveal={withReveal}
+      revealProps={revealProps}
+    >
       <ImageColumn
         src={imageSrc}
         alt={imageAlt}
         width={imageWidth}
         height={imageHeight}
+        withReveal={imageReveal}
+        revealProps={imageRevealProps}
       />
       <TextColumn
         heading={heading}
         subheading={subheading}
         button={button}
-        withReveal={withReveal}
+        withReveal={textReveal}
+        revealProps={textRevealProps}
       >
         {text}
       </TextColumn>

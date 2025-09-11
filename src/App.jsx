@@ -16,7 +16,7 @@ import SEOMetaTags from './scripts/SEOMetaTags';
 const App = () => {
   const location = useLocation();
 
-  // Update document title when location changes
+  // Update document title and body class when location changes
   useEffect(() => {
     // Define page titles for each route
     const pageTitles = {
@@ -25,10 +25,22 @@ const App = () => {
       '/services': 'Services - Andy Lewis - Web Designer & Developer',
       '/projects': 'Projects - Andy Lewis - Web Designer & Developer',
       '/contact': 'Contact Us - Andy Lewis - Web Designer & Developer',
-      // Dynamic project pages will be handled separately
-      // '/projects/yates-outdoor': 'Yates Outdoor - Your Company Name',
-      // '/projects/maros-bistro': 'Maros Bistro - Your Company Name',
-      // '/projects/bxb-bins': 'BxB Bins - Your Company Name',
+    };
+
+    // Function to get page class based on current path
+    const getPageClass = (pathname) => {
+      // Handle home route
+      if (pathname === '/') {
+        return 'home';
+      }
+
+      // Handle dynamic project routes (/projects/:id)
+      if (pathname.startsWith('/projects/') && pathname !== '/projects') {
+        return 'project-detail';
+      }
+
+      // Handle regular routes - remove leading slash and replace any remaining slashes with dashes
+      return pathname.slice(1).replace(/\//g, '-');
     };
 
     // Function to get page title based on current path
@@ -47,8 +59,25 @@ const App = () => {
       return pageTitles[pathname] || 'Andy Lewis - Web Designer & Developer';
     };
 
+    // Update document title
     const newTitle = getPageTitle(location.pathname);
     document.title = newTitle;
+
+    // Update body class
+    const pageClass = getPageClass(location.pathname);
+
+    // Remove any existing page classes
+    document.body.className = document.body.className
+      .replace(/\b(home|about|services|projects|project-detail|contact)\b/g, '')
+      .trim();
+
+    // Add new page class
+    document.body.classList.add(pageClass);
+
+    // Cleanup function to remove the class when component unmounts
+    return () => {
+      document.body.classList.remove(pageClass);
+    };
   }, [location.pathname]);
 
   return (

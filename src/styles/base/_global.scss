@@ -130,6 +130,7 @@ button {
   margin-inline: auto;
   padding: $padding-sm 0;
   z-index: 1;
+  overflow: hidden;
 
   @media (min-width: $breakpoint-md) {
     padding: $padding-md 0;
@@ -140,6 +141,7 @@ button {
     padding: $padding-lg 0;
   }
 }
+
 .container {
   max-width: $max-site-width;
   width: 100%;

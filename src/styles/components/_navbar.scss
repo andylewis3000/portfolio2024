@@ -149,9 +149,10 @@
   height: 100vh;
   background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: $border-radius-sm 0 0 $border-radius-sm;
   transition: $transition-all !important;
+  overflow: hidden;
 
   @media (min-width: $breakpoint-lg) {
     height: auto;
@@ -174,12 +175,38 @@
     line-height: 1.3;
   }
 
+  ul {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -300%;
+      right: -300%;
+      width: 800px;
+      height: 800px;
+      background: url('/src/assets/images/ALDC-Logo-Dark.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transform: rotate(-15deg);
+      opacity: 0.2;
+
+      @media (min-width: $breakpoint-md) {
+        width: 1000px;
+        height: 1000px;
+        bottom: -400%;
+        right: -400%;
+      }
+    }
+  }
+
   ul li a {
     color: $colour-dark-blue;
     text-align: right;
   }
 
   .social-links {
+    position: relative;
     a svg {
       fill: $colour-dark-blue;
     }

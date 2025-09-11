@@ -52,7 +52,7 @@
       .hero-content__text {
         width: 100%;
         height: 100%;
-        text-align: center;
+        text-align: left;
       }
     }
   }
@@ -74,7 +74,6 @@
       width: 100%;
       color: $white;
       text-wrap: balance;
-      max-width: 75%;
     }
 
     .subheading {
@@ -118,6 +117,30 @@
 
   &.hero-medium {
     height: 450px;
+
+    .container {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -130px;
+        right: 0px;
+        background: url('src/assets/images/ALDC-Logo-Dark.svg') no-repeat;
+        background-size: 100% 100%;
+        width: 350px;
+        height: 350px;
+        transform: rotate(-15deg);
+        opacity: 0.2;
+        animation: FadeIn2 3s;
+
+        @media (min-width: $breakpoint-md) {
+          bottom: -150px;
+          width: 500px;
+          height: 500px;
+        }
+      }
+    }
   }
 
   &.hero-small {

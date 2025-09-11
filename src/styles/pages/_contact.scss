@@ -1,3 +1,5 @@
+// Contact Page -- Overrides
+
 .contact {
   .contact__content {
     display: grid;
@@ -12,19 +14,19 @@
     .content-col {
       display: flex;
     }
-  }
 
-  h4 {
-    margin: $padding-xl 0 $padding-sm;
-  }
+    h4 {
+      margin: $padding-xl 0 $padding-sm;
+    }
 
-  .social-links svg {
-    fill: $colour-dark-blue;
-  }
+    .social-links svg {
+      fill: $colour-dark-blue;
+    }
 
-  .contact__form {
-    .btn {
-      margin-top: 1rem;
+    .contact__form {
+      .btn {
+        margin-top: 1rem;
+      }
     }
   }
 }

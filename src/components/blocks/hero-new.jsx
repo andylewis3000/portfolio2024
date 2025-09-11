@@ -32,11 +32,11 @@ const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
             >
               <h1 className="heading">{heading}</h1>
 
-              {subHeading && <h2 className="h5 subheading">{subHeading}</h2>}
+              {subHeading && <h2 className="h4 subheading">{subHeading}</h2>}
 
               {btnActive && (
                 <ButtonLink
-                  btnClass={'btn-primary'}
+                  btnClass={'btn-secondary'}
                   link="/services"
                   btnTitle="Learn How"
                 />

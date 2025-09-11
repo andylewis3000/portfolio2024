@@ -36,3 +36,12 @@
     opacity: 1;
   }
 }
+
+@keyframes FadeIn2 {
+  from {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
