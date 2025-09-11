@@ -38,16 +38,16 @@ const ContentColumn = ({
         triggerOnce
       >
         {heading ? <h2>{heading}</h2> : ''}
-        {subheading ? <h3 className="h4">{subheading}</h3> : ''}
+        {subheading ? <h3 className="h5">{subheading}</h3> : ''}
         {designNote ? (
-          <h4 className="h5">
+          <h4 className="h6">
             Design: <span>{designNote}</span>
           </h4>
         ) : (
           ''
         )}
         {devNote ? (
-          <h4 className="h5">
+          <h4 className="h6">
             Dev: <span>{devNote}</span>
           </h4>
         ) : (

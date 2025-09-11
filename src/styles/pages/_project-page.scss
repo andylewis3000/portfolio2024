@@ -9,4 +9,8 @@
   @media (min-width: $breakpoint-lg) {
     grid-template-columns: $grid-2col;
   }
+
+  p:first-of-type {
+    margin-top: 1rem;
+  }
 }

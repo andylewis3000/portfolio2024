@@ -20,7 +20,7 @@
       .service {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        // gap: 1rem;
         height: 100%;
         padding: 2rem;
         background: $card-bg;
@@ -28,6 +28,7 @@
 
         h3 {
           color: $colour-dark-blue;
+          font-size: 1.75rem;
         }
 
         p {
