@@ -10,153 +10,45 @@ const projects = {
   airsprint: {
     heading: 'Airsprint',
     subheading: 'Web Developement for Breeze Digital',
-    note: 'PHP / HTML5 / CSS3 (Sass) / Javascript / React',
-    paragraph: (
-      <>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-      </>
-    ),
+    designNote: 'Figma',
+    devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript / React',
+    paragraph:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
+    paragraph2:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
     link: '#',
   },
   'yates-outdoor': {
     heading: 'Yates Outdoor',
     subheading: 'Web Design & Developement',
-    note: 'Adobe Illustrator / Adobe Photoshop / PHP / HTML5 / CSS3 (Sass)',
-    paragraph: (
-      <>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-      </>
-    ),
+    designNote: 'Adobe Illustrator / Adobe Photoshop',
+    devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript',
+    paragraph:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
+    paragraph2:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
     link: '#',
   },
   'bxb-bins': {
     heading: 'BXB Bins',
     subheading: 'Web Design & Developement',
-    note: 'Adobe Illustrator / Adobe Photoshop / PHP / HTML5 / CSS3 (Sass)',
-    paragraph: (
-      <>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-      </>
-    ),
+    designNote: 'Adobe Illustrator / Adobe Photoshop',
+    devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript',
+    paragraph:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
+    paragraph2:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
     link: '#',
   },
   'maros-bistro': {
     heading: "Maro's Bistro",
     subheading: 'Web Developement',
-    note: 'Adobe Illustrator / Adobe Photoshop / PHP / HTML5 / CSS3 (Sass)',
-    paragraph: (
-      <>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          odio voluptates voluptatum ducimus officia aut itaque laborum
-          inventore minus incidunt in dolore nemo, cumque facere voluptatem
-          eaque enim magnam error quasi autem obcaecati ad nam. Reprehenderit
-          quis hic, labore tenetur incidunt minima maiores aliquid dolores
-          facilis necessitatibus consequuntur temporibus alias natus suscipit id
-          dolorum! Similique perspiciatis necessitatibus libero reiciendis
-          tempora aperiam recusandae voluptate ratione dolorem aut adipisci,
-          ipsum quae corrupti dolor! Iste laborum aut reiciendis facere
-          similique aliquid qui quibusdam repellat, fugit voluptates quasi nulla
-          soluta eveniet temporibus. Dicta, neque eligendi. Quasi nihil
-          doloribus qui explicabo, itaque magnam minima molestias!
-        </p>
-      </>
-    ),
+    designNote: 'Adobe Illustrator / Adobe Photoshop',
+    devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript',
+    paragraph:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
+    paragraph2:
+      'Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Suspendisse potenti. Vivamus non arcu tincidunt, congue massa at, porttitor velit. Curabitur lacinia nisl ut turpis convallis, at dictum urna aliquet. Nullam non urna eget felis interdum feugiat. Morbi vel neque elit. Nullam a luctus leo. Integer maximus sapien in bibendum scelerisque.',
     link: '#',
   },
 };
@@ -175,12 +67,10 @@ const Project = () => {
               <ContentColumn
                 heading={project.heading}
                 subheading={project.subheading}
-                note={
-                  <>
-                    <span>Tools:</span> {project.note}
-                  </>
-                }
+                designNote={project.designNote}
+                devNote={project.devNote}
                 paragraph={project.paragraph}
+                paragraph2={project.paragraph2}
                 link={project.link}
                 btnClass={'secondary'}
                 btnText={'Launch Project'}

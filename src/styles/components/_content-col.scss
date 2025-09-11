@@ -1,13 +1,19 @@
 .content-col {
   display: block;
 
-  div {
-    p {
-      margin-bottom: 1.5rem;
-    }
+  h4:first-of-type {
+    margin-bottom: 0.25rem;
+  }
 
-    span {
-      font-weight: 600;
-    }
+  span {
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  p:first-of-type {
+    margin-top: 1rem;
   }
 }

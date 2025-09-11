@@ -19,7 +19,8 @@ const ContentColumn = ({
   extraClass,
   heading,
   subheading,
-  note,
+  designNote,
+  devNote,
   paragraph,
   paragraph2,
   link,
@@ -37,9 +38,22 @@ const ContentColumn = ({
         triggerOnce
       >
         {heading ? <h2>{heading}</h2> : ''}
-        {subheading ? <h4>{subheading}</h4> : ''}
-        {note ? <h5>{note}</h5> : ''}
-        {paragraph ? paragraph : ''}
+        {subheading ? <h3 className="h4">{subheading}</h3> : ''}
+        {designNote ? (
+          <h4 className="h5">
+            Design: <span>{designNote}</span>
+          </h4>
+        ) : (
+          ''
+        )}
+        {devNote ? (
+          <h4 className="h5">
+            Dev: <span>{devNote}</span>
+          </h4>
+        ) : (
+          ''
+        )}
+        {paragraph ? <p>{paragraph}</p> : ''}
         {paragraph2 ? <p>{paragraph2}</p> : ''}
         {link ? (
           <Link to={link}>
