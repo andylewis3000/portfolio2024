@@ -15,10 +15,7 @@ const Footer = () => {
           <div className="footer-content">
             <div className="footer-content__block">
               <div className="footer-logo">
-                <img
-                  src="src/assets/images/ALDC-Logo-Light.svg"
-                  alt="Andy Lewis Logo"
-                />
+                <img src="/ALDC-Logo-Light.svg" alt="Andy Lewis Logo" />
                 <h6>
                   Andy Lewis
                   <br />
