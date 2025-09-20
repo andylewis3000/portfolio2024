@@ -23,6 +23,7 @@ const ContentColumn = ({
   devNote,
   paragraph,
   paragraph2,
+  paragraph3,
   link,
   btnClass,
   btnText,
@@ -55,6 +56,7 @@ const ContentColumn = ({
         )}
         {paragraph ? <p>{paragraph}</p> : ''}
         {paragraph2 ? <p>{paragraph2}</p> : ''}
+        {paragraph3 ? <p>{paragraph3}</p> : ''}
         {link ? (
           <Link to={link}>
             <button className={`btn btn-${btnClass}`}>{btnText}</button>

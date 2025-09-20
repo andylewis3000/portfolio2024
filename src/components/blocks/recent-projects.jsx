@@ -71,13 +71,13 @@ const RecentProjects = () => {
           >
             <ContentColumn
               extraClass={'slider-nav'}
-              heading={"Things I've done..."}
+              heading={'From Concept to Reality'}
               paragraph={
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-                  exercitationem! Quae cupiditate voluptas nobis ipsa possimus
-                  suscipit eaque commodi quam. Molestias nemo nostrum excepturi
-                  natus?
+                  Unique challenges solved with creativity, code, and just the
+                  right amount of caffeine. Take a look at how I&apos;ve helped
+                  small businesses and individuals turn their digital dreams
+                  into pixel-perfect reality.
                 </p>
               }
               link={'/projects'}

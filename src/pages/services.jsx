@@ -5,6 +5,7 @@ import PageTransition from '../scripts/transitions';
 const services = [
   {
     id: 1,
+    anchor: 'dev',
     name: 'Web Development',
     paragraph: (
       <p>
@@ -22,6 +23,7 @@ const services = [
   },
   {
     id: 2,
+    anchor: 'webdesign',
     name: 'Web Design',
     paragraph: (
       <p>
@@ -38,6 +40,7 @@ const services = [
   },
   {
     id: 3,
+    anchor: 'seo',
     name: 'SEO & Accessibility',
     paragraph: (
       <p>
@@ -55,6 +58,7 @@ const services = [
   },
   {
     id: 4,
+    anchor: 'graphicdesign',
     name: 'Graphic Design',
     paragraph: (
       <p>
@@ -71,6 +75,7 @@ const services = [
   },
   {
     id: 5,
+    anchor: 'planning',
     name: 'Content Planning',
     paragraph: (
       <p>
@@ -89,6 +94,7 @@ const services = [
   },
   {
     id: 6,
+    anchor: 'consulting',
     name: 'Web Consulting',
     paragraph: (
       <p>
