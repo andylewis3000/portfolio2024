@@ -14,9 +14,8 @@ const projects = [
     subheading: 'Web Development for Breeze Digital',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
-        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+        A sleek redesign for a private jet company, complete with custom
+        components and a smoother-than-first-class user experience.
       </p>
     ),
     img: airsprintGrab,
@@ -28,9 +27,8 @@ const projects = [
     subheading: 'Web Design & Development',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
-        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+        A fresh new digital look for an outdoor brand, designed to match their
+        rebrand and built to handle both gear and adventure.
       </p>
     ),
     img: yatesGrab,
@@ -39,12 +37,11 @@ const projects = [
   {
     id: 'bxb-bins',
     name: 'BXB Disposal',
-    subheading: 'Web Design & Development, Branding',
+    subheading: 'Branding, Web Design & Development',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
-        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+        From logo to launch—helping a disposal bin company establish their brand
+        and build a strong digital foundation.
       </p>
     ),
     img: bxbGrab,
@@ -56,9 +53,8 @@ const projects = [
     subheading: 'Web Development for Valiant Creative',
     paragraph: (
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-        placeat magni. Accusamus saepe incidunt, adipisci voluptatem atque omnis
-        architecto asperiores necessitatibus dolorum sapiente laborum dolores.
+        A modernized web presence for a Mediterranean-Middle Eastern bistro,
+        blending flavor, function, and a little extra polish.
       </p>
     ),
     img: marosGrab,

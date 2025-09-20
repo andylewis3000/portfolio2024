@@ -2,7 +2,20 @@
   .services_content {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    // gap: 2.5rem;
+
+    h2 {
+      @media (min-width: $breakpoint-md) {
+        max-width: 75%;
+      }
+    }
+    p {
+      margin-bottom: 2rem;
+
+      @media (min-width: $breakpoint-md) {
+        max-width: 75%;
+      }
+    }
 
     .services_grid {
       display: grid;
@@ -26,6 +39,13 @@
         background: $card-bg;
         border-radius: $border-radius-sm;
 
+        svg {
+          width: 2rem;
+          height: auto;
+          margin-bottom: 1rem;
+          color: $primary-accent;
+        }
+
         h3 {
           color: $colour-dark-blue;
           font-size: 1.75rem;
@@ -33,6 +53,49 @@
 
         p {
           color: $colour-dark-blue;
+          max-width: 100%;
+        }
+
+        a {
+          display: inline-flex;
+          gap: 5px;
+          align-self: flex-start;
+          transition: all 0.3s ease-in-out;
+          margin-top: auto;
+          position: relative;
+          overflow: hidden;
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            height: 2px;
+            width: 90px;
+            background: $colour-dark-blue;
+            transition: all 0.3s ease-in-out;
+          }
+
+          svg {
+            width: 1rem;
+            margin: 0;
+            fill: $colour-dark-blue;
+            transition: all 0.4s ease-in-out;
+          }
+
+          &:visited {
+            color: $colour-dark-blue;
+          }
+
+          &:hover {
+            color: $colour-dark-blue;
+            &:before {
+              left: 0;
+            }
+            svg {
+              margin-left: 3px;
+            }
+          }
         }
       }
     }
