@@ -13,6 +13,10 @@
 
   p {
     color: $colour-dark-blue;
+
+    @media (min-width: $breakpoint-lg) {
+      max-width: 75%;
+    }
   }
 
   .recent-projects__content {
@@ -26,7 +30,7 @@
     }
 
     @media (min-width: $breakpoint-lg) {
-      grid-template-columns: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr;
       align-items: center;
     }
 
@@ -57,10 +61,12 @@
 
       .project-card {
         .project-card__image {
-          height: 400px;
+          // height: 400px;
+          height: auto;
 
           @media (min-width: $breakpoint-md) {
-            height: 600px;
+            // height: 600px;
+            height: auto;
           }
         }
       }

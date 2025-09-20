@@ -35,7 +35,18 @@
     }
 
     h3 {
+      display: flex;
+      gap: 5px;
       color: $white;
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 25px;
+        background: url('/ALDC-Logo-Light.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
     }
   }
 

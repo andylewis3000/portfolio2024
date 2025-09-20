@@ -78,7 +78,8 @@ button {
   text-decoration: none;
   margin: 0;
   padding: 1rem 1.75rem;
-  border-radius: $border-radius-xs;
+  // border-radius: $border-radius-xs;
+  border-radius: 50px;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
 }

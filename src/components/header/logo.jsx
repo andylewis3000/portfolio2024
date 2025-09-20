@@ -6,12 +6,7 @@ const HeaderLogo = () => {
     <>
       <div className="header-logo">
         <Link to={'/'}>
-          {/* <h3>
-            AL
-            <AiFillThunderbolt />
-            DC
-          </h3> */}
-          <h3>Andy Lewis</h3>
+          <h3>ALDC</h3>
         </Link>
       </div>
     </>

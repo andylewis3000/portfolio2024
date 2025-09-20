@@ -64,10 +64,21 @@
 .header-bg-color {
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   background: $white;
+  // background: rgba(255, 255, 255, 0.9);
+  // backdrop-filter: blur(3px);
   transition: all 0.3s ease-in-out;
 
   .header-logo h3 {
     color: $colour-dark-blue !important;
+
+    &:before {
+      content: '';
+      width: 30px;
+      height: 25px;
+      background: url('/ALDC-Logo-Fade.svg') !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% 100% !important;
+    }
   }
 
   .main-nav ul li a {

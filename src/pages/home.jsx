@@ -12,9 +12,9 @@ const Home = () => {
     <PageTransition>
       <HeroNew
         heroSize={'hero-large'}
-        heading={'Your website probably needs help.'}
+        heading={'Your website needs help.'}
         subHeading={
-          "I'm a web designer and developer based out of British Columbia, and I can help make your brand better."
+          'Get a sleek, user-friendly websites that doesn’t just look good — it gets results.'
         }
         imgActive={true}
         btnActive={true}

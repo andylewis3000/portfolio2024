@@ -73,12 +73,7 @@ const RecentProjects = () => {
               extraClass={'slider-nav'}
               heading={'From Concept to Reality'}
               paragraph={
-                <p>
-                  Unique challenges solved with creativity, code, and just the
-                  right amount of caffeine. Take a look at how I&apos;ve helped
-                  small businesses and individuals turn their digital dreams
-                  into pixel-perfect reality.
-                </p>
+                "Unique challenges solved with creativity, code, and just the right amount of caffeine. Take a look at how I've helped small businesses and individuals turn their digital dreams into pixel-perfect reality."
               }
               link={'/projects'}
               btnClass={'primary'}

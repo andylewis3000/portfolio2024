@@ -43,39 +43,47 @@ const Testimonials = () => {
   return (
     <section className="testimonials">
       <div className="container">
-        <div className="testimonials__content">
-          <Reveal
-            cascade
-            damping={0.2}
-            fraction={0.75}
-            keyframes={customAnimation}
-            triggerOnce
-          >
-            <Swiper
-              slidesPerView={1}
-              loop={true}
-              speed={2000}
-              modules={[Autoplay, EffectFade]}
-              autoplay={{ delay: 5000 }}
-              effect={'fade'}
-              fadeEffect={{
-                crossFade: true,
-              }}
+        <Reveal
+          cascade
+          damping={0.2}
+          fraction={0.75}
+          keyframes={customAnimation}
+          triggerOnce
+        >
+          <div className="testimonials__content">
+            <Reveal
+              cascade
+              damping={0.2}
+              fraction={0.75}
+              keyframes={customAnimation}
+              triggerOnce
             >
-              {testimonialsContent.map((testimonial) => {
-                const { id, content, client } = testimonial;
-                return (
-                  <SwiperSlide key={id}>
-                    <div className="testimonial">
-                      <h2 className="h4">&ldquo;{content}&rdquo;</h2>
-                      <h3 className="h5">{client}</h3>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </Reveal>
-        </div>
+              <Swiper
+                slidesPerView={1}
+                loop={true}
+                speed={3000}
+                modules={[Autoplay, EffectFade]}
+                autoplay={{ delay: 5000 }}
+                effect={'fade'}
+                fadeEffect={{
+                  crossFade: true,
+                }}
+              >
+                {testimonialsContent.map((testimonial) => {
+                  const { id, content, client } = testimonial;
+                  return (
+                    <SwiperSlide key={id}>
+                      <div className="testimonial">
+                        <h2 className="h5">&ldquo;{content}&rdquo;</h2>
+                        <h3 className="h6">{client}</h3>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </Reveal>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

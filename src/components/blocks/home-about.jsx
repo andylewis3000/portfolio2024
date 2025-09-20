@@ -8,7 +8,7 @@ const HomeAbout = () => {
           <ContentColumn
             heading="A little bit about me..."
             paragraph={
-              'Meet the guy who builds websites that look sharp, run smoothly, and won’t mysteriously crash on mobile. He blends creativity, code, and strategy to help brands stand out online—minus the jargon and fluff.'
+              'I’ve been in the web design game long enough to know what works. These days I’ve traded the buzz of the city for mountain air, and dress shoes for hiking boots - but my mission has stayed the same: helping small businesses build powerful online presences with the polish of big agencies.'
             }
             link={'/about'}
             btnClass={'secondary'}

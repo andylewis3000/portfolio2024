@@ -29,7 +29,7 @@ const services = [
     id: 1,
     name: 'Web Development',
     description:
-      'I turn your designs into fast, functional, and future-proof websites. Think of me as your site’s mechanic—minus the greasy hands.',
+      'Turn your designs into fast, functional, and future-proof websites. Think of me as your site’s mechanic — minus the greasy hands.',
     icon: FaCubes,
     link: '/services#dev',
   },
@@ -37,7 +37,7 @@ const services = [
     id: 2,
     name: 'Web Design',
     description:
-      'Good design isn’t just pretty—it’s persuasive. I design websites that look sharp and convert clicks into clients.',
+      'Good design isn’t just pretty — it’s persuasive. I design websites that look sharp and convert clicks into clients.',
     icon: FaObjectGroup,
     link: '/services#webdesign',
   },
@@ -45,7 +45,7 @@ const services = [
     id: 3,
     name: 'Seo & Accessibility',
     description:
-      'If people can’t find you—or worse, can’t use your site—you’re leaving money on the table. Let’s fix that.',
+      'If people can’t find you — or worse, can’t use your site — you’re leaving money on the table. Let’s fix that.',
     icon: FaEye,
     link: '/services#seo',
   },
@@ -53,7 +53,7 @@ const services = [
     id: 4,
     name: 'Graphic Design',
     description:
-      'Logos, social graphics, marketing materials—if it lives online (or in print), I can make it look good.',
+      'Logos, social graphics, marketing materials — if it lives online (or in print), I can make it look good.',
     icon: FaDroplet,
     link: '/services#graphicdesign',
   },
@@ -87,12 +87,12 @@ const HomeServices = () => {
             keyframes={customAnimation}
             triggerOnce
           >
-            <h2>From Strategy to Success, No Stops Skipped</h2>
+            <h2>From strategy to success, streamline your journey</h2>
             <p>
-              Designing and developing websites that work as hard as you do,
-              optimizing them so people can actually find you, and make sure
-              everyone can use them. From strategic planning to graphic design,
-              I&apos;m like a Swiss Army knife for your digital presence, minus
+              Let&apos;s design and develop a website that work as hard as you
+              do, optimize it so people can actually find you, and make sure
+              everyone can use it. From strategic planning to graphic design,
+              I&apos;m your Swiss Army knife for your digital presence, minus
               the tiny scissors that nobody knows how to use.
             </p>
           </Reveal>
