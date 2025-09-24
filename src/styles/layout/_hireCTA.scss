@@ -3,7 +3,8 @@
 .hireCTA {
   .hireCTA__content {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem 2rem;

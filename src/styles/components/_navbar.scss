@@ -181,9 +181,20 @@
   }
 
   h3 {
-    color: $colour-dark-blue;
+    color: $colour-dark-blue !important;
     text-align: right;
     line-height: 1.3;
+    display: flex;
+    gap: 5px;
+
+    &:before {
+      content: '';
+      width: 30px;
+      height: 25px;
+      background: url('/ALDC-Logo-Fade.svg') !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% 100% !important;
+    }
   }
 
   ul {

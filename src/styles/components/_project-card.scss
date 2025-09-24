@@ -7,6 +7,10 @@
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
+  @media (min-width: $breakpoint-lg) {
+    border-radius: $border-radius-lg;
+  }
+
   .project-card__image {
     height: 100%;
     opacity: 0.1;

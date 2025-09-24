@@ -1,4 +1,4 @@
-import { FaArrowRight } from 'react-icons/fa6';
+// import { FaArrowRight } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const HireCTA = () => {
@@ -7,7 +7,8 @@ const HireCTA = () => {
       <div className="container">
         <div className="hireCTA__content">
           <h2>
-            {'Ready to get started?'} <FaArrowRight />
+            {'Ready to get started?'}
+            {/* <FaArrowRight /> */}
           </h2>
           <Link to="/contact">
             <button className="btn btn-primary">

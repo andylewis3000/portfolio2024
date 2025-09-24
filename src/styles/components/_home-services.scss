@@ -26,10 +26,6 @@
         grid-template-columns: $grid-2col;
       }
 
-      @media (min-width: $breakpoint-lg) {
-        grid-template-columns: $grid-3col;
-      }
-
       .service {
         display: flex;
         flex-direction: column;

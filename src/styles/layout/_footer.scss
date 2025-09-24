@@ -11,15 +11,20 @@ footer {
 
   .container {
     height: 100%;
+    position: relative;
   }
 
   .footer-content {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: space-between;
+    align-items: flex-end;
     gap: 4rem;
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
+
+    @media (min-width: $breakpoint-lg) {
+      // flex-direction: row;
+      // align-items: flex-end;
+      gap: 0;
     }
   }
 
@@ -28,7 +33,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
     height: 100%;
 
     .footer-logo {
@@ -47,25 +52,16 @@ footer {
     h6 {
       color: $white;
       text-align: left;
-    }
-
-    .copyright {
-      color: $white;
-      text-align: left;
-
-      small {
-        font-size: 0.875rem;
-      }
-    }
-
-    h5 {
-      color: $white;
+      margin-bottom: 0;
+      display: flex;
+      flex-flow: row wrap;
     }
 
     ul {
       display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
+      flex-direction: row;
+      // gap: 0.25rem;
+      gap: 1rem;
 
       @media (min-width: $breakpoint-lg) {
         flex-direction: row;
@@ -74,6 +70,10 @@ footer {
 
       li {
         text-align: left;
+
+        @media (min-width: $breakpoint-lg) {
+          text-align: center;
+        }
 
         a {
           font-size: 0.875rem;
@@ -98,6 +98,22 @@ footer {
           }
         }
       }
+    }
+  }
+
+  .copyright {
+    position: relative;
+    color: $white;
+    text-align: left;
+    margin-top: 3rem;
+
+    @media (min-width: $breakpoint-lg) {
+      text-align: center;
+      margin-left: 6rem;
+    }
+
+    small {
+      font-size: 0.75rem;
     }
   }
 }

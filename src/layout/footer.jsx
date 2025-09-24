@@ -22,19 +22,19 @@ const Footer = () => {
                   Web Designer & Developer
                 </h6>
               </div>
-              <p className="copyright">
-                <small>&copy; {year}. All rights reserved.</small>
-              </p>
             </div>
             <div className="footer-content__block">
-              <h5>Navigation</h5>
+              {/* <h6>Navigation</h6> */}
               <FooterMenu />
             </div>
             <div className="footer-content__block">
-              <h5>Social</h5>
+              {/* <h6>Social</h6> */}
               <SocialLinks />
             </div>
           </div>
+          <p className="copyright">
+            <small>&copy; {year}. All rights reserved.</small>
+          </p>
         </div>
       </footer>
     </>

@@ -6,6 +6,7 @@
   padding: 5rem 0;
   margin-top: -72px;
   @include gradientBG($colour-dark-blue, $primary-accent);
+  overflow: hidden;
 
   .container {
     display: flex;

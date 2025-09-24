@@ -43,6 +43,16 @@
       font-size: 1.5rem;
       display: flex;
       align-items: center;
+      gap: 5px;
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 25px;
+        background: url('/ALDC-Logo-Light.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
 
       svg {
         font-size: 1.5rem;
