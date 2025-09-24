@@ -2,11 +2,6 @@ import Block2Col from '../components/blocks/block-2col';
 import HeroNew from '../components/blocks/hero-new';
 import PageTransition from '../scripts/transitions';
 
-import airsprintGrab from '../assets/images/Airsprint-Grab.png';
-import yatesGrab from '../assets/images/Yates-Grab.png';
-import bxbGrab from '../assets/images/BXB-Grab.png';
-import marosGrab from '../assets/images/Maros-Grab.png';
-
 const projects = [
   {
     id: 'airsprint',
@@ -18,7 +13,7 @@ const projects = [
         components and a smoother-than-first-class user experience.
       </p>
     ),
-    img: airsprintGrab,
+    img: '../images/airsprint/Airsprint-Grab.webp',
     reverse: true,
   },
   {
@@ -31,7 +26,7 @@ const projects = [
         rebrand and built to handle both gear and adventure.
       </p>
     ),
-    img: yatesGrab,
+    img: '../images/yates-outdoor/Yates-Grab.webp',
     reverse: false,
   },
   {
@@ -44,7 +39,7 @@ const projects = [
         and build a strong digital foundation.
       </p>
     ),
-    img: bxbGrab,
+    img: '../images/bxb/BXB-Grab.webp',
     reverse: true,
   },
   {
@@ -57,7 +52,7 @@ const projects = [
         blending flavor, function, and a little extra polish.
       </p>
     ),
-    img: marosGrab,
+    img: '../images/maros/Maros-Grab.webp',
     reverse: false,
   },
 ];
