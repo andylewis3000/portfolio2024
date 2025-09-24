@@ -14,7 +14,7 @@ const Home = () => {
         heroSize={'hero-large'}
         heading={'Your website needs help.'}
         subHeading={
-          'Get a sleek, user-friendly websites that doesn’t just look good — it gets results.'
+          'Get a sleek, user-friendly website that doesn’t just look good — it gets results.'
         }
         imgActive={true}
         btnActive={true}
