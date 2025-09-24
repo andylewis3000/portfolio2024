@@ -150,7 +150,7 @@ const projects = {
   },
   'maros-bistro': {
     heading: "Maro's Bistro",
-    subheading: 'Web Developement',
+    subheading: 'Web Development',
     designNote: 'Adobe Illustrator / Adobe Photoshop',
     devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript',
     paragraph:
