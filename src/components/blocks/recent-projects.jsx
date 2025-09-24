@@ -2,11 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import yatesGrab from '../../assets/images/Yates-Grab.png';
-import bxbGrab from '../../assets/images/BXB-Grab.png';
-import marosGrab from '../../assets/images/Maros-Grab.png';
-import airsprintGrab from '../../assets/images/Airsprint-Grab.png';
-
 import { Link } from 'react-router-dom';
 import ContentColumn from '../elements/content-col';
 
@@ -30,28 +25,28 @@ const projects = [
     id: 1,
     name: 'Airsprint',
     type: 'Web Development',
-    img: airsprintGrab,
+    img: '../images/airsprint/Airsprint-Grab.webp',
     link: '/projects/airsprint',
   },
   {
     id: 2,
     name: 'Yates Outdoor Sales',
     type: 'Web Design & Development',
-    img: yatesGrab,
+    img: '../images/yates-outdoor/Yates-Grab.webp',
     link: '/projects/yates-outdoor',
   },
   {
     id: 3,
     name: 'BXB Disposal',
     type: 'Web Design & Development',
-    img: bxbGrab,
+    img: '../images/bxb/BXB-Grab.webp',
     link: '/projects/bxb-bins',
   },
   {
     id: 4,
     name: "Maro's Bistro",
     type: 'Web Development',
-    img: marosGrab,
+    img: '../images/maros/Maros-Grab.webp',
     link: '/projects/maros-bistro',
   },
 ];
@@ -79,15 +74,6 @@ const RecentProjects = () => {
               btnClass={'primary'}
               btnText={'View All Work'}
             />
-            {/* </Reveal>
-          <Reveal
-            cascade
-            // duration={300}
-            damping={0.2}
-            fraction={0.75}
-            keyframes={customAnimation}
-            triggerOnce
-          > */}
             <div className="slider">
               <Swiper
                 spaceBetween={24}
