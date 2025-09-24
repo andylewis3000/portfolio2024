@@ -9,7 +9,7 @@ import ContentColumn from '../components/elements/content-col';
 const projects = {
   airsprint: {
     heading: 'Airsprint',
-    subheading: 'Web Developement for Breeze Digital',
+    subheading: 'Web Development for Breeze Digital',
     designNote: 'Figma',
     devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript / React',
     paragraph:
@@ -56,7 +56,7 @@ const projects = {
   },
   'yates-outdoor': {
     heading: 'Yates Outdoor',
-    subheading: 'Web Design & Developement',
+    subheading: 'Web Design & Development',
     designNote: 'Adobe Illustrator / Adobe Photoshop',
     devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript',
     paragraph:
@@ -103,7 +103,7 @@ const projects = {
   },
   'bxb-bins': {
     heading: 'BXB Bins',
-    subheading: 'Branding, Web Design & Developement',
+    subheading: 'Branding, Web Design & Development',
     designNote: 'Adobe Illustrator / Adobe Photoshop',
     devNote: 'PHP / HTML5 / CSS3 (Sass) / Javascript',
     paragraph:
