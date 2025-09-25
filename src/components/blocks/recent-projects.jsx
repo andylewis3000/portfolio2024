@@ -100,7 +100,7 @@ const RecentProjects = () => {
                             />
                           </div>
                           <div className="project-card__content">
-                            <h4>{name}</h4>
+                            <h3 className="h4">{name}</h3>
                             <p>{type}</p>
                           </div>
                         </div>

@@ -112,7 +112,9 @@ const HomeServices = () => {
                     <h3 className="h4">{service.name}</h3>
                     <p>{service.description}</p>
                     <Link to={service.link}>
-                      Learn More <FaArrowRight className="arrow" />
+                      Learn More{' '}
+                      <span className="sr-only">About {service.name}</span>
+                      <FaArrowRight className="arrow" />
                     </Link>
                   </div>
                 );

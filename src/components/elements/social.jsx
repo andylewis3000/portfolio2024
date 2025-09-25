@@ -8,13 +8,25 @@ const SocialLinks = () => {
   return (
     <>
       <div className="social-links">
-        <a href="https://github.com/andylewis3000" target="_blank">
+        <a
+          href="https://github.com/andylewis3000"
+          aria-label="Check out my github profile"
+          target="_blank"
+        >
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/andyclewis/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/andyclewis/"
+          aria-label="Look me up on LinkedIn"
+          target="_blank"
+        >
           <FaLinkedinIn />
         </a>
-        <a href={'mailto:' + ' ' + email_address} target="_blank">
+        <a
+          href={'mailto:' + ' ' + email_address}
+          aria-label="Email me"
+          target="_blank"
+        >
           <FaPaperPlane />
         </a>
       </div>

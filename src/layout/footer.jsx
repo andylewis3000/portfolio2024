@@ -16,11 +16,11 @@ const Footer = () => {
             <div className="footer-content__block">
               <div className="footer-logo">
                 <img src="/ALDC-Logo-Light.svg" alt="Andy Lewis Logo" />
-                <h6>
+                <h2 className="h6">
                   Andy Lewis
                   <br />
                   Web Designer & Developer
-                </h6>
+                </h2>
               </div>
             </div>
             <div className="footer-content__block">
