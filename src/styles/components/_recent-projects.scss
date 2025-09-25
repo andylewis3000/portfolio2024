@@ -30,7 +30,6 @@
     }
 
     @media (min-width: $breakpoint-lg) {
-      // grid-template-columns: 1fr 1fr;
       align-items: center;
     }
 
@@ -39,45 +38,87 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      position: relative;
     }
   }
 
   .slider {
     position: relative;
     height: 100%;
+    right: 0;
+    width: 100%;
 
-    .swiper {
-      padding-left: 5px;
-      padding-right: $padding-md;
+    // Custom Swiper Buttons
+    .swiper-controls {
+      position: absolute;
+      bottom: -3rem;
+      left: 0;
+      display: flex;
+      gap: 0.25rem;
+      z-index: 10;
 
       @media (min-width: $breakpoint-md) {
-        padding-right: $padding-xl;
+        bottom: unset;
+        left: unset;
+        top: -6rem;
+        right: 0;
+      }
+
+      .swiper-btn {
+        padding: 0.75rem;
+        line-height: 0;
+        font-weight: 900;
+
+        svg {
+          width: 1rem;
+          height: auto;
+        }
+      }
+
+      .prev-btn {
+        padding-left: 0.65rem;
+        padding-right: 0.85rem;
+      }
+
+      .next-btn {
+        padding-left: 0.85rem;
+        padding-right: 0.65rem;
       }
     }
 
     .swiper-slide {
-      width: 90%;
-      padding: 10px 0;
+      width: 100% !important;
 
       .project-card {
         .project-card__image {
-          // height: 400px;
-          height: auto;
+          height: 300px;
 
           @media (min-width: $breakpoint-md) {
-            // height: 600px;
             height: auto;
           }
         }
       }
+    }
 
-      &.swiper-slide-active {
-        .project-card {
-          .project-card__image {
-            opacity: 1;
-          }
+    // ✅ OPTIONAL: Add fade-specific styling for smoother transitions
+    &.swiper-fade {
+      .swiper-slide {
+        // Ensure slides don't interfere with each other during fade
+        &:not(.swiper-slide-active) {
+          pointer-events: none; // Prevent interaction with hidden slides
         }
       }
     }
+  }
+}
+
+// ✅ ADDITIONAL: Ensure Swiper container doesn't have conflicting styles
+.swiper {
+  // Reset any potential conflicts
+  overflow: hidden; // Ensure this is set for fade effect
+
+  .swiper-wrapper {
+    // Ensure wrapper doesn't interfere with fade positioning
+    position: relative;
   }
 }

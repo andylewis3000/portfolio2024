@@ -1,12 +1,15 @@
+import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 import { Link } from 'react-router-dom';
 import ContentColumn from '../elements/content-col';
 
 import { keyframes } from '@emotion/react';
 import { Reveal } from 'react-awesome-reveal';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const customAnimation = keyframes`
   from {
@@ -52,13 +55,14 @@ const projects = [
 ];
 
 const RecentProjects = () => {
+  const swiperRef = useRef(null);
+
   return (
     <section className="recent-projects">
       <div className="container">
         <div className="recent-projects__content">
           <Reveal
             cascade
-            // duration={300}
             damping={0.2}
             fraction={0.75}
             keyframes={customAnimation}
@@ -76,15 +80,40 @@ const RecentProjects = () => {
               srText={"that I've done"}
             />
             <div className="slider">
+              <div className="swiper-controls">
+                <button className="btn btn-secondary swiper-btn prev-btn">
+                  <FaChevronLeft />
+                </button>
+                <button className="btn btn-secondary swiper-btn next-btn">
+                  <FaChevronRight />
+                </button>
+              </div>
               <Swiper
-                spaceBetween={24}
-                slidesPerView={'auto'}
-                centeredSlides={false}
+                ref={swiperRef}
+                spaceBetween={0} // No space needed with fade effect
+                slidesPerView={1}
+                centeredSlides={false} // Remove this for fade effect
                 loop={true}
                 grabCursor={true}
-                speed={2000}
-                modules={[Autoplay]}
-                autoplay={{ delay: 3000 }}
+                speed={800} // Slightly faster for better UX
+                modules={[Navigation, EffectFade]}
+                navigation={{
+                  prevEl: '.prev-btn',
+                  nextEl: '.next-btn',
+                }}
+                effect="fade"
+                fadeEffect={{
+                  crossFade: true, // Ensures smooth crossfade
+                }}
+                // Add fallback for older browsers
+                breakpoints={{
+                  320: {
+                    effect: 'slide', // Fallback to slide on very small screens
+                  },
+                  768: {
+                    effect: 'fade',
+                  },
+                }}
               >
                 {projects.map((project) => {
                   const { id, name, type, img, link } = project;
@@ -98,6 +127,7 @@ const RecentProjects = () => {
                               alt={name}
                               width="300"
                               height="300"
+                              loading="lazy" // Performance improvement
                             />
                           </div>
                           <div className="project-card__content">
