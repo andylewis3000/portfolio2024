@@ -106,14 +106,14 @@ const RecentProjects = () => {
                   crossFade: true, // Ensures smooth crossfade
                 }}
                 // Add fallback for older browsers
-                breakpoints={{
-                  320: {
-                    effect: 'slide', // Fallback to slide on very small screens
-                  },
-                  768: {
-                    effect: 'fade',
-                  },
-                }}
+                // breakpoints={{
+                //   320: {
+                //     effect: 'slide', // Fallback to slide on very small screens
+                //   },
+                //   768: {
+                //     effect: 'fade',
+                //   },
+                // }}
               >
                 {projects.map((project) => {
                   const { id, name, type, img, link } = project;
