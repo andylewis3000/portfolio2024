@@ -31,9 +31,17 @@
         flex-direction: column;
         // gap: 1rem;
         height: 100%;
-        padding: 2rem;
+        padding: $padding-md;
         background: $card-bg;
         border-radius: $border-radius-sm;
+
+        @media (min-width: $breakpoint-md) {
+          padding: $padding-md;
+        }
+
+        @media (min-width: $breakpoint-md) {
+          padding: $padding-lg;
+        }
 
         svg {
           width: 2rem;

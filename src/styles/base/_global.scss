@@ -166,18 +166,18 @@ button {
 }
 
 section:not(.header, .hero, :first-of-type) {
-  padding: 4rem 0;
+  padding: $padding-lg 0 calc($padding-xl * 2);
 
   @media (min-width: $breakpoint-md) {
-    padding: 6rem 0;
+    padding: $padding-lg 0 calc($padding-xl * 2);
   }
 }
 
 section:first-of-type:not(.hero, .header) {
-  padding: 2rem 0 4rem;
+  padding: $padding-lg 0 calc($padding-xl * 2);
 
   @media (min-width: $breakpoint-md) {
-    padding: 2rem 0 6rem;
+    padding: $padding-lg 0 calc($padding-xl * 2);
   }
 }
 

@@ -2,13 +2,16 @@
 
 .services {
   .service {
-    padding-bottom: 0 !important;
+    padding-bottom: $padding-xl !important;
 
     .content-col {
       background: $card-bg;
       padding: $padding-md;
       border-radius: $border-radius-lg;
-      // border: 4px solid $colour-dark-blue;
+
+      @media (min-width: $breakpoint-md) {
+        padding: $padding-lg;
+      }
 
       p {
         @media (min-width: $breakpoint-lg) {
@@ -22,12 +25,10 @@
     .content-col {
       background: none;
       padding: 0 $padding-md;
-      // border: 4px solid;
-      // border-image: linear-gradient(45deg, $colour-dark-blue, $colour-pink);
     }
   }
 
-  .service:last-of-type {
-    padding-bottom: 4rem !important;
-  }
+  // .service:last-of-type {
+  //   padding-bottom: 4rem !important;
+  // }
 }

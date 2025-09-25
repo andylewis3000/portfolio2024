@@ -1,6 +1,11 @@
 /* Hire Me CTA */
 
 .hireCTA {
+  padding: $padding-md * 2 0 !important;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $padding-lg * 2 0 !important;
+  }
   .hireCTA__content {
     display: flex;
     // flex-direction: column;

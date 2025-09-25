@@ -22,16 +22,7 @@
   .recent-projects__content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 48px 24px;
-
-    @media (min-width: $breakpoint-md) {
-      padding: $padding-xl 0;
-      border-radius: $border-radius-lg;
-    }
-
-    @media (min-width: $breakpoint-lg) {
-      align-items: center;
-    }
+    gap: $grid-spacing-md;
 
     .slider-nav {
       display: flex;
@@ -51,7 +42,7 @@
     // Custom Swiper Buttons
     .swiper-controls {
       position: absolute;
-      bottom: -3rem;
+      bottom: -4rem;
       left: 0;
       display: flex;
       gap: 0.25rem;
@@ -60,7 +51,7 @@
       @media (min-width: $breakpoint-md) {
         bottom: unset;
         left: unset;
-        top: -6rem;
+        top: -5rem;
         right: 0;
       }
 

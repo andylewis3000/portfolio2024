@@ -61,9 +61,9 @@ const Testimonials = () => {
               <Swiper
                 slidesPerView={1}
                 loop={true}
-                speed={3000}
+                speed={1000}
                 modules={[Autoplay, EffectFade]}
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 7000 }}
                 effect={'fade'}
                 fadeEffect={{
                   crossFade: true,

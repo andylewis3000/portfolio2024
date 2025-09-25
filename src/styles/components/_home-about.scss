@@ -4,22 +4,24 @@
   .content-2col {
     background: $card-bg;
     margin: 0;
-    padding: $padding-lg;
+    padding: $padding-md;
     text-align: left;
     border-radius: $border-radius-lg;
     grid-template-columns: 1fr;
 
     @media (min-width: $breakpoint-md) {
       grid-template-columns: 1fr 1fr;
+      padding: $padding-md;
     }
 
     @media (min-width: $breakpoint-lg) {
       grid-template-columns: 3fr 1fr;
+      padding: $padding-lg;
     }
 
-    .content-2col__text {
-      // display: flex;
-    }
+    // .content-2col__text {
+    //   // display: flex;
+    // }
 
     h2 {
       position: relative;
