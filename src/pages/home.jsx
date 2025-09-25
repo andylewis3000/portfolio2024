@@ -20,12 +20,11 @@ const Home = () => {
         btnActive={true}
       />
       <div className="page-container">
+        <HomeAbout />
         <HomeServices />
         <RecentProjects />
         <Testimonials />
         <SkillsNew />
-        {/* <Skills /> */}
-        <HomeAbout />
       </div>
     </PageTransition>
   );

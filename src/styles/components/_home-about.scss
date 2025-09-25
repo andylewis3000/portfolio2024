@@ -1,16 +1,24 @@
 /* Home - About */
 .home-about {
   position: relative;
-  .home-about__content {
+  .content-2col {
+    background: $card-bg;
     margin: 0;
-    // max-width: 750px;
+    padding: $padding-lg;
     text-align: left;
+    border-radius: $border-radius-lg;
+    grid-template-columns: 1fr;
 
-    .content-col {
-      display: flex;
-      background: $card-bg;
-      padding: 2rem;
-      border-radius: $border-radius-lg;
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: 3fr 1fr;
+    }
+
+    .content-2col__text {
+      // display: flex;
     }
 
     h2 {
@@ -20,10 +28,14 @@
       color: $colour-dark-blue;
     }
 
-    p {
-      @media (min-width: $breakpoint-lg) {
-        max-width: 75%;
-      }
+    // p {
+    //   @media (min-width: $breakpoint-lg) {
+    //     max-width: 75%;
+    //   }
+    // }
+
+    button {
+      margin-top: 1rem;
     }
   }
 }

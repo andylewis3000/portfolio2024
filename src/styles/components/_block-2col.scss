@@ -5,7 +5,7 @@
     gap: $grid-spacing-md;
     border-radius: $border-radius-sm;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
       grid-template-columns: $grid-2col;
       grid-gap: $grid-spacing-lg;
     }
