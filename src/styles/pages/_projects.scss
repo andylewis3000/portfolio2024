@@ -1,0 +1,24 @@
+// PROJECTS PAGE OVERRIDES
+
+.projects {
+  .content-2col {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .content-2col.reverse {
+    div:nth-of-type(odd) {
+      order: 1;
+      @media (min-width: $breakpoint-lg) {
+        order: 2;
+      }
+    }
+
+    div:nth-of-type(even) {
+      order: 1;
+    }
+  }
+}
