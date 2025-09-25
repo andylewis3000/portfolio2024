@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://andylewis.ca/sitemap.xml
+
+# Block common bot paths that don't exist in your SPA
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
