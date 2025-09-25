@@ -48,6 +48,7 @@ const ButtonLink = ({
   btnClass,
   btnTitle,
   link,
+  srText,
   withReveal = false,
   revealProps = {},
 }) => {
@@ -57,7 +58,9 @@ const ButtonLink = ({
 
   const buttonContent = (
     <Link to={link}>
-      <button className={`btn ${btnClass}`}>{btnTitle}</button>
+      <button className={`btn ${btnClass}`}>
+        {btnTitle} <span className="sr-only">{srText}</span>
+      </button>
     </Link>
   );
 

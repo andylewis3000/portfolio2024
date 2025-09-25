@@ -100,6 +100,7 @@ const TextTextLayout = ({
   text1,
   btnTitle1,
   link1,
+  srText1,
   btnClass1,
   text1Reveal = false,
   text1RevealProps = {},
@@ -111,6 +112,7 @@ const TextTextLayout = ({
   text2,
   btnTitle2,
   link2,
+  srText2,
   btnClass2,
   text2Reveal = false,
   text2RevealProps = {},
@@ -123,6 +125,7 @@ const TextTextLayout = ({
         btnClass={btnClass1}
         btnTitle={btnTitle1}
         link={link1}
+        srText={srText1}
         withReveal={button1Reveal}
         revealProps={button1RevealProps}
       />
@@ -134,6 +137,7 @@ const TextTextLayout = ({
         btnClass={btnClass2}
         btnTitle={btnTitle2}
         link={link2}
+        srText={srText2}
         withReveal={button2Reveal}
         revealProps={button2RevealProps}
       />

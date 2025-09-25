@@ -73,6 +73,7 @@ const RecentProjects = () => {
               link={'/projects'}
               btnClass={'primary'}
               btnText={'View All Work'}
+              srText={"that I've done"}
             />
             <div className="slider">
               <Swiper

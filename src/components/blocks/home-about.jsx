@@ -37,6 +37,7 @@ const HomeAbout = () => {
       btnTitle="Learn More"
       btnClass={'btn-primary'}
       link={'/about'}
+      srText={'about me'}
       buttonReveal={true}
       buttonRevealProps={{ damping: 2 }}
     />

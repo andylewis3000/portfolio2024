@@ -169,6 +169,7 @@ const ImageTextLayout = ({
   // Button props
   btnTitle,
   link,
+  srText,
   btnClass,
   buttonReveal = false,
   buttonRevealProps = {},
@@ -179,6 +180,7 @@ const ImageTextLayout = ({
         btnClass={btnClass}
         btnTitle={btnTitle}
         link={link}
+        srText={srText}
         withReveal={buttonReveal}
         revealProps={buttonRevealProps}
       />
