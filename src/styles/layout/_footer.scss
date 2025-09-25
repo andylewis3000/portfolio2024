@@ -5,9 +5,13 @@ footer {
   text-align: center;
   @include gradientBG($colour-dark-blue, $colour-dark-blue);
   border-radius: $border-radius-lg $border-radius-lg 0 0;
-  max-width: $max-site-width;
+  max-width: $max-site-width-lg;
   margin-inline: auto;
   flex-grow: 1;
+
+  @media (min-width: $breakpoint-xl) {
+    max-width: $max-site-width-xl;
+  }
 
   .container {
     height: 100%;

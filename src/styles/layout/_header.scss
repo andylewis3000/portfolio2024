@@ -22,11 +22,15 @@
 
   .header-content {
     width: 100%;
-    max-width: $max-site-width;
+    max-width: $max-site-width-lg;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $breakpoint-xl) {
+      max-width: $max-site-width-xl;
+    }
   }
 
   .header-logo {
