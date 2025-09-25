@@ -18,7 +18,7 @@ const projects = {
       'As part of the Breeze Digital team, I focused on front-end development and building out custom components like a jet range map and product detail carousels, while providing feedback on design implementation. Working with Silverstripe CMS (PHP/Twig), CSS/SCSS, JavaScript, and a dash of React, I created a flexible, performant front-end that not only looked sharp but worked seamlessly across devices.',
     paragraph3:
       "The result was a faster, more accessible site that boosted SEO rankings, improved UX, and felt perfectly aligned with Airsprint's luxury brand. Basically: digital turbulence eliminated.",
-    link: '#',
+    link: 'https://airsprint.com',
     images: {
       fullImage: {
         src: '../images/airsprint/Airsprint-Grab.webp',
@@ -65,7 +65,7 @@ const projects = {
       'I redesigned the website from the ground up, reworking the content structure, improving the flow, and ensuring the site delivered a smooth browsing experience. With careful attention to responsive layouts and performance, I built a site that loads quickly, works beautifully across devices, and matches the look and feel of their updated brand.',
     paragraph3:
       "The outcome? A faster, more accessible, SEO-friendly site that not only aligned with Yates' new identity but also gave customers an easier way to find what they needed. No trail maps required.",
-    link: '#',
+    link: 'https://andylewis.ca/sites/yatesoutdoor/index.php',
     images: {
       fullImage: {
         src: '../images/yates-outdoor/Yates-Grab.webp',
@@ -112,7 +112,7 @@ const projects = {
       'Working directly with the owner, I provided consultation, branding, and logo design, along with a new website build. I created a brand mark and visual identity that reflected their service, then translated that into a web presence that was clean, functional, and easy for customers to navigate.',
     paragraph3:
       'The outcome was a cohesive brand package: a professional logo, a consistent identity, and a website that clearly communicated their services. BX Bins went from having no digital presence to having a solid foundation that supports both brand recognition and customer engagement. Garbage never looked so good.',
-    link: '#',
+    link: 'https://bxbins.com',
     images: {
       fullImage: {
         src: '../images/bxb/BXB-Grab.webp',
@@ -159,7 +159,7 @@ const projects = {
       "Contracted through Valiant Creative, I provided front-end development services, implementing new layouts, streamlining navigation, and ensuring the design showcased the restaurant's personality. I built flexible components, optimized for responsiveness, and focused on accessibility so all users could explore the menu with ease.",
     paragraph3:
       "The result was a refreshed website that felt true to the bistro's brand: modern, approachable, and easy to use. The improved UX and alignment with their identity ensured Maro's could put their best digital plate forward.",
-    link: '#',
+    link: 'https://andylewis.ca/sites/marosbistro/index.php',
     images: {
       fullImage: {
         src: '../images/maros/Maros-Grab.webp',
@@ -238,6 +238,7 @@ const Project = () => {
                 link={project.link}
                 btnClass={'secondary'}
                 btnText={'Launch Project'}
+                target={'_blank'}
               />
               <ImageGallery images={project.images} />
             </div>

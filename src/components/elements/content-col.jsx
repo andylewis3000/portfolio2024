@@ -28,6 +28,7 @@ const ContentColumn = ({
   btnClass,
   btnText,
   srText,
+  target,
 }) => {
   return (
     <div className={`content-col` + (extraClass ? ` ${extraClass}` : '')}>
@@ -59,7 +60,7 @@ const ContentColumn = ({
         {paragraph2 ? <p>{paragraph2}</p> : ''}
         {paragraph3 ? <p>{paragraph3}</p> : ''}
         {link ? (
-          <Link to={link}>
+          <Link to={link} target={target}>
             <button className={`btn btn-${btnClass}`}>
               {btnText} <span className="sr-only">{srText}</span>
             </button>
