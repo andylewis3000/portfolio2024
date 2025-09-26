@@ -81,10 +81,16 @@ const RecentProjects = () => {
             />
             <div className="slider">
               <div className="swiper-controls">
-                <button className="btn btn-secondary swiper-btn prev-btn">
+                <button
+                  className="btn btn-secondary swiper-btn prev-btn"
+                  aria-label="Previous Slide"
+                >
                   <FaChevronLeft />
                 </button>
-                <button className="btn btn-secondary swiper-btn next-btn">
+                <button
+                  className="btn btn-secondary swiper-btn next-btn"
+                  aria-label="Next Slide"
+                >
                   <FaChevronRight />
                 </button>
               </div>
