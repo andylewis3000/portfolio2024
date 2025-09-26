@@ -105,23 +105,23 @@ const App = () => {
           <Route path="/projects/bxb-bins" element={<BxB />} /> */}
           {/* <Route path="*" element={<404 />} /> */}
         </Routes>
+        {location.pathname === '/contact' ? (
+          <HireCTA
+            heading={'Check out my work'}
+            btnClass={'btn-secondary'}
+            btnTitle={'View Work'}
+            link={'/projects'}
+          />
+        ) : (
+          <HireCTA
+            heading={'Ready to get started?'}
+            btnClass={'btn-primary'}
+            btnTitle={"Let's work together"}
+            link={'/contact'}
+          />
+        )}
+        <Footer />
       </AnimatePresence>
-      {location.pathname === '/contact' ? (
-        <HireCTA
-          heading={'Check out my work'}
-          btnClass={'btn-secondary'}
-          btnTitle={'View Work'}
-          link={'/projects'}
-        />
-      ) : (
-        <HireCTA
-          heading={'Ready to get started?'}
-          btnClass={'btn-primary'}
-          btnTitle={"Let's work together"}
-          link={'/contact'}
-        />
-      )}
-      <Footer />
     </>
   );
 };
