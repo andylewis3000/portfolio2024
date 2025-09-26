@@ -3,7 +3,7 @@ footer {
   width: 100%;
   padding: 5rem 0;
   text-align: center;
-  @include gradientBG($colour-dark-blue, $colour-dark-blue);
+  @include gradientBG($colour-dark-blue, $colour-dark-blue, $colour-dark-blue);
   border-radius: $border-radius-lg $border-radius-lg 0 0;
   max-width: $max-site-width-lg;
   margin-inline: auto;
@@ -98,7 +98,8 @@ footer {
         }
         &:hover {
           svg {
-            fill: $secondary-accent;
+            // fill: $secondary-accent;
+            opacity: 0.5;
           }
         }
       }
@@ -113,7 +114,7 @@ footer {
 
     @media (min-width: $breakpoint-lg) {
       text-align: center;
-      margin-left: 6rem;
+      margin-left: 2.5rem;
     }
 
     small {

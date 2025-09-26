@@ -17,8 +17,8 @@
 }
 
 /* Gradient Backgrounds w/ Noise */
-@mixin gradientBG($color1, $color2) {
-  background: linear-gradient(45deg, $color1, $color2);
+@mixin gradientBG($color1, $color2, $color3) {
+  background: linear-gradient(45deg, $color1, $color2, $color3);
   &:before {
     content: '';
     position: absolute;

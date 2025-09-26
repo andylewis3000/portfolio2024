@@ -42,7 +42,7 @@
     // Custom Swiper Buttons
     .swiper-controls {
       position: absolute;
-      bottom: -4rem;
+      bottom: -3.5rem;
       left: 0;
       display: flex;
       gap: 0.25rem;
@@ -51,30 +51,37 @@
       @media (min-width: $breakpoint-md) {
         bottom: unset;
         left: unset;
-        top: -5rem;
+        top: -4.5rem;
         right: 0;
       }
 
       .swiper-btn {
-        padding: 0.75rem;
+        padding: 0.25rem;
         line-height: 0;
         font-weight: 900;
+        background: $white !important;
+        transition: $transition-all;
+
+        &:hover {
+          opacity: 0.5;
+        }
 
         svg {
-          width: 1rem;
+          width: 1.5rem;
           height: auto;
+          color: $colour-dark-blue !important;
         }
       }
 
-      .prev-btn {
-        padding-left: 0.65rem;
-        padding-right: 0.85rem;
-      }
+      // .prev-btn {
+      //   padding-left: 0.65rem;
+      //   padding-right: 0.85rem;
+      // }
 
-      .next-btn {
-        padding-left: 0.85rem;
-        padding-right: 0.65rem;
-      }
+      // .next-btn {
+      //   padding-left: 0.85rem;
+      //   padding-right: 0.65rem;
+      // }
     }
 
     .swiper-slide {

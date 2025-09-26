@@ -11,7 +11,7 @@
     gap: $grid-spacing-sm;
     padding: $padding-md;
     border-radius: $border-radius-sm;
-    @include gradientBG($colour-dark-blue, $primary-accent);
+    @include gradientBG($colour-dark-blue, $primary-accent, $secondary-accent);
 
     @media (min-width: $breakpoint-md) {
       gap: $grid-spacing-md;

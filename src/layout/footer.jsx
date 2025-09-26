@@ -19,7 +19,7 @@ const Footer = () => {
                 <h2 className="h6">
                   Andy Lewis
                   <br />
-                  Web Designer & Developer
+                  Digital Creative
                 </h2>
               </div>
             </div>

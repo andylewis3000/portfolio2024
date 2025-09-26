@@ -15,7 +15,8 @@
 
   a:hover {
     svg {
-      fill: $secondary-accent;
+      // fill: $secondary-accent;
+      opacity: 0.5;
     }
   }
 }

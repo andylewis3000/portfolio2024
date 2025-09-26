@@ -86,11 +86,11 @@ button {
 
 .btn-primary {
   background-image: linear-gradient(
-    270deg,
+    225deg,
     $primary-accent,
     $primary-accent,
-    $primary-accent-light,
-    $primary-accent
+    $primary-accent,
+    $colour-dark-blue
   );
   background-size: 300%;
   background-position: right;
@@ -104,16 +104,17 @@ button {
 
 .btn-secondary {
   background-image: linear-gradient(
-    270deg,
+    225deg,
     $secondary-accent,
     $secondary-accent,
-    $secondary-accent-light,
-    $secondary-accent
+    $secondary-accent,
+    $primary-accent
   );
   background-size: 300%;
   background-position: right;
   transition: 0.5s background-position ease-in-out;
-  color: $white;
+  // color: $white;
+  color: $colour-dark-blue;
 
   &:hover {
     background-position: left;
@@ -192,10 +193,10 @@ section:first-of-type:not(.hero, .header) {
   color: $colour-dark-blue;
 }
 .colour-lightblue {
-  color: $colour-light-blue;
+  color: $colour-green;
 }
 .colour-beige {
-  color: $colour-beige;
+  color: $white;
 }
 
 // Accessiblity - Screen Reader Only

@@ -5,7 +5,7 @@
   width: 100%;
   padding: 5rem 0;
   margin-top: -72px;
-  @include gradientBG($colour-dark-blue, $primary-accent);
+  @include gradientBG($colour-dark-blue, $primary-accent, $secondary-accent);
   overflow: hidden;
 
   .container {
@@ -81,6 +81,7 @@
       width: 100%;
       max-width: 800px;
       color: $white;
+      margin-bottom: 1.5rem;
     }
   }
 

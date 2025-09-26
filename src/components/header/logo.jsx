@@ -6,7 +6,11 @@ const HeaderLogo = () => {
     <>
       <div className="header-logo">
         <Link to={'/'}>
-          <h3>ALDC</h3>
+          <h3 className="h6">
+            Andy Lewis
+            <br />
+            Digital Creative
+          </h3>
         </Link>
       </div>
     </>

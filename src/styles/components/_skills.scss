@@ -10,8 +10,8 @@
     gap: $grid-spacing-lg;
     // padding: $padding-lg;
     // border-radius: $border-radius-sm;
-    // border-top: 1px solid $colour-beige;
-    // border-left: 1px solid $colour-beige;
+    // border-top: 1px solid $white;
+    // border-left: 1px solid $white;
     // box-shadow: -5px -5px 15px -5px rgba(0, 0, 0, 0.3);
 
     @media (min-width: $breakpoint-md) {
@@ -25,7 +25,7 @@
     display: inline-block;
     z-index: 2;
     color: $colour-dark-blue;
-    // color: $colour-beige;
+    // color: $white;
     text-align: left;
   }
 
