@@ -1,13 +1,14 @@
 /* This is the main SCSS file where all imports will be delivered */
 /* Example: @import '/scss/file_name.scss' */
 
+@import 'styles/base/_fonts';
+
 /* Utilities */
 @import 'styles/utilities/_variables';
 @import 'styles/utilities/_mixins';
 @import 'styles/utilities/_animations';
 
 /* Base */
-@import 'styles/base/_fonts';
 @import 'styles/base/_typography';
 @import 'styles/base/_reset';
 @import 'styles/base/_global';
