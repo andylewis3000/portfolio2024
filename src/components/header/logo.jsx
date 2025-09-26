@@ -6,7 +6,7 @@ const HeaderLogo = () => {
     <>
       <div className="header-logo">
         <Link to={'/'}>
-          <h3 className="h6" rel="preload" fetchPriority="high">
+          <h3 className="h6">
             Andy Lewis
             <br />
             Digital Creative
