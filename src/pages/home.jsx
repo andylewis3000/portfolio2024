@@ -12,9 +12,9 @@ const Home = () => {
     <PageTransition>
       <HeroNew
         heroSize={'hero-large'}
-        heading={'Your website needs help.'}
+        heading={'Your brand deserves better than a template.'}
         subHeading={
-          'Get a sleek, user-friendly website that doesn’t just look good — it gets results.'
+          'I build custom websites designed to stand out, scale with your business, and actually get results.'
         }
         imgActive={true}
         btnActive={true}

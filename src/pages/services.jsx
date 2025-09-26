@@ -54,7 +54,7 @@ const services = [
     anchor: 'consulting',
     name: 'Web Consulting',
     paragraph:
-      'Sometimes you don’t need a full rebuild—you just need someone to tell you what’s working, what’s not, and how to fix it. That’s where I come in. With years of experience in design, development, and strategy, I provide actionable insights that go beyond surface-level advice. Whether it’s diagnosing why conversions are low, untangling a messy CMS, or figuring out how to scale, I’ll help you get clarity and a clear path forward. Think of me as your website’s coach—minus the whistle.',
+      'Sometimes you don’t need a full rebuild—you just need someone to tell you what’s working, what’s not, and how to fix it. That’s where I come in. With years of experience in design, development, and strategy, I provide actionable insights that go beyond surface-level advice. Whether it’s diagnosing why conversions are low, untangling a messy CMS, or figuring out how to scale, I’ll help you get clarity and a clear path forward.',
     // img: 'https://placehold.co/600x400',
     // reverse: false,
   },

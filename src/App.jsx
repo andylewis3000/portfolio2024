@@ -106,7 +106,21 @@ const App = () => {
           {/* <Route path="*" element={<404 />} /> */}
         </Routes>
       </AnimatePresence>
-      <HireCTA />
+      {location.pathname === '/contact' ? (
+        <HireCTA
+          heading={'Check out my work'}
+          btnClass={'btn-secondary'}
+          btnTitle={'View Work'}
+          link={'/projects'}
+        />
+      ) : (
+        <HireCTA
+          heading={'Ready to get started?'}
+          btnClass={'btn-primary'}
+          btnTitle={"Let's work together"}
+          link={'/contact'}
+        />
+      )}
       <Footer />
     </>
   );

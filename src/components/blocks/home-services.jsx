@@ -29,7 +29,7 @@ const services = [
     id: 1,
     name: 'Web Development',
     description:
-      'Turn your designs into fast, functional, and future-proof websites. Think of me as your site’s mechanic — minus the greasy hands.',
+      'Turn your designs into fast, functional, and future-proof websites. Built clean, built smart, built to last.',
     icon: FaCubes,
     link: '/services#dev',
   },
@@ -89,11 +89,10 @@ const HomeServices = () => {
           >
             <h2>From strategy to success, streamline your journey</h2>
             <p>
-              Let&apos;s design and develop a website that work as hard as you
+              Let&apos;s design and develop a website that works as hard as you
               do, optimize it so people can actually find you, and make sure
-              everyone can use it. From strategic planning to graphic design,
-              I&apos;m your Swiss Army knife for your digital presence, minus
-              the tiny scissors that nobody knows how to use.
+              everyone can use it. From strategic planning to polished product,
+              I&apos;m your Swiss Army knife for your digital presence.
             </p>
           </Reveal>
           <div className="services_grid">

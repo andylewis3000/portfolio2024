@@ -47,7 +47,7 @@ const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
             <div className="hero-content__image">
               <Image
                 src={logoDark}
-                alt="Cool Guy Andy"
+                alt="Andy Lewis Digital Creative"
                 width="600"
                 height="600"
               />

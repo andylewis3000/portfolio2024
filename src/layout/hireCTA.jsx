@@ -1,19 +1,14 @@
 // import { FaArrowRight } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
-const HireCTA = () => {
+const HireCTA = ({ heading, btnClass, btnTitle, link }) => {
   return (
     <section className="hireCTA">
       <div className="container">
         <div className="hireCTA__content">
-          <h2>
-            {'Ready to get started?'}
-            {/* <FaArrowRight /> */}
-          </h2>
-          <Link to="/contact">
-            <button className="btn btn-primary">
-              Let&apos;s work together
-            </button>
+          <h2>{heading}</h2>
+          <Link to={link}>
+            <button className={`btn ${btnClass}`}>{btnTitle}</button>
           </Link>
         </div>
       </div>
