@@ -204,7 +204,7 @@ const SkillsNew = () => {
                       keyframes={customAnimation}
                       triggerOnce
                     >
-                      <item.icon />
+                      <item.icon role="img" aria-label={`${item.title} icon`} />
                     </Reveal>
                   </li>
                 );
