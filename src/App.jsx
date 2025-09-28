@@ -22,7 +22,7 @@ const App = () => {
 
   // Initialize Google Analytics
   useEffect(() => {
-    ReactGA.initialize(GA_MEASUREMENT_ID), { debug_mode: true };
+    ReactGA.initialize(GA_MEASUREMENT_ID);
   }, []);
 
   // Track page views
