@@ -24,7 +24,7 @@ const HomeAbout = () => {
       extraClass="home-about"
       // withReveal={true}
       // revealProps={{ cascade: true, damping: 0.1 }}
-      imageSrc={'/AL-Portrait.webp'}
+      imageSrc={'/images/AL-Portrait.webp'}
       imageAlt="Hi, I'm Andy"
       imageReveal={true}
       imageRevealProps={{ damping: 3 }}
