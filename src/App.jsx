@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 
 import Header from './layout/header';
 import HireCTA from './layout/hireCTA';
@@ -12,6 +13,23 @@ import Projects from './pages/projects';
 import Project from './pages/project';
 import Contact from './pages/contact';
 import SEOMetaTags from './scripts/SEOMetaTags';
+
+const GA_MEASUREMENT_ID = 'G-211F5WWT6Q';
+ReactGA.initialize(GA_MEASUREMENT_ID);
+
+const TrackPageViews = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Send a pageview event for the new URL
+    ReactGA.send({
+      hitType: 'pageview',
+      page: location.pathname + location.search,
+    });
+  }, [location]);
+
+  return null;
+};
 
 const App = () => {
   const location = useLocation();
@@ -93,6 +111,7 @@ const App = () => {
           }
         }}
       >
+        <TrackPageViews />
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
