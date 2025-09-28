@@ -47,7 +47,7 @@ const About = () => {
               </p>
             </>
           }
-          imageSrc={'/AL-Portrait.webp'}
+          imageSrc={'/images/AL-Portrait.webp'}
           imageAlt="Andy Lewis Portrait"
           imageWidth={600}
           imageHeight={600}
@@ -99,7 +99,7 @@ const About = () => {
               </p>
             </>
           }
-          imageSrc={'/Jman-snooze.webp'}
+          imageSrc={'/images/Jman-snooze.webp'}
           imageAlt="Jasper the snoozy doggo"
           imageWidth={600}
           imageHeight={600}
