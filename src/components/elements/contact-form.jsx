@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     const successMsg = (
       <div className="form__result form-sent">
-        <h4>Thanks for reaching out!</h4>
+        <h5>Thanks for reaching out!</h5>
         <p>Our team will get back to you within 48 hours.</p>
         <p>
           In the meantime, feel free to check out my{' '}

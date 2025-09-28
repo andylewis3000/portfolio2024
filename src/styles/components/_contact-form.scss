@@ -46,14 +46,14 @@ form {
 
 .form__result {
   color: $white;
-  margin: 24px auto 0;
-  padding: 48px;
-  text-align: center;
+  margin: 3rem auto 0;
+  padding: $padding-lg;
+  text-align: left;
   width: 100%;
-  border-radius: 8px;
+  border-radius: $border-radius-lg;
 
-  h4 {
-    margin-top: 0;
+  h5 {
+    margin-top: 0 !important;
   }
 
   p {
@@ -61,14 +61,14 @@ form {
   }
 }
 
-.form-sending {
-  background: $colour-dark-blue;
-}
+// .form-sending {
+//   background: $colour-dark-blue;
+// }
 
 .form-sent {
-  padding: 1.5rem;
-  background: none;
-  border: 1px solid $secondary-accent;
+  padding: $padding-lg;
+  background: $card-bg;
+  // border: 1px solid $secondary-accent;
   border-radius: $border-radius-lg;
   a {
     color: $primary-accent;

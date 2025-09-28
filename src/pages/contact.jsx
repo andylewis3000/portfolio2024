@@ -31,7 +31,7 @@ const Contact = () => {
                   }
                 />
                 <div className="contact__social">
-                  <h4>{'Stay Connected!'}</h4>
+                  <h4>{'Stay Connected'}</h4>
                   <SocialLinks />
                 </div>
               </div>
