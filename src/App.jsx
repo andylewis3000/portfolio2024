@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ReactGA from 'react-ga4';
 
 import Header from './layout/header';
@@ -15,11 +15,17 @@ import Contact from './pages/contact';
 import SEOMetaTags from './scripts/SEOMetaTags';
 
 const GA_MEASUREMENT_ID = 'G-211F5WWT6Q';
-ReactGA.initialize(GA_MEASUREMENT_ID);
 
-const TrackPageViews = () => {
+const App = () => {
   const location = useLocation();
+  const [displayLocation, setDisplayLocation] = useState(location.pathname);
 
+  // Initialize Google Analytics
+  useEffect(() => {
+    ReactGA.initialize(GA_MEASUREMENT_ID);
+  }, []);
+
+  // Track page views
   useEffect(() => {
     // Send a pageview event for the new URL
     ReactGA.send({
@@ -28,11 +34,14 @@ const TrackPageViews = () => {
     });
   }, [location]);
 
-  return null;
-};
+  // Update display location with a small delay to prevent CTA flashing
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setDisplayLocation(location.pathname);
+    }, 300);
 
-const App = () => {
-  const location = useLocation();
+    return () => clearTimeout(timeout);
+  }, [location.pathname]);
 
   // Update document title and body class when location changes
   useEffect(() => {
@@ -111,7 +120,6 @@ const App = () => {
           }
         }}
       >
-        <TrackPageViews />
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -124,23 +132,26 @@ const App = () => {
           <Route path="/projects/bxb-bins" element={<BxB />} /> */}
           {/* <Route path="*" element={<404 />} /> */}
         </Routes>
-        {location.pathname === '/contact' ? (
-          <HireCTA
-            heading={'Check out my work'}
-            btnClass={'btn-secondary'}
-            btnTitle={'View Work'}
-            link={'/projects'}
-          />
-        ) : (
-          <HireCTA
-            heading={'Ready to get started?'}
-            btnClass={'btn-primary'}
-            btnTitle={"Let's work together"}
-            link={'/contact'}
-          />
-        )}
-        <Footer />
       </AnimatePresence>
+
+      {/* HireCTA outside AnimatePresence to prevent layout shift, using delayed location */}
+      {displayLocation === '/contact' ? (
+        <HireCTA
+          heading={'Check out my work'}
+          btnClass={'btn-secondary'}
+          btnTitle={'View Work'}
+          link={'/projects'}
+        />
+      ) : (
+        <HireCTA
+          heading={'Ready to get started?'}
+          btnClass={'btn-primary'}
+          btnTitle={"Let's work together"}
+          link={'/contact'}
+        />
+      )}
+
+      <Footer />
     </>
   );
 };
