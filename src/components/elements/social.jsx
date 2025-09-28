@@ -2,7 +2,8 @@ import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { FaPaperPlane } from 'react-icons/fa6';
 
-const email_address = 'andy.c.lewis@gmail.com';
+// const email_address = 'andy.c.lewis@gmail.com';
+const email_address = 'info@andylewis.ca';
 
 const SocialLinks = () => {
   return (
