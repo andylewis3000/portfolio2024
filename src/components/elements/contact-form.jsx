@@ -32,11 +32,11 @@ const ContactForm = () => {
 
     const successMsg = (
       <div className="form__result form-sent">
-        <h5>Thanks for reaching out!</h5>
-        <p>Our team will get back to you within 48 hours.</p>
+        <h5>Success!</h5>
+        <p>Thanks for reaching out - I&apos;ll be in touch within 48 hours.</p>
         <p>
           In the meantime, feel free to check out my{' '}
-          <Link to="/work">work</Link>.
+          <Link to="/projects">work</Link>.
         </p>
       </div>
     );
