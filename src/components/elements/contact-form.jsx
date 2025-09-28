@@ -15,7 +15,7 @@ const ContactForm = () => {
     // setResult('Sending....');
     const sendingMsg = (
       <div className="form__result form-sending">
-        <h4>Sending...</h4>
+        <h5>Sending...</h5>
       </div>
     );
     setResult(sendingMsg);
@@ -33,9 +33,9 @@ const ContactForm = () => {
     const successMsg = (
       <div className="form__result form-sent">
         <h5>Success!</h5>
-        <p>Thanks for reaching out - I&apos;ll be in touch within 48 hours.</p>
         <p>
-          In the meantime, feel free to check out my{' '}
+          Thanks for reaching out - I&apos;ll be in touch within 48 hours. In
+          the meantime, feel free to check out my{' '}
           <Link to="/projects">work</Link>.
         </p>
       </div>

@@ -44,13 +44,17 @@ form {
   }
 }
 
-.form__result {
-  color: $white;
+.form__result,
+.form-sending,
+.form-sent {
+  // color: $white;
   margin: 3rem auto 0;
   padding: $padding-lg;
   text-align: left;
   width: 100%;
   border-radius: $border-radius-lg;
+  transition: $transition-all;
+  background: $card-bg;
 
   h5 {
     margin-top: 0 !important;
@@ -59,18 +63,22 @@ form {
   p {
     margin: 0;
   }
+
+  a {
+    color: $primary-accent;
+  }
 }
 
 // .form-sending {
 //   background: $colour-dark-blue;
 // }
 
-.form-sent {
-  padding: $padding-lg;
-  background: $card-bg;
-  // border: 1px solid $secondary-accent;
-  border-radius: $border-radius-lg;
-  a {
-    color: $primary-accent;
-  }
-}
+// .form-sent {
+//   padding: $padding-lg;
+//   background: $card-bg;
+//   // border: 1px solid $secondary-accent;
+//   border-radius: $border-radius-lg;
+//   a {
+//     color: $primary-accent;
+//   }
+// }
