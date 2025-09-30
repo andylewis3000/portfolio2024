@@ -14,7 +14,7 @@ const SEOMetaTags = () => {
         keywords:
           'web development, web design, custom websites, responsive design, professional web services',
         ogType: 'website',
-        ogImage: '/images/og-home.jpg',
+        ogImage: '/images/og-default.jpg',
         canonicalUrl: 'https://andylewis.ca',
       },
       '/about': {
@@ -25,7 +25,7 @@ const SEOMetaTags = () => {
         keywords:
           'about us, web development team, company history, web design expertise, professional developers',
         ogType: 'website',
-        ogImage: '/images/og-about.jpg',
+        ogImage: '/images/og-default.jpg',
         canonicalUrl: 'https://andylewis.ca/about',
       },
       '/services': {
@@ -36,7 +36,7 @@ const SEOMetaTags = () => {
         keywords:
           'web development services, custom websites, e-commerce development, web applications, digital solutions',
         ogType: 'website',
-        ogImage: '/images/og-services.jpg',
+        ogImage: '/images/og-default.jpg',
         canonicalUrl: 'https://andylewis.ca/services',
       },
       '/projects': {
@@ -47,7 +47,7 @@ const SEOMetaTags = () => {
         keywords:
           'web development portfolio, project showcase, website examples, client work, case studies',
         ogType: 'website',
-        ogImage: '/images/og-projects.jpg',
+        ogImage: '/images/og-default.jpg',
         canonicalUrl: 'https://andylewis.ca/projects',
       },
       '/contact': {
@@ -58,7 +58,7 @@ const SEOMetaTags = () => {
         keywords:
           'contact web developers, free quote, web development consultation, hire developers, project inquiry',
         ogType: 'website',
-        ogImage: '/images/og-contact.jpg',
+        ogImage: '/images/og-default.jpg',
         canonicalUrl: 'https://andylewis.ca/contact',
       },
     };
@@ -76,7 +76,8 @@ const SEOMetaTags = () => {
           description: `Detailed case study of ${projectName} web development project. See how we delivered custom solutions and exceptional results for our client.`,
           keywords: `${projectName}, web development case study, project details, client success story`,
           ogType: 'article',
-          ogImage: `/images/projects/${projectId}-og.jpg`,
+          // ogImage: `/images/projects/${projectId}-og.jpg`,
+          ogImage: `/images/og-default.jpg`,
           canonicalUrl: `https://andylewis.ca/projects/${projectId}`,
         };
       }
