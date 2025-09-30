@@ -5,6 +5,9 @@ const SEOMetaTags = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // IMPORTANT: Use absolute URLs for Open Graph images
+    const baseUrl = 'https://andylewis.ca';
+
     // Define SEO data for each route
     const seoData = {
       '/': {
@@ -14,8 +17,9 @@ const SEOMetaTags = () => {
         keywords:
           'web development, web design, custom websites, responsive design, professional web services',
         ogType: 'website',
-        ogImage: '/images/og-default.jpg',
-        canonicalUrl: 'https://andylewis.ca',
+        ogImage: `${baseUrl}/images/og-default.jpg`,
+        ogImageAlt: 'Andy Lewis Web Development Services',
+        canonicalUrl: `${baseUrl}`,
       },
       '/about': {
         title:
@@ -25,8 +29,9 @@ const SEOMetaTags = () => {
         keywords:
           'about us, web development team, company history, web design expertise, professional developers',
         ogType: 'website',
-        ogImage: '/images/og-default.jpg',
-        canonicalUrl: 'https://andylewis.ca/about',
+        ogImage: `${baseUrl}/images/og-default.jpg`,
+        ogImageAlt: 'About Andy Lewis Web Development Team',
+        canonicalUrl: `${baseUrl}/about`,
       },
       '/services': {
         title:
@@ -36,8 +41,9 @@ const SEOMetaTags = () => {
         keywords:
           'web development services, custom websites, e-commerce development, web applications, digital solutions',
         ogType: 'website',
-        ogImage: '/images/og-default.jpg',
-        canonicalUrl: 'https://andylewis.ca/services',
+        ogImage: `${baseUrl}/images/og-default.jpg`,
+        ogImageAlt: 'Andy Lewis Web Development Services',
+        canonicalUrl: `${baseUrl}/services`,
       },
       '/projects': {
         title:
@@ -47,8 +53,9 @@ const SEOMetaTags = () => {
         keywords:
           'web development portfolio, project showcase, website examples, client work, case studies',
         ogType: 'website',
-        ogImage: '/images/og-default.jpg',
-        canonicalUrl: 'https://andylewis.ca/projects',
+        ogImage: `${baseUrl}/images/og-default.jpg`,
+        ogImageAlt: 'Andy Lewis Web Development Portfolio',
+        canonicalUrl: `${baseUrl}/projects`,
       },
       '/contact': {
         title:
@@ -58,8 +65,9 @@ const SEOMetaTags = () => {
         keywords:
           'contact web developers, free quote, web development consultation, hire developers, project inquiry',
         ogType: 'website',
-        ogImage: '/images/og-default.jpg',
-        canonicalUrl: 'https://andylewis.ca/contact',
+        ogImage: `${baseUrl}/images/og-default.jpg`,
+        ogImageAlt: 'Contact Andy Lewis for Web Development',
+        canonicalUrl: `${baseUrl}/contact`,
       },
     };
 
@@ -76,9 +84,9 @@ const SEOMetaTags = () => {
           description: `Detailed case study of ${projectName} web development project. See how we delivered custom solutions and exceptional results for our client.`,
           keywords: `${projectName}, web development case study, project details, client success story`,
           ogType: 'article',
-          // ogImage: `/images/projects/${projectId}-og.jpg`,
-          ogImage: `/images/og-default.jpg`,
-          canonicalUrl: `https://andylewis.ca/projects/${projectId}`,
+          ogImage: `${baseUrl}/images/og-default.jpg`,
+          ogImageAlt: `${projectName} Project Case Study`,
+          canonicalUrl: `${baseUrl}/projects/${projectId}`,
         };
       }
 
@@ -91,8 +99,9 @@ const SEOMetaTags = () => {
             'Professional web development and design services. Custom solutions for your digital needs.',
           keywords: 'web development, web design, professional services',
           ogType: 'website',
-          ogImage: '/images/og-default.jpg',
-          canonicalUrl: 'https://andylewis.ca',
+          ogImage: `${baseUrl}/images/og-default.jpg`,
+          ogImageAlt: 'Andy Lewis Web Development',
+          canonicalUrl: baseUrl,
         }
       );
     };
@@ -145,6 +154,10 @@ const SEOMetaTags = () => {
       setMetaTag('og:type', data.ogType, true);
       setMetaTag('og:url', data.canonicalUrl, true);
       setMetaTag('og:image', data.ogImage, true);
+      setMetaTag('og:image:secure_url', data.ogImage, true); // HTTPS version
+      setMetaTag('og:image:alt', data.ogImageAlt, true); // Alt text for accessibility
+      setMetaTag('og:image:width', '1200', true); // Facebook recommends 1200x630
+      setMetaTag('og:image:height', '630', true);
       setMetaTag('og:site_name', 'Andy Lewis - Web Designer & Developer', true);
       setMetaTag('og:locale', 'en_US', true);
 
@@ -153,21 +166,22 @@ const SEOMetaTags = () => {
       setMetaTag('twitter:title', data.title);
       setMetaTag('twitter:description', data.description);
       setMetaTag('twitter:image', data.ogImage);
+      setMetaTag('twitter:image:alt', data.ogImageAlt);
       setMetaTag('twitter:site', '@yourtwitter'); // Replace with your Twitter handle
 
       // Canonical URL
       setLinkTag('canonical', data.canonicalUrl);
 
       // Additional SEO improvements
-      setMetaTag('theme-color', '#292f36'); // Replace with your brand color
-      setMetaTag('msapplication-TileColor', '#292f36'); // Replace with your brand color
+      setMetaTag('theme-color', '#292f36');
+      setMetaTag('msapplication-TileColor', '#292f36');
     };
 
     const currentSEOData = getSEOData(location.pathname);
     updateMetaTags(currentSEOData);
   }, [location.pathname]);
 
-  return null; // This component doesn't render anything visible
+  return null;
 };
 
 export default SEOMetaTags;
