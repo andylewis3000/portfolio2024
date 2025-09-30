@@ -4,6 +4,7 @@ import path from 'path';
 
 // Your project data - update this array when you add new projects
 const projects = [
+  'airsprint',
   'yates-outdoor',
   'maros-bistro',
   'bxb-bins',
