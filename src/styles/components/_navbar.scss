@@ -72,7 +72,8 @@
     }
 
     li a {
-      font-size: 1.125rem;
+      // font-size: 1.125rem;
+      font-size: 1rem;
       font-family: $heading-font;
       font-weight: 800;
       padding: 0;
@@ -82,7 +83,8 @@
       text-transform: uppercase;
 
       @media (min-width: $breakpoint-lg) {
-        padding: 12px 16px 8px;
+        // padding: 12px 16px 8px;
+        padding: 0 16px;
       }
     }
 

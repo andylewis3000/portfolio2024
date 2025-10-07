@@ -5,7 +5,8 @@
   width: 100%;
   padding: 5rem 0;
   margin-top: -72px;
-  @include gradientBG($colour-dark-blue, $primary-accent, $secondary-accent);
+  // @include gradientBG($colour-dark-blue, $primary-accent, $secondary-accent);
+  @include moodyGradientBG;
   overflow: hidden;
 
   .container {

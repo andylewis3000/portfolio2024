@@ -11,7 +11,12 @@
     gap: $grid-spacing-sm;
     padding: $padding-md;
     border-radius: $border-radius-sm;
-    @include gradientBG($colour-dark-blue, $primary-accent, $secondary-accent);
+    // @include gradientBG($colour-dark-blue, $primary-accent, $secondary-accent);
+    @include moodyGradientBG;
+
+    &:before {
+      border-radius: $border-radius-sm;
+    }
 
     @media (min-width: $breakpoint-md) {
       gap: $grid-spacing-md;
@@ -22,6 +27,10 @@
       gap: $grid-spacing-lg;
       border-radius: $border-radius-lg;
       padding: $padding-xl;
+
+      &:before {
+        border-radius: $border-radius-lg;
+      }
     }
 
     .testimonial {

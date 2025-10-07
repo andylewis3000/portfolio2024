@@ -32,3 +32,29 @@
     opacity: 0.4;
   }
 }
+
+/* New Gradient BG */
+
+@mixin moodyGradientBG {
+  background: (($gradient) #292f36);
+  mix-blend-mode: $gradient-blend-mode;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: $noise-texture;
+    background-size: $noise-size;
+    background-position: center;
+    background-repeat: repeat;
+    backdrop-filter: blur($gradient-blur) contrast(100%) brightness(100%);
+    -webkit-backdrop-filter: blur($gradient-blur) contrast(100%)
+      brightness(100%);
+    opacity: 0.4;
+    overflow: hidden;
+  }
+}

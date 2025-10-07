@@ -57,3 +57,27 @@ $breakpoint-xl: 1280px;
 
 /* Transitions */
 $transition-all: all 0.3s ease-in-out;
+
+/* New Gradient BG Variables */
+$noise-texture: url('/images/noise.svg');
+$noise-size: 50%;
+$gradient-blend-mode: normal;
+$gradient-blur: 60px;
+$gradient: radial-gradient(at 75.4% 28.5%, #99da44 0px, transparent 50%),
+  radial-gradient(at 76.1% 78.3%, #e51bd4 0px, transparent 50%),
+  radial-gradient(at 80.6% 27.8%, #292f36 0px, transparent 50%),
+  radial-gradient(at 37.3% 34.6%, #e51bd4 0px, transparent 50%),
+  radial-gradient(at 67% 20%, #292f36 0px, transparent 50%),
+  radial-gradient(at 12.2% 11.2%, #292f36 0px, transparent 50%);
+
+// .noise {
+//   background-image: var($noise-texture);
+//   background-size: var($noise-size);
+//   background-position: center;
+//   background-repeat: repeat;
+// }
+
+// .frosted-backdrop {
+//   backdrop-filter: blur($gradient-blur) contrast(100%) brightness(100%);
+//   -webkit-backdrop-filter: blur($gradient-blur) contrast(100%) brightness(100%);
+// }
