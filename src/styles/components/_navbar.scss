@@ -1,16 +1,276 @@
+// .main-nav {
+//   display: none;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-end;
+//   gap: 3rem;
+//   position: absolute;
+//   top: 0;
+//   right: -99999px;
+//   width: 0;
+//   height: 0;
+//   transition: $transition-all;
+//   padding-right: 2rem;
+
+//   @media (min-width: $breakpoint-lg) {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     align-self: center;
+//     gap: 0;
+//     position: relative;
+//     width: 100%;
+//     right: unset;
+//     height: auto;
+//     background: transparent;
+//     padding-right: unset;
+//   }
+
+//   .header-logo {
+//     display: block;
+
+//     @media (min-width: $breakpoint-lg) {
+//       display: block !important;
+//     }
+
+//     h3 {
+//       display: flex;
+//       gap: 5px;
+//       color: $white;
+
+//       &:before {
+//         content: '';
+//         width: 30px;
+//         height: 25px;
+//         background: url('/images/ALDC-Logo-Light.svg');
+//         background-repeat: no-repeat;
+//         background-size: 100% 100%;
+//       }
+//     }
+//   }
+
+//   ul {
+//     display: flex;
+//     flex-direction: column;
+
+//     @media (min-width: $breakpoint-lg) {
+//       display: inline-flex;
+//       flex-direction: row;
+//       justify-content: space-around;
+//       align-items: center;
+//     }
+
+//     li {
+//       margin: 0 0 12px;
+//       padding-right: 0;
+//       text-align: right;
+
+//       @media (min-width: $breakpoint-lg) {
+//         margin: 0;
+//       }
+//     }
+
+//     li a {
+//       // font-size: 1.125rem;
+//       font-size: 1rem;
+//       font-family: $heading-font;
+//       font-weight: 800;
+//       padding: 0;
+//       background: transparent;
+//       transition: all 0.3s ease-in-out;
+//       color: $white;
+//       text-transform: uppercase;
+
+//       @media (min-width: $breakpoint-lg) {
+//         // padding: 12px 16px 8px;
+//         padding: 0 16px;
+//       }
+//     }
+
+//     li a:hover {
+//       // color: $secondary-accent !important;
+//       opacity: 0.5;
+//     }
+
+//     li:last-of-type {
+//       margin-right: 0;
+//     }
+//   }
+
+//   .social-links {
+//     display: none;
+//     a svg {
+//       color: $white;
+//     }
+//     a:hover {
+//       svg {
+//         // fill: $secondary-accent !important;
+//         opacity: 0.5;
+//       }
+//     }
+//   }
+
+//   .navClose {
+//     display: none;
+//     position: absolute;
+//     top: 18px;
+//     right: 22px;
+
+//     @media (min-width: $breakpoint-lg) {
+//       display: none;
+//     }
+
+//     svg {
+//       width: 30px;
+//       height: auto;
+//       color: $colour-dark-blue;
+//     }
+//   }
+// }
+
+// .hamburger {
+//   display: block;
+//   text-align: right;
+//   z-index: 1000;
+//   cursor: pointer;
+
+//   @media (min-width: $breakpoint-lg) {
+//     display: none;
+//   }
+
+//   svg {
+//     width: 24px;
+//     height: auto;
+//     color: $white;
+//   }
+// }
+
+// // Mobile Nav Open
+// .header-content:has(.main-nav.active) {
+//   .hamburger {
+//     display: none;
+//     svg {
+//       fill: $colour-dark-blue;
+//     }
+//   }
+// }
+
+// .main-nav.active {
+//   display: flex;
+//   top: 0;
+//   right: 0;
+//   width: 80%;
+//   max-width: 375px;
+//   height: 100vh;
+//   background: rgba(255, 255, 255, 1);
+//   backdrop-filter: blur(5px);
+//   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+//   border-radius: $border-radius-sm 0 0 $border-radius-sm;
+//   transition: $transition-all !important;
+//   overflow: hidden;
+
+//   @media (min-width: $breakpoint-lg) {
+//     height: auto;
+//     background: none;
+//     backdrop-filter: none;
+//     border: none;
+//     border-radius: 0;
+//     top: unset;
+//     right: unset;
+//     position: relative;
+//   }
+
+//   .navClose {
+//     display: block;
+//   }
+
+//   h3 {
+//     color: $colour-dark-blue !important;
+//     text-align: right;
+//     line-height: 1.3;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     gap: 5px;
+
+//     &:before {
+//       content: '';
+//       width: 30px;
+//       height: 25px;
+//       background: url('/images/ALDC-Logo-Fade.svg') !important;
+//       background-repeat: no-repeat !important;
+//       background-size: 100% 100% !important;
+//     }
+//   }
+
+//   ul {
+//     position: relative;
+
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       bottom: -300%;
+//       right: -300%;
+//       width: 800px;
+//       height: 800px;
+//       background: url('/images/ALDC-Logo-Dark.svg');
+//       background-repeat: no-repeat;
+//       background-size: 100% 100%;
+//       transform: rotate(-15deg);
+//       opacity: 0.2;
+//       z-index: -1;
+
+//       @media (min-width: $breakpoint-md) {
+//         width: 1000px;
+//         height: 1000px;
+//         bottom: -400%;
+//         right: -400%;
+//       }
+//     }
+//   }
+
+//   ul li a {
+//     color: $colour-dark-blue;
+//     text-align: right;
+//   }
+
+//   .social-links {
+//     position: relative;
+//     display: flex;
+//     a svg {
+//       fill: $colour-dark-blue;
+//     }
+//   }
+// }
+
+// .main-nav.false {
+//   transition: $transition-all !important;
+// }
+
 .main-nav {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   gap: 3rem;
   position: absolute;
   top: 0;
-  right: -99999px;
-  width: 0;
-  height: 0;
-  transition: $transition-all;
+  right: 0;
+  width: 80%;
+  max-width: 375px;
+  height: 100vh;
   padding-right: 2rem;
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius-sm 0 0 $border-radius-sm;
+  z-index: 1001;
+  overflow: hidden;
+
+  // Animation properties
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 
   @media (min-width: $breakpoint-lg) {
     display: flex;
@@ -21,10 +281,15 @@
     gap: 0;
     position: relative;
     width: 100%;
-    right: unset;
+    max-width: 100%;
     height: auto;
     background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-radius: 0;
     padding-right: unset;
+    transform: none;
+    transition: none;
   }
 
   .header-logo {
@@ -36,177 +301,41 @@
 
     h3 {
       display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
       gap: 5px;
-      color: $white;
+      color: $colour-dark-blue;
 
       &:before {
         content: '';
         width: 30px;
         height: 25px;
-        background: url('/images/ALDC-Logo-Light.svg');
+        background-image: url('/images/ALDC-Logo-Fade.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
       }
+
+      @media (min-width: $breakpoint-lg) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        color: $white;
+
+        &:before {
+          background-image: url('/images/ALDC-Logo-Light.svg');
+        }
+      }
     }
   }
 
   ul {
     display: flex;
     flex-direction: column;
-
-    @media (min-width: $breakpoint-lg) {
-      display: inline-flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    li {
-      margin: 0 0 12px;
-      padding-right: 0;
-      text-align: right;
-
-      @media (min-width: $breakpoint-lg) {
-        margin: 0;
-      }
-    }
-
-    li a {
-      // font-size: 1.125rem;
-      font-size: 1rem;
-      font-family: $heading-font;
-      font-weight: 800;
-      padding: 0;
-      background: transparent;
-      transition: all 0.3s ease-in-out;
-      color: $white;
-      text-transform: uppercase;
-
-      @media (min-width: $breakpoint-lg) {
-        // padding: 12px 16px 8px;
-        padding: 0 16px;
-      }
-    }
-
-    li a:hover {
-      // color: $secondary-accent !important;
-      opacity: 0.5;
-    }
-
-    li:last-of-type {
-      margin-right: 0;
-    }
-  }
-
-  .social-links {
-    display: none;
-    a svg {
-      color: $white;
-    }
-    a:hover {
-      svg {
-        // fill: $secondary-accent !important;
-        opacity: 0.5;
-      }
-    }
-  }
-
-  .navClose {
-    display: none;
-    position: absolute;
-    top: 18px;
-    right: 22px;
-
-    @media (min-width: $breakpoint-lg) {
-      display: none;
-    }
-
-    svg {
-      width: 30px;
-      height: auto;
-      color: $colour-dark-blue;
-    }
-  }
-}
-
-.hamburger {
-  display: block;
-  text-align: right;
-  z-index: 1000;
-  cursor: pointer;
-
-  @media (min-width: $breakpoint-lg) {
-    display: none;
-  }
-
-  svg {
-    width: 24px;
-    height: auto;
-    color: $white;
-  }
-}
-
-// Mobile Nav Open
-.header-content:has(.main-nav.active) {
-  .hamburger {
-    display: none;
-    svg {
-      fill: $colour-dark-blue;
-    }
-  }
-}
-
-.main-nav.active {
-  display: flex;
-  top: 0;
-  right: 0;
-  width: 80%;
-  max-width: 375px;
-  height: 100vh;
-  background: rgba(255, 255, 255, 1);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-  border-radius: $border-radius-sm 0 0 $border-radius-sm;
-  transition: $transition-all !important;
-  overflow: hidden;
-
-  @media (min-width: $breakpoint-lg) {
-    height: auto;
-    background: none;
-    backdrop-filter: none;
-    border: none;
-    border-radius: 0;
-    top: unset;
-    right: unset;
-    position: relative;
-  }
-
-  .navClose {
-    display: block;
-  }
-
-  h3 {
-    color: $colour-dark-blue !important;
-    text-align: right;
-    line-height: 1.3;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 5px;
-
-    &:before {
-      content: '';
-      width: 30px;
-      height: 25px;
-      background: url('/images/ALDC-Logo-Fade.svg') !important;
-      background-repeat: no-repeat !important;
-      background-size: 100% 100% !important;
-    }
-  }
-
-  ul {
     position: relative;
 
+    // Decorative background logo for mobile
     &:after {
       content: '';
       position: absolute;
@@ -227,23 +356,147 @@
         bottom: -400%;
         right: -400%;
       }
+
+      @media (min-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    li {
+      margin: 0 0 12px;
+      padding-right: 0;
+      text-align: right;
+
+      @media (min-width: $breakpoint-lg) {
+        margin: 0;
+      }
+    }
+
+    li a {
+      font-size: 1rem;
+      font-family: $heading-font;
+      font-weight: 800;
+      padding: 0;
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+      color: $colour-dark-blue;
+      text-transform: uppercase;
+
+      @media (min-width: $breakpoint-lg) {
+        padding: 0 16px;
+        color: $white;
+      }
+    }
+
+    li a:hover {
+      opacity: 0.5;
+    }
+
+    li:last-of-type {
+      margin-right: 0;
     }
   }
 
-  ul li a {
-    color: $colour-dark-blue;
-    text-align: right;
+  .social-links {
+    display: flex;
+    position: relative;
+
+    @media (min-width: $breakpoint-lg) {
+      display: none;
+    }
+
+    a svg {
+      fill: $colour-dark-blue !important;
+
+      @media (min-width: $breakpoint-lg) {
+        color: $white;
+      }
+    }
+
+    a:hover {
+      svg {
+        opacity: 0.5;
+      }
+    }
   }
 
-  .social-links {
-    position: relative;
-    display: flex;
-    a svg {
-      fill: $colour-dark-blue;
+  .navClose {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    cursor: pointer;
+
+    @media (min-width: $breakpoint-lg) {
+      display: none;
+    }
+
+    svg {
+      width: 30px;
+      height: auto;
+      color: $colour-dark-blue;
     }
   }
 }
 
-.main-nav.false {
-  transition: $transition-all !important;
+// Active state - slide nav in
+.main-nav.active {
+  transform: translateX(0);
+}
+
+// Overlay for mobile nav
+.nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Hamburger menu
+.hamburger {
+  display: block;
+  text-align: right;
+  z-index: 1000;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+
+  svg {
+    width: 24px;
+    height: auto;
+    color: $white;
+  }
+}
+
+// Hide hamburger when nav is open
+.header-content:has(.main-nav.active) {
+  .hamburger {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
