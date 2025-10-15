@@ -18,7 +18,7 @@ const PageTransition = ({ children }) => {
       className="page"
       transition={{
         ease: 'easeInOut',
-        duration: 0.3,
+        duration: 0.75,
       }}
       variants={opacityAnimation}
       initial="initial"
