@@ -167,7 +167,6 @@ const SEOMetaTags = () => {
       setMetaTag('twitter:description', data.description);
       setMetaTag('twitter:image', data.ogImage);
       setMetaTag('twitter:image:alt', data.ogImageAlt);
-      setMetaTag('twitter:site', '@yourtwitter'); // Replace with your Twitter handle
 
       // Canonical URL
       setLinkTag('canonical', data.canonicalUrl);

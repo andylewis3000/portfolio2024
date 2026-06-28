@@ -27,7 +27,7 @@ const Block2Col = ({
   reveal,
 }) => {
   return (
-    <section className={`block-2col` + (extraClass ? `${extraClass}` : '')}>
+    <section className={`block-2col${extraClass ? ` ${extraClass}` : ''}`}>
       <div className="container">
         <div className={`content-2col ${reverse ? 'reverse' : ''}`}>
           {img ? (
