@@ -5,7 +5,6 @@ import HeroNew from '../components/blocks/hero-new';
 import ImageGallery from '../components/elements/image-gallery';
 import ContentColumn from '../components/elements/content-col';
 
-// import { projectData } from '../data/projects';
 const projects = {
   airsprint: {
     heading: 'Airsprint',

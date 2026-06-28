@@ -1,4 +1,3 @@
-// import coolGuyAndy from '../../assets/images/cool-guy-posterize.png';
 import logoDark from '../../assets/images/ALDC-Logo-Dark.svg';
 import ButtonLink from '../elements/button';
 import Image from '../elements/image';

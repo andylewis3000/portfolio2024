@@ -3,16 +3,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
-  // window.onload = function () {
-  //   // Reset the form fields when the page loads
-  //   document.getElementById('contact-form').reset();
-  // };
-
   const [result, setResult] = useState('');
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    // setResult('Sending....');
     const sendingMsg = (
       <div className="form__result form-sending">
         <h5>Sending...</h5>
@@ -42,11 +36,10 @@ const ContactForm = () => {
     );
 
     if (data.success) {
-      // setResult('Form Submitted Successfully!');
       setResult(successMsg);
       event.target.reset();
     } else {
-      console.log('Error', data);
+      console.error('Contact form submission error:', data);
       setResult(data.message);
     }
   };

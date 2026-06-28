@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-// import { AiFillThunderbolt } from 'react-icons/ai';
 
 const HeaderLogo = () => {
   return (
