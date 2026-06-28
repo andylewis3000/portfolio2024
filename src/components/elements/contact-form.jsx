@@ -13,16 +13,10 @@ const ContactForm = () => {
       </div>
     );
     setResult(sendingMsg);
-    const formData = new FormData(event.target);
+    const form = event.target;
+    const formData = new FormData(form);
 
     formData.append('access_key', 'dc706c94-1fb0-465d-9306-9bc15ee5ac23');
-
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData,
-    });
-
-    const data = await response.json();
 
     const successMsg = (
       <div className="form__result form-sent">
@@ -35,12 +29,34 @@ const ContactForm = () => {
       </div>
     );
 
-    if (data.success) {
-      setResult(successMsg);
-      event.target.reset();
-    } else {
-      console.error('Contact form submission error:', data);
-      setResult(data.message);
+    const errorMsg = (message) => (
+      <div className="form__result form-error">
+        <h5>Something went wrong</h5>
+        <p>
+          {message} You can also reach me directly at{' '}
+          <a href="mailto:info@andylewis.ca">info@andylewis.ca</a>.
+        </p>
+      </div>
+    );
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult(successMsg);
+        form.reset();
+      } else {
+        console.error('Contact form submission error:', data);
+        setResult(errorMsg(data.message || 'Your message could not be sent.'));
+      }
+    } catch (error) {
+      console.error('Contact form network error:', error);
+      setResult(errorMsg("We couldn't reach the server."));
     }
   };
 
@@ -52,6 +68,16 @@ const ContactForm = () => {
         onSubmit={onSubmit}
       >
         <input type="hidden" name="from_name" value="AL/DC - Webform"></input>
+        {/* Honeypot: hidden from real users; bots that fill it are silently
+            rejected by Web3Forms. */}
+        <input
+          type="checkbox"
+          name="botcheck"
+          style={{ display: 'none' }}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
         <label htmlFor="name">Name</label>
         <input id="name" type="text" name="name" placeholder="Name" required />
         <label htmlFor="email">Email</label>

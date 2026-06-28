@@ -69,6 +69,10 @@ form {
   }
 }
 
+.form-error {
+  border-left: 4px solid $primary-accent;
+}
+
 // .form-sending {
 //   background: $colour-dark-blue;
 // }
