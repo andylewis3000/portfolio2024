@@ -45,3 +45,24 @@
     opacity: 0.2;
   }
 }
+
+/* Page transition: fades each route in on mount.
+   Replaces framer-motion's AnimatePresence to keep the bundle lean. */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-transition {
+  animation: pageFadeIn 0.75s ease-in-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}
