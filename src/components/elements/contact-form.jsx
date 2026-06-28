@@ -59,22 +59,24 @@ const ContactForm = () => {
         onSubmit={onSubmit}
       >
         <input type="hidden" name="from_name" value="AL/DC - Webform"></input>
-        <label htmlFor="firstName" aria-hidden>
-          Name
-        </label>
-        <input type="text" name="name" placeholder="Name" />
-        <label htmlFor="email" aria-hidden>
-          Email
-        </label>
-        <input type="email" name="email" placeholder="Email" />
-        <label htmlFor="subject" aria-hidden>
-          Project
-        </label>
-        <input type="text" name="Project" placeholder="Project" />
-        <label htmlFor="message" aria-hidden>
-          Project Details
-        </label>
-        <textarea name="details" placeholder="Project Details"></textarea>
+        <label htmlFor="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Name" required />
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <label htmlFor="project">Project</label>
+        <input id="project" type="text" name="Project" placeholder="Project" />
+        <label htmlFor="details">Project Details</label>
+        <textarea
+          id="details"
+          name="details"
+          placeholder="Project Details"
+        ></textarea>
         <input className="btn btn-primary" type="submit" value={'Submit'} />
       </form>
 
