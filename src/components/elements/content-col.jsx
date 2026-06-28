@@ -1,4 +1,3 @@
-// import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 import { keyframes } from '@emotion/react';
 import { Reveal } from 'react-awesome-reveal';
@@ -34,7 +33,6 @@ const ContentColumn = ({
     <div className={`content-col` + (extraClass ? ` ${extraClass}` : '')}>
       <Reveal
         cascade
-        // duration={300}
         damping={0.2}
         fraction={0.75}
         keyframes={customAnimation}

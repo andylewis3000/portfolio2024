@@ -104,7 +104,6 @@ const HomeServices = () => {
               triggerOnce
             >
               {services.map((service) => {
-                // const { id, icon, name, description } = service;
                 return (
                   <div className="service" key={service.id}>
                     <service.icon />

@@ -1,39 +1,3 @@
-// import { Reveal } from 'react-awesome-reveal';
-// import { defaultRevealProps } from '../../utils/revealAnimation';
-
-// const TextColumn = ({
-//   heading,
-//   subheading,
-//   children,
-//   button,
-//   withReveal = false,
-//   revealProps = {},
-// }) => {
-//   const finalRevealProps = { ...defaultRevealProps, ...revealProps };
-
-//   return (
-//     <div className="content-2col__text">
-//       {withReveal ? (
-//         <Reveal {...finalRevealProps}>
-//           {heading && <h2>{heading}</h2>}
-//           {subheading && <h4>{subheading}</h4>}
-//           {children && <div>{children}</div>}
-//           {button}
-//         </Reveal>
-//       ) : (
-//         <>
-//           {heading && <h2>{heading}</h2>}
-//           {subheading && <h4>{subheading}</h4>}
-//           {children && <div>{children}</div>}
-//           {button}
-//         </>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default TextColumn;
-
 import { Reveal } from 'react-awesome-reveal';
 import { defaultRevealProps } from '../../utils/revealAnimation';
 

@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------------------
+# Andy Lewis portfolio — Apache / LiteSpeed (Hostinger) config
+# Lives in public/ so Vite copies it to the root of dist/ on every build.
+# ---------------------------------------------------------------------------
+
+# Serve index.html for directory requests (so /about/ -> /about/index.html).
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force HTTPS. The X-Forwarded-Proto check avoids a redirect loop when
+  # Hostinger terminates SSL at a proxy and passes HTTP to the app server.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # If the request maps to a real file, directory or symlink, serve it as-is.
+  # This is what lets the prerendered pages (/about/index.html,
+  # /projects/airsprint/index.html, hashed assets, fonts, images, etc.) be
+  # served directly instead of falling through to the SPA shell.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+
+  # Everything else (unknown / dynamic routes) falls back to the SPA entry
+  # point so React Router can handle it client-side.
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compression
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2 font/woff font/ttf
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Caching
+#  - Hashed JS/CSS/fonts/images are immutable -> cache for a year.
+#  - HTML is short-lived so SEO/content updates propagate quickly.
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Long-cache immutable, content-hashed build assets.
+  <FilesMatch "\.(?:js|css|woff2?|ttf|svg|webp|jpg|jpeg|png)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Never hard-cache the HTML shell.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

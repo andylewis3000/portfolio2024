@@ -1,111 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { getSEOData } from '../seo/seoData';
 
 const SEOMetaTags = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // IMPORTANT: Use absolute URLs for Open Graph images
-    const baseUrl = 'https://andylewis.ca';
-
-    // Define SEO data for each route
-    const seoData = {
-      '/': {
-        title: 'Andy Lewis - Professional Web Development & Design Services',
-        description:
-          'Leading web development company specializing in custom websites, web applications, and digital solutions. Get professional, responsive websites that drive results.',
-        keywords:
-          'web development, web design, custom websites, responsive design, professional web services',
-        ogType: 'website',
-        ogImage: `${baseUrl}/images/og-default.jpg`,
-        ogImageAlt: 'Andy Lewis Web Development Services',
-        canonicalUrl: `${baseUrl}`,
-      },
-      '/about': {
-        title:
-          'About Us - Andy Lewis - Web Designer & Developer | Experienced Web Development Team',
-        description:
-          'Learn about our experienced team of web developers and designers. Discover our mission, values, and commitment to delivering exceptional digital solutions.',
-        keywords:
-          'about us, web development team, company history, web design expertise, professional developers',
-        ogType: 'website',
-        ogImage: `${baseUrl}/images/og-default.jpg`,
-        ogImageAlt: 'About Andy Lewis Web Development Team',
-        canonicalUrl: `${baseUrl}/about`,
-      },
-      '/services': {
-        title:
-          'Web Development Services - Custom Solutions | Andy Lewis - Web Designer & Developer',
-        description:
-          'Comprehensive web development services including custom website development, e-commerce solutions, web applications, and digital marketing. Contact us today!',
-        keywords:
-          'web development services, custom websites, e-commerce development, web applications, digital solutions',
-        ogType: 'website',
-        ogImage: `${baseUrl}/images/og-default.jpg`,
-        ogImageAlt: 'Andy Lewis Web Development Services',
-        canonicalUrl: `${baseUrl}/services`,
-      },
-      '/projects': {
-        title:
-          'Our Portfolio - Web Development Projects | Andy Lewis - Web Designer & Developer',
-        description:
-          "View our portfolio of successful web development projects. See examples of custom websites, web applications, and digital solutions we've created for clients.",
-        keywords:
-          'web development portfolio, project showcase, website examples, client work, case studies',
-        ogType: 'website',
-        ogImage: `${baseUrl}/images/og-default.jpg`,
-        ogImageAlt: 'Andy Lewis Web Development Portfolio',
-        canonicalUrl: `${baseUrl}/projects`,
-      },
-      '/contact': {
-        title:
-          'Contact Us - Get Your Free Web Development Quote | Andy Lewis - Web Designer & Developer',
-        description:
-          "Ready to start your web development project? Contact our team for a free consultation and quote. We're here to bring your digital vision to life.",
-        keywords:
-          'contact web developers, free quote, web development consultation, hire developers, project inquiry',
-        ogType: 'website',
-        ogImage: `${baseUrl}/images/og-default.jpg`,
-        ogImageAlt: 'Contact Andy Lewis for Web Development',
-        canonicalUrl: `${baseUrl}/contact`,
-      },
-    };
-
-    // Function to get SEO data based on current path
-    const getSEOData = (pathname) => {
-      // Handle dynamic project routes (/projects/:id)
-      if (pathname.startsWith('/projects/') && pathname !== '/projects') {
-        const projectId = pathname.split('/')[2];
-        const projectName = projectId
-          .replace(/-/g, ' ')
-          .replace(/\b\w/g, (l) => l.toUpperCase());
-        return {
-          title: `${projectName} - Project Case Study | Andy Lewis - Web Designer & Developer`,
-          description: `Detailed case study of ${projectName} web development project. See how we delivered custom solutions and exceptional results for our client.`,
-          keywords: `${projectName}, web development case study, project details, client success story`,
-          ogType: 'article',
-          ogImage: `${baseUrl}/images/og-default.jpg`,
-          ogImageAlt: `${projectName} Project Case Study`,
-          canonicalUrl: `${baseUrl}/projects/${projectId}`,
-        };
-      }
-
-      // Return specific SEO data or default
-      return (
-        seoData[pathname] || {
-          title:
-            'Andy Lewis - Web Designer & Developer - Professional Web Development Services',
-          description:
-            'Professional web development and design services. Custom solutions for your digital needs.',
-          keywords: 'web development, web design, professional services',
-          ogType: 'website',
-          ogImage: `${baseUrl}/images/og-default.jpg`,
-          ogImageAlt: 'Andy Lewis Web Development',
-          canonicalUrl: baseUrl,
-        }
-      );
-    };
-
     // Function to update meta tags
     const updateMetaTags = (data) => {
       // Update title
@@ -167,7 +67,6 @@ const SEOMetaTags = () => {
       setMetaTag('twitter:description', data.description);
       setMetaTag('twitter:image', data.ogImage);
       setMetaTag('twitter:image:alt', data.ogImageAlt);
-      setMetaTag('twitter:site', '@yourtwitter'); // Replace with your Twitter handle
 
       // Canonical URL
       setLinkTag('canonical', data.canonicalUrl);
@@ -177,8 +76,7 @@ const SEOMetaTags = () => {
       setMetaTag('msapplication-TileColor', '#292f36');
     };
 
-    const currentSEOData = getSEOData(location.pathname);
-    updateMetaTags(currentSEOData);
+    updateMetaTags(getSEOData(location.pathname));
   }, [location.pathname]);
 
   return null;

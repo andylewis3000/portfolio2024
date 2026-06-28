@@ -2,7 +2,6 @@ import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { FaPaperPlane } from 'react-icons/fa6';
 
-// const email_address = 'andy.c.lewis@gmail.com';
 const email_address = 'info@andylewis.ca';
 
 const SocialLinks = () => {
@@ -23,11 +22,7 @@ const SocialLinks = () => {
         >
           <FaLinkedinIn />
         </a>
-        <a
-          href={'mailto:' + ' ' + email_address}
-          aria-label="Email me"
-          target="_blank"
-        >
+        <a href={`mailto:${email_address}`} aria-label="Email me">
           <FaPaperPlane />
         </a>
       </div>
