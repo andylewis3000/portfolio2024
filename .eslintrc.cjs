@@ -19,4 +19,11 @@ module.exports = {
     ],
     'react/prop-types': 'off',
   },
+  overrides: [
+    {
+      // Build scripts run in Node, not the browser.
+      files: ['scripts/**/*.js'],
+      env: { node: true, browser: false },
+    },
+  ],
 };
