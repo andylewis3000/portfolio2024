@@ -10,20 +10,22 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
-  # Force HTTPS.
+  # Force HTTPS. The X-Forwarded-Proto check avoids a redirect loop when
+  # Hostinger terminates SSL at a proxy and passes HTTP to the app server.
   RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 1. If the request maps to a real file or directory, serve it as-is.
-  #    This is what lets the prerendered pages (/about/index.html,
-  #    /projects/airsprint/index.html, hashed assets, fonts, images, etc.)
-  #    be served directly instead of falling through to the SPA shell.
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # If the request maps to a real file, directory or symlink, serve it as-is.
+  # This is what lets the prerendered pages (/about/index.html,
+  # /projects/airsprint/index.html, hashed assets, fonts, images, etc.) be
+  # served directly instead of falling through to the SPA shell.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
 
-  # 2. Everything else (unknown / dynamic routes) falls back to the SPA entry
-  #    point so React Router can handle it client-side.
+  # Everything else (unknown / dynamic routes) falls back to the SPA entry
+  # point so React Router can handle it client-side.
   RewriteRule ^ /index.html [L]
 </IfModule>
 
