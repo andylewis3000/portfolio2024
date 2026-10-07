@@ -1,0 +1,90 @@
+# Build the site and deploy dist/ to Hostinger over SSH + rsync.
+#
+# Server safety rules:
+#  - Files are only added/overwritten; nothing outside assets/ is ever deleted
+#    (error pages, verification files, etc. on the server are left alone).
+#  - sites/ and staging/ are excluded entirely.
+#  - assets/ holds only Vite's content-hashed JS/CSS, so stale bundles there are
+#    pruned after the new build is live.
+#
+# Automatic deploys on push only run once the repo variable AUTO_DEPLOY is set
+# to "true". Until then, run it manually from the Actions tab (dry run first).
+
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (show what would change, upload nothing)'
+        type: boolean
+        default: true
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || vars.AUTO_DEPLOY == 'true'
+    runs-on: ubuntu-latest
+    env:
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+      REMOTE: ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          cat > ~/.ssh/config <<EOF
+          Host ${{ secrets.SSH_HOST }}
+            Port ${{ secrets.SSH_PORT }}
+            User ${{ secrets.SSH_USER }}
+            IdentityFile ~/.ssh/id_deploy
+            IdentitiesOnly yes
+          EOF
+
+      - name: Deploy
+        run: |
+          set -euo pipefail
+          # --checksum: CI checkouts reset mtimes, so compare by content instead.
+          RSYNC="rsync -rlz --checksum --itemize-changes --chmod=D755,F644"
+          if [ "$DRY_RUN" = "true" ]; then
+            RSYNC="$RSYNC --dry-run"
+            echo "::notice::Dry run - nothing will be uploaded or deleted"
+          fi
+
+          echo "== 1. Upload new hashed assets (before HTML references them)"
+          $RSYNC dist/assets/ "$REMOTE/assets/"
+
+          echo "== 2. Upload pages, images, fonts, .htaccess, robots.txt, sitemap.xml"
+          $RSYNC --exclude='/sites/' --exclude='/staging/' dist/ "$REMOTE/"
+
+          echo "== 3. Prune stale hashed bundles in assets/"
+          $RSYNC --delete dist/assets/ "$REMOTE/assets/"
+
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "== Info only: files on the server that are not in the build (kept, never deleted)"
+            rsync -rlz --checksum --dry-run --delete --itemize-changes \
+              --exclude='/sites/' --exclude='/staging/' \
+              dist/ "$REMOTE/" | grep '^\*deleting' || echo "(none)"
+          fi
+
+      - name: Clean up SSH key
+        if: always()
+        run: rm -f ~/.ssh/id_deploy
