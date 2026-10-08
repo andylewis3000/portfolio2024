@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# andylewis.ca/sites/ — archived client sites (PHP)
+#
+# Lives on the server at public_html/sites/.htaccess. Not deployed by the
+# GitHub Actions workflow (which never touches /sites/); kept here for
+# version control and uploaded manually.
+#
+# Overrides the root SPA config (public/.htaccess) for everything under
+# /sites/: each site is served from its own index.php, and the root's
+# "fall back to spa.html" rewrite does not apply here.
+# ---------------------------------------------------------------------------
+
+Options -Indexes -MultiViews
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /sites/
+
+  # Force HTTPS (rewrite rules in this file replace the root's, so repeat it).
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Server-side includes, DB config and page templates (including the
+  # disabled contact form handler) are never requested by browsers.
+  RewriteRule (^|/)(_connect|_inc|pages)(/|$) - [F,L]
+</IfModule>
+
+# Old error logs, macOS metadata and include-only PHP files.
+<FilesMatch "^(error_log|\.DS_Store|include\.php)$">
+  Require all denied
+</FilesMatch>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the "ea-php74" package as the default "PHP" programming language.
+# Kept from the original file: both sites were written for PHP 7.4.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
