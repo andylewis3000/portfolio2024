@@ -7,6 +7,7 @@ import Header from './layout/header';
 import HireCTA from './layout/hireCTA';
 import Footer from './layout/footer';
 import SEOMetaTags from './scripts/SEOMetaTags';
+import { normalizePath } from './seo/seoData';
 
 // Lazy load page components (code-splitting by route)
 const Home = lazy(() => import('./pages/home'));
@@ -15,6 +16,7 @@ const Services = lazy(() => import('./pages/services'));
 const Projects = lazy(() => import('./pages/projects'));
 const Project = lazy(() => import('./pages/project'));
 const Contact = lazy(() => import('./pages/contact'));
+const Audit = lazy(() => import('./pages/audit'));
 
 const GA_MEASUREMENT_ID = 'G-211F5WWT6Q';
 
@@ -35,6 +37,8 @@ const PageLoader = () => (
 
 const App = () => {
   const location = useLocation();
+  // '/contact/' and '/contact' are the same page (see normalizePath).
+  const pathname = normalizePath(location.pathname);
 
   // Initialize Google Analytics
   useEffect(() => {
@@ -59,19 +63,11 @@ const App = () => {
     requestAnimationFrame(() => {
       requestAnimationFrame(scrollToTop);
     });
-  }, [location.pathname]);
+  }, [pathname]);
 
-  // Update document title and body class when location changes
+  // Update body class when location changes. The document title is set by
+  // SEOMetaTags from the shared SEO data.
   useEffect(() => {
-    // Define page titles for each route
-    const pageTitles = {
-      '/': 'Home - Andy Lewis - Web Designer & Developer',
-      '/about': 'About Us - Andy Lewis - Web Designer & Developer',
-      '/services': 'Services - Andy Lewis - Web Designer & Developer',
-      '/projects': 'Projects - Andy Lewis - Web Designer & Developer',
-      '/contact': 'Contact Us - Andy Lewis - Web Designer & Developer',
-    };
-
     // Function to get page class based on current path
     const getPageClass = (pathname) => {
       // Handle home route
@@ -80,7 +76,7 @@ const App = () => {
       }
 
       // Handle dynamic project routes (/projects/:id)
-      if (pathname.startsWith('/projects/') && pathname !== '/projects') {
+      if (pathname.startsWith('/projects/')) {
         return 'project-detail';
       }
 
@@ -88,31 +84,11 @@ const App = () => {
       return pathname.slice(1).replace(/\//g, '-');
     };
 
-    // Function to get page title based on current path
-    const getPageTitle = (pathname) => {
-      // Handle dynamic project routes (/projects/:id)
-      if (pathname.startsWith('/projects/') && pathname !== '/projects') {
-        const projectId = pathname.split('/')[2];
-        return `${projectId
-          .replace(/-/g, ' ')
-          .replace(/\b\w/g, (l) =>
-            l.toUpperCase()
-          )} - Andy Lewis - Web Designer & Developer`;
-      }
-
-      // Return specific title or default
-      return pageTitles[pathname] || 'Andy Lewis - Web Designer & Developer';
-    };
-
-    // Update document title
-    document.title = getPageTitle(location.pathname);
-
-    // Update body class
-    const pageClass = getPageClass(location.pathname);
+    const pageClass = getPageClass(pathname);
 
     // Remove any existing page classes
     document.body.className = document.body.className
-      .replace(/\b(home|about|services|projects|project-detail|contact)\b/g, '')
+      .replace(/\b(home|about|services|projects|project-detail|contact|audit)\b/g, '')
       .trim();
 
     // Add new page class
@@ -122,7 +98,7 @@ const App = () => {
     return () => {
       document.body.classList.remove(pageClass);
     };
-  }, [location.pathname]);
+  }, [pathname]);
 
   return (
     <>
@@ -131,17 +107,19 @@ const App = () => {
       {/* Routes are keyed by pathname so each page remounts and the CSS
           page-fade transition (see PageTransition) re-runs on navigation. */}
       <Suspense fallback={<PageLoader />}>
-        <Routes key={location.pathname}>
+        <Routes key={pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/audit" element={<Audit />} />
         </Routes>
       </Suspense>
 
-      {location.pathname === '/contact' ? (
+      {/* The audit page renders its own booking CTA. */}
+      {pathname === '/audit' ? null : pathname === '/contact' ? (
         <HireCTA
           heading={'Check out my work'}
           btnClass={'btn-secondary'}

@@ -1,0 +1,532 @@
+// AUDIT LANDING PAGE
+
+// Body class from App.jsx (applied after hydration, so cosmetic only).
+.audit h2 {
+  text-wrap: balance;
+}
+
+// Anchor buttons: keep button text colour over the global a:visited rules.
+a.btn-primary {
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+a.btn-secondary {
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: $colour-dark-blue;
+  }
+}
+
+// Shared icon list (problem leaks, fit / not a fit)
+%audit-icon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $grid-spacing-sm;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: $padding-sm;
+    font-weight: 300;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+
+    svg {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+// Two-column text layout
+.audit-split {
+  display: grid;
+  grid-template-columns: $grid-1col;
+  gap: $grid-spacing-md;
+  align-items: start;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: $grid-2col;
+    gap: $grid-spacing-lg;
+  }
+}
+
+// Hero actions
+.audit-hero__actions {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: $padding-sm $padding-lg;
+
+  .audit-hero__link {
+    font-family: $heading-font;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: $transition-all;
+
+    &,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+      border-bottom-color: $secondary-accent;
+    }
+  }
+}
+
+// The problem
+.audit-problem {
+  .audit-leaks {
+    @extend %audit-icon-list;
+
+    li {
+      padding: $padding-sm $padding-md;
+      background: $card-bg;
+      border-radius: $border-radius-sm;
+
+      svg {
+        color: $primary-accent;
+      }
+    }
+  }
+}
+
+// Teardown follow-up callout (problem section)
+.audit-teardown-note {
+  padding: $padding-sm $padding-md;
+  border-left: 3px solid $secondary-accent;
+  background: $card-bg;
+  border-radius: 0 $border-radius-xs $border-radius-xs 0;
+
+  // Body font only ships light weights, so use the heading font for emphasis.
+  strong {
+    font-family: $heading-font;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+}
+
+// What's included / After the audit
+.audit-included,
+.audit-retainer {
+  h2 {
+    margin-bottom: $padding-lg;
+  }
+
+  .audit-cards {
+    display: grid;
+    grid-template-columns: $grid-1col;
+    gap: $grid-spacing-sm;
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: $grid-2col;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: $grid-4col;
+      gap: $grid-spacing-md;
+    }
+
+    &.audit-cards--3 {
+      @media (min-width: $breakpoint-lg) {
+        grid-template-columns: $grid-3col;
+      }
+    }
+
+    // Reveal wraps each card in a div; let it fill the grid cell.
+    > div {
+      height: 100%;
+    }
+  }
+
+  .audit-card {
+    height: 100%;
+    padding: $padding-md;
+    background: $card-bg;
+    border-radius: $border-radius-sm;
+
+    svg {
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-bottom: $padding-sm;
+      color: $primary-accent;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.audit-included {
+  scroll-margin-top: 96px;
+}
+
+.audit-retainer .audit-retainer__intro {
+  max-width: 75ch;
+  margin: -$padding-sm 0 $padding-lg;
+}
+
+// How it works
+.audit-steps {
+  h2 {
+    margin-bottom: $padding-lg;
+  }
+
+  .audit-steps__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: $grid-1col;
+    gap: $grid-spacing-md;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: $grid-2col;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    li {
+      position: relative;
+      padding-top: $padding-sm;
+      border-top: 2px solid $colour-dark-blue;
+    }
+
+    .audit-steps__number {
+      display: block;
+      font-family: $heading-font;
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: $padding-sm;
+      color: $primary-accent;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+// Who it's for
+.audit-fit {
+  .audit-fit__grid {
+    display: grid;
+    grid-template-columns: $grid-1col;
+    gap: $grid-spacing-sm;
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: $grid-2col;
+      gap: $grid-spacing-md;
+    }
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  .audit-fit__col {
+    height: 100%;
+    padding: $padding-md;
+    border-radius: $border-radius-sm;
+
+    @media (min-width: $breakpoint-md) {
+      padding: $padding-lg;
+      border-radius: $border-radius-lg;
+    }
+
+    h2 {
+      margin-bottom: $padding-md;
+    }
+
+    ul {
+      @extend %audit-icon-list;
+    }
+  }
+
+  .audit-fit__col--yes {
+    background: $card-bg;
+
+    svg {
+      color: $colour-dark-blue;
+      background: $secondary-accent;
+      border-radius: 50%;
+      padding: 0.25rem;
+    }
+  }
+
+  .audit-fit__col--no {
+    border: 2px solid $card-bg;
+
+    svg {
+      color: $primary-accent;
+    }
+  }
+}
+
+// Pricing
+.audit-pricing {
+  .audit-pricing__intro {
+    margin-bottom: $padding-lg;
+  }
+
+  .audit-pricing__grid {
+    display: grid;
+    grid-template-columns: $grid-1col;
+    gap: $grid-spacing-sm;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: $grid-2col;
+      gap: $grid-spacing-md;
+    }
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  .audit-price {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: $padding-md;
+    background: $card-bg;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+
+    @media (min-width: $breakpoint-md) {
+      padding: $padding-lg;
+      border-radius: $border-radius-lg;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .audit-price__amount {
+      font-family: $heading-font;
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 1;
+      letter-spacing: 0;
+      margin: $padding-sm 0 $padding-lg;
+
+      span {
+        font-size: 1rem;
+      }
+
+      .audit-price__from {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+    }
+  }
+
+  .audit-price--featured {
+    @include moodyGradientBG;
+
+    &:before {
+      z-index: 0;
+      border-radius: inherit;
+    }
+
+    h3,
+    .audit-price__amount {
+      color: $white;
+    }
+  }
+
+  .audit-pricing__note {
+    margin-top: $padding-lg;
+    max-width: 900px;
+  }
+}
+
+// Proof
+.audit-proof {
+  .audit-proof__content {
+    position: relative;
+    padding: $padding-md;
+    border-radius: $border-radius-sm;
+    @include moodyGradientBG;
+
+    &:before {
+      border-radius: $border-radius-sm;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      padding: $padding-lg;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      padding: $padding-xl;
+      border-radius: $border-radius-lg;
+
+      &:before {
+        border-radius: $border-radius-lg;
+      }
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      color: $white;
+      margin-bottom: $padding-lg;
+    }
+  }
+
+  .audit-proof__grid {
+    display: grid;
+    grid-template-columns: $grid-1col;
+    gap: $grid-spacing-md;
+    margin: 0;
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: $grid-2col;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: $grid-4col;
+    }
+  }
+
+  .audit-proof__item {
+    position: relative;
+    padding-top: $padding-sm;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: $secondary-accent;
+      border-radius: 2px;
+    }
+
+    dt {
+      font-family: $heading-font;
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      color: $white;
+    }
+
+    dd {
+      margin: 0.5rem 0 0;
+      font-weight: 300;
+      line-height: 1.5rem;
+      letter-spacing: 1px;
+      color: $white;
+    }
+  }
+}
+
+// FAQ
+.audit-faq {
+  h2 {
+    margin-bottom: $padding-lg;
+    text-align: center;
+  }
+
+  .audit-faq__list {
+    max-width: 900px;
+    margin-inline: auto;
+    border-top: 2px solid $card-bg;
+  }
+
+  details {
+    border-bottom: 2px solid $card-bg;
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: $padding-sm;
+      padding: $padding-md 0;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      svg {
+        flex-shrink: 0;
+        color: $primary-accent;
+        transition: $transition-all;
+      }
+
+      &:hover h3 {
+        color: $primary-accent;
+      }
+    }
+
+    &[open] summary svg {
+      transform: rotate(180deg);
+    }
+
+    p {
+      margin: 0 0 $padding-md;
+      max-width: 75ch;
+    }
+  }
+}
+
+// Final CTA
+.audit-cta {
+  .hireCTA__content {
+    text-wrap: balance;
+  }
+}

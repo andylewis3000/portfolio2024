@@ -2,25 +2,22 @@
 import fs from 'fs';
 import path from 'path';
 
-// Your project data - update this array when you add new projects
-const projects = [
-  'airsprint',
-  'yates-outdoor',
-  'maros-bistro',
-  'bxb-bins',
-  // Add more project slugs here as you create them
-];
+import { baseUrl, pageUrl, getPrerenderRoutes } from '../src/seo/seoData.js';
 
-const siteConfig = {
-  baseUrl: 'https://andylewis.ca',
-  staticPages: [
-    { path: '/', priority: '1.0', changefreq: 'monthly' },
-    { path: '/about', priority: '0.4', changefreq: 'yearly' },
-    { path: '/services', priority: '0.8', changefreq: 'monthly' },
-    { path: '/projects', priority: '0.8', changefreq: 'monthly' },
-    { path: '/contact', priority: '0.2', changefreq: 'yearly' },
-  ],
+// Routes come from src/seo/seoData.js so the sitemap, canonical URLs and
+// prerendered pages never drift apart. Unlisted routes (e.g. project pages)
+// fall back to the default below.
+const routeSettings = {
+  '/': { priority: '1.0', changefreq: 'monthly' },
+  '/about': { priority: '0.4', changefreq: 'yearly' },
+  '/services': { priority: '0.8', changefreq: 'monthly' },
+  '/projects': { priority: '0.8', changefreq: 'monthly' },
+  '/contact': { priority: '0.2', changefreq: 'yearly' },
+  '/audit': { priority: '0.9', changefreq: 'monthly' },
 };
+const defaultSettings = { priority: '0.6', changefreq: 'monthly' };
+
+const siteConfig = { baseUrl };
 
 function generateSitemap() {
   const currentDate = new Date().toISOString().split('T')[0];
@@ -28,25 +25,14 @@ function generateSitemap() {
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-  // Add static pages
-  siteConfig.staticPages.forEach((page) => {
+  getPrerenderRoutes().forEach((route) => {
+    const { priority, changefreq } = routeSettings[route] || defaultSettings;
     sitemap += `
   <url>
-    <loc>${siteConfig.baseUrl}${page.path}</loc>
+    <loc>${pageUrl(route)}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`;
-  });
-
-  // Add dynamic project pages
-  projects.forEach((project) => {
-    sitemap += `
-  <url>
-    <loc>${siteConfig.baseUrl}/projects/${project}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`;
   });
 

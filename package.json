@@ -7,7 +7,7 @@
     "dev": "vite",
     "sitemap": "node scripts/generateSitemap.js",
     "prerender": "node scripts/prerender.js",
-    "build": "npm run sitemap && vite build && npm run prerender",
+    "build": "npm run sitemap && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && npm run prerender",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

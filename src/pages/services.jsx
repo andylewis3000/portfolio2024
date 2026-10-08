@@ -4,6 +4,16 @@ import PageTransition from '../scripts/transitions';
 
 const services = [
   {
+    id: 7,
+    anchor: 'cro',
+    name: 'Shopify CRO',
+    paragraph:
+      'Traffic is expensive, and most Shopify stores leak sales in the same places: slow mobile pages, product pages that leave questions unanswered, shipping costs that show up too late, and checkouts with too much friction. I spent three years at Shopify Plus advising merchants on conversion, and I design and build too, so I can find the problem and fix it. It starts with a fixed-price audit that gives you a ranked list of fixes, sorted by impact and effort.',
+    link: '/audit',
+    btnText: 'Shopify CRO Audit',
+    srText: '- see what the audit covers',
+  },
+  {
     id: 1,
     anchor: 'dev',
     name: 'Web Development',
@@ -38,7 +48,8 @@ const services = [
     anchor: 'consulting',
     name: 'Web Consulting',
     paragraph:
-      'Sometimes you don’t need a full rebuild—you just need someone to tell you what’s working, what’s not, and how to fix it. That’s where I come in. With years of experience in design, development, and strategy, I provide actionable insights that go beyond surface-level advice. Whether it’s diagnosing why conversions are low, untangling a messy CMS, or figuring out how to scale, I’ll help you get clarity and a clear path forward.',  },
+      'Sometimes you don’t need a full rebuild—you just need someone to tell you what’s working, what’s not, and how to fix it. That’s where I come in. With years of experience in design, development, and strategy, I provide actionable insights that go beyond surface-level advice. Whether it’s diagnosing why conversions are low, untangling a messy CMS, or figuring out how to scale, I’ll help you get clarity and a clear path forward.',
+  },
 ];
 
 const Services = () => {
@@ -53,10 +64,18 @@ const Services = () => {
       <div className="page-container">
         <div className="container">
           {services.map((service) => {
-            const { id, name, paragraph } = service;
+            const { id, anchor, name, paragraph, link, btnText, srText } =
+              service;
             return (
-              <section className="service" key={id}>
-                <ContentColumn heading={name} paragraph={paragraph} />
+              <section className="service" id={anchor} key={id}>
+                <ContentColumn
+                  heading={name}
+                  paragraph={paragraph}
+                  link={link}
+                  btnClass="primary"
+                  btnText={btnText}
+                  srText={srText}
+                />
               </section>
             );
           })}

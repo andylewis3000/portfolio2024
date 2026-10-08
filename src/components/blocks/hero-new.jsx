@@ -16,7 +16,16 @@ const customAnimation = keyframes`
   }
 `;
 
-const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
+// `actions` replaces the default "Learn How" button when a page needs its own
+// calls to action (e.g. the audit page's booking + anchor links).
+const HeroNew = ({
+  heroSize,
+  heading,
+  subHeading,
+  imgActive,
+  btnActive,
+  actions,
+}) => {
   return (
     <section className={`hero ${heroSize}`}>
       <div className="container">
@@ -31,9 +40,11 @@ const HeroNew = ({ heroSize, heading, subHeading, imgActive, btnActive }) => {
             >
               <h1 className="heading">{heading}</h1>
 
-              {subHeading && <h2 className="h4 subheading">{subHeading}</h2>}
+              {subHeading && <h2 className="h5 subheading">{subHeading}</h2>}
 
-              {btnActive && (
+              {actions}
+
+              {btnActive && !actions && (
                 <ButtonLink
                   btnClass={'btn-secondary'}
                   link="/services"

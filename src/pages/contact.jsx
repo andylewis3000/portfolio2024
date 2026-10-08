@@ -22,12 +22,12 @@ const Contact = () => {
                 <ContentColumn
                   heading="Get in touch"
                   paragraph={
-                    <p>
+                    <>
                       Whether you&apos;re looking for some minor content
                       changes, add some custom functionality, a redesign or a
                       new build, drop me a line and let me know how I can help
                       you realize your next project.
-                    </p>
+                    </>
                   }
                 />
                 <div className="contact__social">

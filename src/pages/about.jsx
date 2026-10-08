@@ -14,36 +14,41 @@ const About = () => {
           text={
             <>
               <p>
-                I&apos;m Andy, a passionate web designer and front-end developer
-                based in Cranbrook, BC, with over ten years of experience
-                crafting visually striking and highly functional websites.
+                I&apos;m Andy, a web designer and front-end developer based in
+                Cranbrook, BC, who helps Shopify stores turn more of their
+                visitors into customers. I&apos;ve spent over ten years crafting
+                visually striking and highly functional websites, and much of
+                that time in ecommerce.
               </p>
               <p>
                 Throughout my career, I&apos;ve had the privilege of working
                 with a wide range of clients and companies, from small
-                businesses to large-scale enterprises. Whether collaborating
-                with real estate firms, e-commerce brands, or digital agencies,
-                I&apos;ve helped businesses establish their online presence
+                businesses to large-scale enterprises. I spent three years at
+                Shopify Plus as a Merchant Success Manager, advising a portfolio
+                of 50+ merchants on acquisition, conversion, and retention.
+                Today I manage delivery for Shopify retainer clients at an
+                agency, across redesigns, integrations, and CRO work. Whether
+                collaborating with real estate firms, e-commerce brands, or
+                digital agencies, I&apos;ve helped businesses grow online
                 through clean, user-friendly, and strategically designed
                 websites.
               </p>
               <p>
-                I specialize in UI/UX design, front-end development,
-                accessibility, and SEO, combining creativity with technical
-                expertise to deliver seamless digital experiences. My toolkit
+                I specialize in Shopify CRO, UI/UX design, front-end
+                development, accessibility, and SEO, combining creativity with
+                technical expertise to deliver seamless digital experiences. My toolkit
                 includes HTML5, CSS3, JavaScript, jQuery, Liquid, and PHP,
                 alongside design tools like Photoshop, Illustrator, XD, and
-                Figma. I thrive in remote work environments, where my strong
+                Figma, plus Shopify, Shopify Plus, and Google Analytics. I thrive in remote work environments, where my strong
                 communication and problem-solving skills ensure smooth
                 collaboration with teams and clients alike.
               </p>
               <p>
-                From designing and coding custom themes to optimizing websites
-                for performance and accessibility, I take pride in turning ideas
-                into engaging, high-performing digital experiences. If
-                you&apos;re looking for a creative, detail-oriented, and
-                strategic thinker to elevate your online presence, let&apos;s
-                connect!
+                From finding where a store is losing sales to designing and
+                coding the fix, I take pride in turning ideas into engaging,
+                high-performing digital experiences. If you&apos;re looking for
+                a creative, detail-oriented, and strategic thinker to help your
+                store sell more, let&apos;s connect!
               </p>
             </>
           }
@@ -95,7 +100,7 @@ const About = () => {
                 Beyond that, I take advantage of living in the mountains and
                 love to snowboard, mountain bike, rock climb, and hike. I&apos;m
                 also a father, husband, and dog dad to the best/weirdest
-                assitant ever: Jasper.
+                assistant ever: Jasper.
               </p>
             </>
           }

@@ -4,7 +4,7 @@ import './app.scss';
 import App from './App.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const app = (
   <React.StrictMode>
     <Router basename="/">
       {/* <Router basename="/"> */}
@@ -15,3 +15,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Router>
   </React.StrictMode>
 );
+
+const rootEl = document.getElementById('root');
+
+// Prerendered pages (see scripts/prerender.js) ship real markup in #root, so
+// hydrate it. The dev server and the SPA fallback shell have an empty #root.
+if (rootEl.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootEl, app);
+} else {
+  ReactDOM.createRoot(rootEl).render(app);
+}

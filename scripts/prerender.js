@@ -4,19 +4,25 @@
 // scrapers only see generic head tags until JS executes. This script writes a
 // static HTML file per route (dist/about/index.html, dist/projects/airsprint/
 // index.html, ...) with that route's title, description, canonical and Open
-// Graph / Twitter tags baked into the <head>. The SPA still hydrates normally.
+// Graph / Twitter tags baked into the <head>, and the route's fully rendered
+// React markup inside #root. The client hydrates that markup in main.jsx.
 //
-// No headless browser required — it operates purely on the built HTML string
-// using the shared SEO data in src/seo/seoData.js.
+// No headless browser required: page markup comes from the SSR bundle built
+// from src/entry-server.jsx (`vite build --ssr`), head tags from the shared
+// SEO data in src/seo/seoData.js.
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 import { getSEOData, getPrerenderRoutes } from '../src/seo/seoData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, '../dist');
 const baseHtmlPath = path.join(distDir, 'index.html');
+// Empty-#root shell for URLs that aren't prerendered (.htaccess fallback).
+const shellHtmlPath = path.join(distDir, 'spa.html');
+const ssrEntryPath = path.resolve(__dirname, '../dist-ssr/entry-server.js');
+const emptyRoot = '<div id="root"></div>';
 
 function escapeAttr(value) {
   return String(value)
@@ -32,7 +38,7 @@ function buildHeadFragment(data) {
     ['name', 'description', data.description],
     ['name', 'keywords', data.keywords],
     ['name', 'robots', 'index, follow'],
-    ['name', 'author', 'Andy Lewis - Web Designer & Developer'],
+    ['name', 'author', 'Andy Lewis - Shopify CRO, Design & Development'],
     ['property', 'og:title', data.title],
     ['property', 'og:description', data.description],
     ['property', 'og:type', data.ogType],
@@ -42,7 +48,7 @@ function buildHeadFragment(data) {
     ['property', 'og:image:alt', data.ogImageAlt],
     ['property', 'og:image:width', '1200'],
     ['property', 'og:image:height', '630'],
-    ['property', 'og:site_name', 'Andy Lewis - Web Designer & Developer'],
+    ['property', 'og:site_name', 'Andy Lewis - Shopify CRO, Design & Development'],
     ['property', 'og:locale', 'en_US'],
     ['name', 'twitter:card', 'summary_large_image'],
     ['name', 'twitter:title', data.title],
@@ -79,15 +85,26 @@ function stripManagedTags(html) {
     .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '');
 }
 
-function renderRouteHtml(baseHtml, route) {
+async function renderRouteHtml(baseHtml, render, route) {
   const data = getSEOData(route);
   const stripped = stripManagedTags(baseHtml);
   const fragment = buildHeadFragment(data);
-  return stripped.replace(/<\/head>/i, `${fragment}  </head>`);
+  const appHtml = await render(route);
+  // Copy placeholders are written as "[TODO: ...]"; never ship one.
+  // PRERENDER_ALLOW_TODO=1 downgrades this to a warning for local previews.
+  const todo = appHtml.match(/\[TODO[^\]]*\]?/);
+  if (todo) {
+    const message = `Unfilled placeholder on ${route}: ${todo[0]}`;
+    if (!process.env.PRERENDER_ALLOW_TODO) throw new Error(message);
+    console.warn(`⚠ ${message}`);
+  }
+  return stripped
+    .replace(/<\/head>/i, `${fragment}  </head>`)
+    .replace(emptyRoot, () => `<div id="root">${appHtml}</div>`);
 }
 
-function writeRoute(baseHtml, route) {
-  const html = renderRouteHtml(baseHtml, route);
+async function writeRoute(baseHtml, render, route) {
+  const html = await renderRouteHtml(baseHtml, render, route);
 
   if (route === '/') {
     fs.writeFileSync(baseHtmlPath, html);
@@ -98,19 +115,35 @@ function writeRoute(baseHtml, route) {
   }
 }
 
-function prerender() {
+async function prerender() {
   if (!fs.existsSync(baseHtmlPath)) {
     console.error('✗ dist/index.html not found — run `vite build` first.');
     process.exit(1);
   }
+  if (!fs.existsSync(ssrEntryPath)) {
+    console.error('✗ dist-ssr/entry-server.js not found — run the SSR build first.');
+    process.exit(1);
+  }
 
   const baseHtml = fs.readFileSync(baseHtmlPath, 'utf8');
+  if (!baseHtml.includes(emptyRoot)) {
+    console.error(`✗ ${emptyRoot} not found in dist/index.html.`);
+    process.exit(1);
+  }
+  fs.writeFileSync(shellHtmlPath, baseHtml);
+
+  const { render } = await import(pathToFileURL(ssrEntryPath).href);
   const routes = getPrerenderRoutes();
 
-  routes.forEach((route) => writeRoute(baseHtml, route));
+  for (const route of routes) {
+    await writeRoute(baseHtml, render, route);
+  }
 
   console.log(`✅ Prerendered ${routes.length} routes:`);
   routes.forEach((route) => console.log(`   ${route}`));
 }
 
-prerender();
+prerender().catch((err) => {
+  console.error('✗ Prerender failed:', err);
+  process.exit(1);
+});

@@ -7,7 +7,7 @@ import {
   FaEye,
   FaDroplet,
   FaBrain,
-  FaLightbulb,
+  FaChartLine,
   FaArrowRight,
 } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
@@ -25,6 +25,14 @@ const customAnimation = keyframes`
 `;
 
 const services = [
+  {
+    id: 6,
+    name: 'Shopify CRO',
+    description:
+      'Find out where your store is losing sales, with a ranked list of fixes sorted by impact and effort.',
+    icon: FaChartLine,
+    link: '/audit',
+  },
   {
     id: 1,
     name: 'Web Development',
@@ -64,14 +72,6 @@ const services = [
       'No more staring at a blank page. I’ll help you plan content that speaks to your audience and sells your story.',
     icon: FaBrain,
     link: '/services#planning',
-  },
-  {
-    id: 6,
-    name: 'Consulting',
-    description:
-      'Need a second set of eyes on your website? I’ll give you the no-fluff feedback and practical steps to improve it.',
-    icon: FaLightbulb,
-    link: '/services#consulting',
   },
 ];
 
