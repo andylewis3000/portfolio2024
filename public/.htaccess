@@ -24,9 +24,10 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
 
-  # Everything else (unknown / dynamic routes) falls back to the SPA entry
-  # point so React Router can handle it client-side.
-  RewriteRule ^ /index.html [L]
+  # Everything else (unknown / dynamic routes) falls back to the empty SPA
+  # shell so React Router can handle it client-side. Not index.html: that
+  # now holds the prerendered homepage markup.
+  RewriteRule ^ /spa.html [L]
 </IfModule>
 
 # ---------------------------------------------------------------------------

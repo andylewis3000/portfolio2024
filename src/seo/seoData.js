@@ -6,6 +6,19 @@ export const baseUrl = 'https://andylewis.ca';
 
 const defaultImage = `${baseUrl}/images/og-default.jpg`;
 
+// Hostinger serves each prerendered page from a directory and 301-redirects
+// /about -> /about/, so the browser's pathname carries a trailing slash.
+// Route keys stay slash-less; normalize before any lookup or comparison.
+export function normalizePath(pathname) {
+  return pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
+}
+
+// Public URL for a route, in the trailing-slash form the server actually
+// serves (canonical and sitemap URLs must not point at a redirect).
+export function pageUrl(route) {
+  return route === '/' ? baseUrl : `${baseUrl}${route}/`;
+}
+
 // Project slugs that have a /projects/:id case-study page.
 // Keep in sync with the `projects` object in src/pages/project.jsx.
 export const projectSlugs = [
@@ -18,93 +31,100 @@ export const projectSlugs = [
 // Static (non-dynamic) routes.
 export const staticSeo = {
   '/': {
-    title: 'Andy Lewis - Professional Web Development & Design Services',
+    title: 'Andy Lewis | Shopify CRO, Design & Development',
     description:
-      'Leading web development company specializing in custom websites, web applications, and digital solutions. Get professional, responsive websites that drive results.',
+      "Shopify conversion rate optimization from an ex-Shopify Plus advisor with 10+ years in web design and front-end development. Find what's costing your store sales, then fix it.",
     keywords:
-      'web development, web design, custom websites, responsive design, professional web services',
+      'Shopify CRO, Shopify conversion rate optimization, Shopify Plus, Shopify developer, web design, front-end development',
     ogType: 'website',
     ogImage: defaultImage,
-    ogImageAlt: 'Andy Lewis Web Development Services',
-    canonicalUrl: `${baseUrl}`,
+    ogImageAlt: 'Andy Lewis - Shopify CRO, Design & Development',
+    canonicalUrl: pageUrl('/'),
   },
   '/about': {
-    title:
-      'About Us - Andy Lewis - Web Designer & Developer | Experienced Web Development Team',
+    title: 'About Andy Lewis | Shopify CRO, Design & Development',
     description:
-      'Learn about our experienced team of web developers and designers. Discover our mission, values, and commitment to delivering exceptional digital solutions.',
+      'Ex-Shopify Plus Merchant Success Manager and front-end developer with 10+ years in web design. How I help Shopify stores turn more visitors into customers.',
     keywords:
-      'about us, web development team, company history, web design expertise, professional developers',
+      'Andy Lewis, Shopify CRO consultant, Shopify Plus, front-end developer, web designer',
     ogType: 'website',
     ogImage: defaultImage,
-    ogImageAlt: 'About Andy Lewis Web Development Team',
-    canonicalUrl: `${baseUrl}/about`,
+    ogImageAlt: 'About Andy Lewis',
+    canonicalUrl: pageUrl('/about'),
   },
   '/services': {
-    title:
-      'Web Development Services - Custom Solutions | Andy Lewis - Web Designer & Developer',
+    title: 'Services | Shopify CRO, Web Design & Development | Andy Lewis',
     description:
-      'Comprehensive web development services including custom website development, e-commerce solutions, web applications, and digital marketing. Contact us today!',
+      'Shopify CRO audits, web design, front-end development, SEO and accessibility. One person who can find the problem and fix it.',
     keywords:
-      'web development services, custom websites, e-commerce development, web applications, digital solutions',
+      'Shopify CRO audit, Shopify conversion optimization, web design, front-end development, SEO, accessibility',
     ogType: 'website',
     ogImage: defaultImage,
-    ogImageAlt: 'Andy Lewis Web Development Services',
-    canonicalUrl: `${baseUrl}/services`,
+    ogImageAlt: 'Andy Lewis Services',
+    canonicalUrl: pageUrl('/services'),
   },
   '/projects': {
-    title:
-      'Our Portfolio - Web Development Projects | Andy Lewis - Web Designer & Developer',
+    title: 'Projects | Andy Lewis - Shopify CRO, Design & Development',
     description:
-      "View our portfolio of successful web development projects. See examples of custom websites, web applications, and digital solutions we've created for clients.",
+      'Selected web design and development projects and case studies by Andy Lewis.',
     keywords:
-      'web development portfolio, project showcase, website examples, client work, case studies',
+      'web design portfolio, web development case studies, website examples, client work',
     ogType: 'website',
     ogImage: defaultImage,
-    ogImageAlt: 'Andy Lewis Web Development Portfolio',
-    canonicalUrl: `${baseUrl}/projects`,
+    ogImageAlt: 'Andy Lewis Portfolio',
+    canonicalUrl: pageUrl('/projects'),
   },
   '/contact': {
-    title:
-      'Contact Us - Get Your Free Web Development Quote | Andy Lewis - Web Designer & Developer',
+    title: 'Contact | Andy Lewis - Shopify CRO, Design & Development',
     description:
-      "Ready to start your web development project? Contact our team for a free consultation and quote. We're here to bring your digital vision to life.",
+      "Questions about a CRO audit or a web project? Get in touch and I'll reply within 48 hours.",
     keywords:
-      'contact web developers, free quote, web development consultation, hire developers, project inquiry',
+      'contact Andy Lewis, Shopify CRO audit, hire Shopify developer, web design quote',
     ogType: 'website',
     ogImage: defaultImage,
-    ogImageAlt: 'Contact Andy Lewis for Web Development',
-    canonicalUrl: `${baseUrl}/contact`,
+    ogImageAlt: 'Contact Andy Lewis',
+    canonicalUrl: pageUrl('/contact'),
+  },
+  '/audit': {
+    title: 'Shopify CRO Audit | Fixed-Price Conversion Audit | Andy Lewis',
+    description:
+      'A fixed-price conversion audit for Shopify and Shopify Plus stores. Find where your store loses sales and get a clear list of fixes, prioritized by likely impact.',
+    keywords:
+      'Shopify CRO audit, Shopify conversion rate optimization, Shopify Plus audit, ecommerce conversion audit, Canada',
+    ogType: 'website',
+    ogImage: defaultImage,
+    ogImageAlt: 'Shopify CRO Audit by Andy Lewis',
+    canonicalUrl: pageUrl('/audit'),
   },
 };
 
 const fallbackSeo = {
-  title:
-    'Andy Lewis - Web Designer & Developer - Professional Web Development Services',
+  title: 'Andy Lewis | Shopify CRO, Design & Development',
   description:
-    'Professional web development and design services. Custom solutions for your digital needs.',
-  keywords: 'web development, web design, professional services',
+    'Shopify CRO, web design and front-end development by Andy Lewis.',
+  keywords: 'Shopify CRO, web design, front-end development',
   ogType: 'website',
   ogImage: defaultImage,
-  ogImageAlt: 'Andy Lewis Web Development',
+  ogImageAlt: 'Andy Lewis - Shopify CRO, Design & Development',
   canonicalUrl: baseUrl,
 };
 
 // Resolve SEO data for any pathname, including dynamic /projects/:id routes.
-export function getSEOData(pathname) {
+export function getSEOData(rawPathname) {
+  const pathname = normalizePath(rawPathname);
   if (pathname.startsWith('/projects/') && pathname !== '/projects') {
     const projectId = pathname.split('/')[2];
     const projectName = projectId
       .replace(/-/g, ' ')
       .replace(/\b\w/g, (l) => l.toUpperCase());
     return {
-      title: `${projectName} - Project Case Study | Andy Lewis - Web Designer & Developer`,
-      description: `Detailed case study of ${projectName} web development project. See how we delivered custom solutions and exceptional results for our client.`,
-      keywords: `${projectName}, web development case study, project details, client success story`,
+      title: `${projectName} - Case Study | Andy Lewis`,
+      description: `How I designed and built ${projectName}: the brief, the approach and the result.`,
+      keywords: `${projectName}, web design case study, web development case study`,
       ogType: 'article',
       ogImage: defaultImage,
       ogImageAlt: `${projectName} Project Case Study`,
-      canonicalUrl: `${baseUrl}/projects/${projectId}`,
+      canonicalUrl: pageUrl(`/projects/${projectId}`),
     };
   }
 

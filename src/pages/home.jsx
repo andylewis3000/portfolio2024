@@ -1,4 +1,5 @@
 import HeroNew from '../components/blocks/hero-new';
+import ButtonLink from '../components/elements/button';
 import HomeAbout from '../components/blocks/home-about';
 import HomeServices from '../components/blocks/home-services';
 import RecentProjects from '../components/blocks/recent-projects';
@@ -11,12 +12,18 @@ const Home = () => {
     <PageTransition>
       <HeroNew
         heroSize={'hero-large'}
-        heading={'Your brand deserves better than a template.'}
+        heading={'Your Shopify store should be selling more.'}
         subHeading={
-          'I build custom websites designed to stand out, scale with your business, and actually get results.'
+          "I find what's costing you sales, then fix it. Shopify CRO backed by 10+ years of design and development."
         }
         imgActive={true}
-        btnActive={true}
+        actions={
+          <ButtonLink
+            btnClass={'btn-secondary'}
+            link="/audit"
+            btnTitle="Get a CRO audit"
+          />
+        }
       />
       <div className="page-container">
         <HomeAbout />

@@ -45,7 +45,7 @@ const SEOMetaTags = () => {
       setMetaTag('description', data.description);
       setMetaTag('keywords', data.keywords);
       setMetaTag('robots', 'index, follow');
-      setMetaTag('author', 'Andy Lewis - Web Designer & Developer');
+      setMetaTag('author', 'Andy Lewis - Shopify CRO, Design & Development');
       setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
 
       // Open Graph meta tags (Facebook, LinkedIn, etc.)
@@ -58,7 +58,7 @@ const SEOMetaTags = () => {
       setMetaTag('og:image:alt', data.ogImageAlt, true); // Alt text for accessibility
       setMetaTag('og:image:width', '1200', true); // Facebook recommends 1200x630
       setMetaTag('og:image:height', '630', true);
-      setMetaTag('og:site_name', 'Andy Lewis - Web Designer & Developer', true);
+      setMetaTag('og:site_name', 'Andy Lewis - Shopify CRO, Design & Development', true);
       setMetaTag('og:locale', 'en_US', true);
 
       // Twitter Card meta tags
