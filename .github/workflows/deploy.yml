@@ -79,10 +79,10 @@ jobs:
           $RSYNC --delete dist/assets/ "$REMOTE/assets/"
 
           if [ "$DRY_RUN" = "true" ]; then
-            echo "== Info only: files on the server that are not in the build (kept, never deleted)"
+            echo "== Info only: top-level server items not in the build (kept, never deleted)"
             rsync -rlz --checksum --dry-run --delete --itemize-changes \
               --exclude='/sites/' --exclude='/staging/' \
-              dist/ "$REMOTE/" | grep '^\*deleting' || echo "(none)"
+              dist/ "$REMOTE/" | grep -E '^\*deleting +[^/]+/?$' || echo "(none)"
           fi
 
       - name: Clean up SSH key
